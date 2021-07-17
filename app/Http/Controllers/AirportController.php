@@ -17,11 +17,11 @@ class AirportController extends Controller
         //
     }
 
-    public function getAirports($request) {
+    public function searchAirport(Request $request) {
 
-        $airports = Airport::where('iata_code'.$request->keyword)->get();
+        $data = Airport::where('iata_code',$request->keyword)->get();
 
-        return response()->json($airports);
+        return response()->json($data);
 
     }
 
