@@ -28,5 +28,8 @@
         "vue": "^3.0.5",
         "vue-loader": "^16.1.2",
         "webpack": "^5.45.1"
+    },
+    "dependencies": {
+        "luxon": "^2.0.1"
     }
 }

@@ -15,15 +15,23 @@
                 </div>
             </div>
         </div>
+
+        <div class="py-12">
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                <trip-overview></trip-overview>
+            </div>
+        </div>
     </breeze-authenticated-layout>
 </template>
 
 <script>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
     import PairingSearch from "@/Components/PairingSearch";
+    import TripOverview from "@/Components/TripOverview";
 
     export default {
         components: {
+            TripOverview,
             BreezeAuthenticatedLayout,
             PairingSearch
         },
