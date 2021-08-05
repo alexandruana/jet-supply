@@ -19,7 +19,9 @@ class AirportController extends Controller
 
     public function searchAirport(Request $request) {
 
-        $data = Airport::where('iata_code',$request->keyword)->get();
+        $data = Airport::where('iata_code',$request->keyword)
+            ->orWhere('municipality', $request->keyword)
+            ->get();
 
         return response()->json($data);
 

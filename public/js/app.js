@@ -18219,13 +18219,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     getFlightTime: function getFlightTime() {
       if (this.duration) {
-        var hours = luxon__WEBPACK_IMPORTED_MODULE_0__.Duration.fromObject({
-          hours: this.duration.substr(0, 2)
-        }).toFormat("hh");
-        var minutes = luxon__WEBPACK_IMPORTED_MODULE_0__.Duration.fromObject({
-          minutes: this.duration.substr(-2, 2)
-        }).toFormat("mm");
-        return "".concat(hours, ":").concat(minutes);
+        var time = luxon__WEBPACK_IMPORTED_MODULE_0__.Duration.fromObject({
+          hours: this.duration.substr(0, this.duration.length - 2),
+          minutes: this.duration.substr(this.duration.length - 2, 2)
+        }).toFormat("hh:mm");
+        return time;
       }
     }
   }
@@ -19110,7 +19108,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.from]]), $data.depAirport.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.depAirport, function (airport) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
       key: airport.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.gps_code) + ")", 1
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ")", 1
     /* TEXT */
     );
   }), 128
@@ -19130,7 +19128,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.to]]), $data.arrAirport.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.arrAirport, function (airport) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
       key: airport.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.gps_code) + ")", 1
+    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ")", 1
     /* TEXT */
     );
   }), 128
@@ -19141,7 +19139,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
       return $data.duration = $event;
     }),
     tabindex: "2",
-    maxlength: "4",
+    maxlength: "5",
     type: "text",
     placeholder: "hh:mm"
   }, null, 512
@@ -19207,17 +19205,7 @@ var _hoisted_1 = {
   "class": "overview-panel"
 };
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "overview-figures"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "kpi"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "kpi__label"
-}, " Latitude "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "kpi__value"
-}, " Some coordinates ")])], -1
-/* HOISTED */
-);
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"overview-figures\" data-v-27b89d89><div class=\"kpi\" data-v-27b89d89><div class=\"kpi__label\" data-v-27b89d89> Latitude </div><div class=\"kpi__value\" data-v-27b89d89> Some coordinates </div></div></div><div class=\"overview-map\" data-v-27b89d89> Here comes the map. </div>", 2);
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
@@ -20693,7 +20681,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "input[data-v-5f719255] {\n  font-size: 14px;\n}\n.pairing-search[data-v-5f719255] {\n  display: flex;\n  flex-direction: row;\n}\n.result[data-v-5f719255] {\n  color: #f1f5f9;\n  padding: 1rem 2rem;\n  background: #2d3142;\n  font-weight: bold;\n  border-radius: 1.2rem;\n}\n.airport-input[data-v-5f719255] {\n  margin: 0 2em 0 0;\n}\n.airport-input label[data-v-5f719255] {\n  display: block;\n  font-weight: bold;\n}\ninput[type=text][data-v-5f719255] {\n  width: 4rem;\n  border: none;\n  padding: 0 0.5rem;\n  background: none;\n  text-align: left;\n  border-bottom: 2px solid #00a9e2;\n}\n#durationInput[data-v-5f719255] {\n  text-align: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "input[data-v-5f719255] {\n  font-size: 14px;\n}\n.pairing-search[data-v-5f719255] {\n  display: grid;\n  grid-template-columns: 1fr 1fr 0.2fr 0.5fr;\n  flex-direction: row;\n}\n.result[data-v-5f719255] {\n  color: #f1f5f9;\n  padding: 1rem 2rem;\n  background: #2d3142;\n  font-weight: bold;\n  border-radius: 1.2rem;\n}\n.airport-input[data-v-5f719255] {\n  margin: 0 2em 0 0;\n}\n.airport-input label[data-v-5f719255] {\n  display: block;\n  font-weight: bold;\n}\ninput[type=text][data-v-5f719255] {\n  width: 100%;\n  border: none;\n  padding: 0 0.5rem;\n  background: none;\n  text-align: left;\n  border-bottom: 2px solid #00a9e2;\n}\n#durationInput[data-v-5f719255] {\n  text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

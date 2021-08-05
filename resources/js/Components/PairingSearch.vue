@@ -4,7 +4,7 @@
             <label for="departureSearch">From</label>
                 <input id="departureSearch" v-model="from" type="text" @keyup="departureSearch" placeholder="Airport">
             <ul v-if="depAirport.length > 0">
-                <li v-for="airport in depAirport" :key="airport.id" >{{ airport.municipality }} ({{ airport.gps_code }})</li>
+                <li v-for="airport in depAirport" :key="airport.id" >{{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})</li>
             </ul>
         </div>
 
@@ -12,19 +12,18 @@
             <label for="arrivalSearch">To</label>
             <input id="arrivalSearch" v-model="to" type="text" @keyup="arrivalSearch" placeholder="Airport">
             <ul v-if="arrAirport.length > 0">
-                <li v-for="airport in arrAirport" :key="airport.id">{{ airport.municipality }} ({{ airport.gps_code }})</li>
+                <li v-for="airport in arrAirport" :key="airport.id">{{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})</li>
             </ul>
         </div>
 
         <div class="airport-input">
             <label>Duration</label>
-            <input id="durationInput" v-model="duration" tabindex="2" maxlength="4" type="text" placeholder="hh:mm">
+            <input id="durationInput" v-model="duration" tabindex="2" maxlength="5" type="text" placeholder="hh:mm">
         </div>
 
         <div class="result">
             {{ getFlightTime() }}
         </div>
-
     </div>
 
 </template>
@@ -62,12 +61,16 @@ export default {
         },
         getFlightTime: function() {
             if (this.duration) {
-                const hours = Duration.fromObject({hours: this.duration.substr(0,2)}).toFormat("hh")
-                const minutes = Duration.fromObject({minutes: this.duration.substr(-2, 2)}).toFormat("mm")
+                const time = Duration.fromObject({
+                    hours: this.duration.substr(0, this.duration.length-2 ),
+                    minutes: this.duration.substr(this.duration.length-2, 2 )
+                }).toFormat("hh:mm")
 
-                return `${hours}:${minutes}`
+                return time
+
+
             }
-        }
+        },
     },
 }
 </script>
@@ -78,7 +81,8 @@ export default {
     }
 
     .pairing-search {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr .2fr .5fr;
         flex-direction: row;
     }
 
@@ -97,7 +101,7 @@ export default {
         }
     }
     input[type="text"] {
-        width: 4rem;
+        width: 100%;
         border: none;
         padding: 0 .5rem;
         background: none;
