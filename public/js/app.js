@@ -19066,27 +19066,33 @@ var _hoisted_4 = {
   key: 0
 };
 var _hoisted_5 = {
+  href: "#"
+};
+var _hoisted_6 = {
   "class": "airport-input"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", {
   "for": "arrivalSearch"
 }, "To", -1
 /* HOISTED */
 );
 
-var _hoisted_7 = {
+var _hoisted_8 = {
   key: 0
 };
-var _hoisted_8 = {
+var _hoisted_9 = {
+  href: "#"
+};
+var _hoisted_10 = {
   "class": "airport-input"
 };
 
-var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", null, "Duration", -1
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", null, "Duration", -1
 /* HOISTED */
 );
 
-var _hoisted_10 = {
+var _hoisted_12 = {
   "class": "result"
 };
 
@@ -19108,12 +19114,12 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
   ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.from]]), $data.depAirport.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_4, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.depAirport, function (airport) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
       key: airport.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ")", 1
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ") ", 1
     /* TEXT */
-    );
+    )]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [_hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "arrivalSearch",
     "onUpdate:modelValue": _cache[3] || (_cache[3] = function ($event) {
       return $data.to = $event;
@@ -19125,15 +19131,15 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     placeholder: "Airport"
   }, null, 544
   /* HYDRATE_EVENTS, NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.to]]), $data.arrAirport.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_7, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.arrAirport, function (airport) {
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.to]]), $data.arrAirport.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_8, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.arrAirport, function (airport) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
       key: airport.id
-    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ")", 1
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.ident) + ", " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.iata_code) + " (" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.municipality) + " / " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(airport.name) + ") ", 1
     /* TEXT */
-    );
+    )]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [_hoisted_9, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
+  ))])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [_hoisted_11, (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("input", {
     id: "durationInput",
     "onUpdate:modelValue": _cache[5] || (_cache[5] = function ($event) {
       return $data.duration = $event;
@@ -19144,7 +19150,7 @@ var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data,
     placeholder: "hh:mm"
   }, null, 512
   /* NEED_PATCH */
-  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.duration]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getFlightTime()), 1
+  ), [[vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.duration]])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($options.getFlightTime()), 1
   /* TEXT */
   )]);
 });
@@ -20195,7 +20201,7 @@ var _hoisted_3 = {
   "class": "max-w-7xl mx-auto sm:px-6 lg:px-8"
 };
 var _hoisted_4 = {
-  "class": "bg-white overflow-hidden shadow-sm sm:rounded-lg"
+  "class": "bg-white overflow-hidden shadow-sm sm:rounded-lg overflow-visible"
 };
 var _hoisted_5 = {
   "class": "p-6 bg-white border-b border-gray-200"
@@ -20681,7 +20687,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "input[data-v-5f719255] {\n  font-size: 14px;\n}\n.pairing-search[data-v-5f719255] {\n  display: grid;\n  grid-template-columns: 1fr 1fr 0.2fr 0.5fr;\n  flex-direction: row;\n}\n.result[data-v-5f719255] {\n  color: #f1f5f9;\n  padding: 1rem 2rem;\n  background: #2d3142;\n  font-weight: bold;\n  border-radius: 1.2rem;\n}\n.airport-input[data-v-5f719255] {\n  margin: 0 2em 0 0;\n}\n.airport-input label[data-v-5f719255] {\n  display: block;\n  font-weight: bold;\n}\ninput[type=text][data-v-5f719255] {\n  width: 100%;\n  border: none;\n  padding: 0 0.5rem;\n  background: none;\n  text-align: left;\n  border-bottom: 2px solid #00a9e2;\n}\n#durationInput[data-v-5f719255] {\n  text-align: center;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".pairing-search[data-v-5f719255] {\n  display: grid;\n  background: #ffffff;\n  flex-direction: row;\n  grid-template-columns: 1fr 1fr 0.2fr 0.5fr;\n}\n.result[data-v-5f719255] {\n  color: #f1f5f9;\n  padding: 1rem 2rem;\n  background: #2d3142;\n  font-weight: bold;\n  border-radius: 1.2rem;\n}\n.airport-input[data-v-5f719255] {\n  margin: 0 2em 0 0;\n  position: relative;\n  font-size: 14px;\n}\n.airport-input label[data-v-5f719255] {\n  display: block;\n  font-weight: bold;\n}\n.airport-input ul[data-v-5f719255] {\n  width: 100%;\n  margin: 0.25rem 0 0 0;\n  z-index: 9;\n  position: absolute;\n  background: #ffffff;\n  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.25);\n  border-radius: 0.75rem;\n}\n.airport-input ul li[data-v-5f719255] {\n  padding: 0.5rem;\n}\ninput[type=text][data-v-5f719255] {\n  width: 100%;\n  border: none;\n  padding: 0 0.5rem;\n  background: none;\n  text-align: left;\n  border-bottom: 2px solid #00a9e2;\n}\n#durationInput[data-v-5f719255] {\n  text-align: center;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -21,6 +21,11 @@ class AirportController extends Controller
 
         $data = Airport::where('iata_code',$request->keyword)
             ->orWhere('municipality', $request->keyword)
+            ->orWhere('ident', $request->keyword)
+            ->where(function ($query) {
+                $query->whereNotNull('iata_code')
+                ->WhereIn('type', ['small_airport', 'medium_airport', 'large_airport']);
+            })
             ->get();
 
         return response()->json($data);

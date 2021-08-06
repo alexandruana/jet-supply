@@ -2,9 +2,13 @@
     <div class="pairing-search">
         <div class="airport-input">
             <label for="departureSearch">From</label>
-                <input id="departureSearch" v-model="from" type="text" @keyup="departureSearch" placeholder="Airport">
+            <input id="departureSearch" v-model="from" type="text" @keyup="departureSearch" placeholder="Airport">
             <ul v-if="depAirport.length > 0">
-                <li v-for="airport in depAirport" :key="airport.id" >{{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})</li>
+                <li v-for="airport in depAirport" :key="airport.id" >
+                    <a href="#">
+                        {{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -12,7 +16,11 @@
             <label for="arrivalSearch">To</label>
             <input id="arrivalSearch" v-model="to" type="text" @keyup="arrivalSearch" placeholder="Airport">
             <ul v-if="arrAirport.length > 0">
-                <li v-for="airport in arrAirport" :key="airport.id">{{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})</li>
+                <li v-for="airport in arrAirport" :key="airport.id">
+                    <a href="#">
+                        {{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})
+                    </a>
+                </li>
             </ul>
         </div>
 
@@ -76,14 +84,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    input {
-        font-size: 14px;
-    }
-
     .pairing-search {
         display: grid;
-        grid-template-columns: 1fr 1fr .2fr .5fr;
+        background: #ffffff;
         flex-direction: row;
+        grid-template-columns: 1fr 1fr .2fr .5fr;
     }
 
     .result {
@@ -95,9 +100,24 @@ export default {
     }
     .airport-input {
         margin: 0 2em 0 0;
+        position: relative;
+        font-size: 14px;
         label {
             display: block;
             font-weight: bold;
+        }
+
+        ul {
+            width: 100%;
+            margin: .25rem 0 0 0;
+            z-index: 9;
+            position: absolute;
+            background: #ffffff;
+            box-shadow: 0 2px 5px 1px rgb(0 0 0 / 25%);
+            border-radius: .75rem;
+            li {
+                padding: .5rem;
+            }
         }
     }
     input[type="text"] {
