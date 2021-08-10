@@ -26,8 +26,7 @@ class CreateAirportsTable extends Migration
             $table->string('gps_code');
             $table->string('iata_code');
             $table->string('local_code');
-            $table->string('latitude_deg');
-            $table->string('longitude_deg');
+            $table->string('coordinates');
             $table->timestamps();
         });
     }

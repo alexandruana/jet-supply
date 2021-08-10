@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Airport;
+use Illuminate\Support\Facades\DB;
 
 class AirportController extends Controller
 {
@@ -19,17 +20,19 @@ class AirportController extends Controller
 
     public function searchAirport(Request $request) {
 
-        $data = Airport::where('iata_code',$request->keyword)
-            ->orWhere('municipality', $request->keyword)
-            ->orWhere('ident', $request->keyword)
-            ->where(function ($query) {
-                $query->whereNotNull('iata_code')
-                ->WhereIn('type', ['small_airport', 'medium_airport', 'large_airport']);
+        $airports = DB::table('airports')
+            ->where('gps_code', 'LIKE','%'.$request->keyword.'%')
+            ->orwhere('iata_code', 'LIKE','%'.$request->keyword.'%')
+            ->orWhere('municipality', 'LIKE','%'.$request->keyword.'%')
+            ->where( function($query) {
+                $query
+                    ->WhereIn('type', array('small_airport', 'medium_airport', 'large_airport'))
+                    ->whereNotNull('gps_code');
             })
+            ->orderBy('type', 'asc')
             ->get();
 
-        return response()->json($data);
-
+        return response()->json($airports);
     }
 
     /**
