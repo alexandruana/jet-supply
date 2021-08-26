@@ -31,4 +31,5 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/searchairport', [\App\Http\Controllers\AirportController::class, 'searchAirport']);
+Route::get('/getairports', [\App\Http\Controllers\AirportController::class, 'index']);
 

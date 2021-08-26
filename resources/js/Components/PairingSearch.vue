@@ -1,25 +1,21 @@
 <template>
     <div class="pairing-search">
         <div class="airport-input">
-            <label for="departureSearch">From</label>
-            <input id="departureSearch" v-model="from" type="text" @keyup="departureSearch" placeholder="Airport">
-            <ul v-if="depAirport.length > 0">
-                <li v-for="airport in depAirport" :key="airport.id" >
-                    <a href="#">
-                        {{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})
-                    </a>
+            <label>From</label>
+            <input v-model.trim="from" type="text" placeholder="Airport">
+            <ul v-show="from && airports">
+                <li v-show="itemVisible(airport, from)" v-for="airport in airports" :key="airport.id" >
+                    {{ airport.icao }}, {{ airport.iata }} ({{ airport.city }} / {{ airport.name }})
                 </li>
             </ul>
         </div>
 
         <div class="airport-input">
-            <label for="arrivalSearch">To</label>
-            <input id="arrivalSearch" v-model="to" type="text" @keyup="arrivalSearch" placeholder="Airport">
-            <ul v-if="arrAirport.length > 0">
-                <li v-for="airport in arrAirport" :key="airport.id">
-                    <a href="#">
-                        {{ airport.ident }}, {{ airport.iata_code }} ({{ airport.municipality }} / {{ airport.name }})
-                    </a>
+            <label>To</label>
+            <input v-model.trim="to" type="text" placeholder="Airport">
+            <ul v-show="to && airports">
+                <li v-show="itemVisible(airport, to)" v-for="airport in airports" :key="airport.id" >
+                    {{ airport.icao }}, {{ airport.iata }} ({{ airport.city }} / {{ airport.name }})
                 </li>
             </ul>
         </div>
@@ -43,29 +39,26 @@ export default {
     name: "PairingSearch",
     data() {
         return {
-            from: null,
-            to: null,
-            depAirport: {},
-            arrAirport: {},
+            from: '',
+            to: '',
             airports: [],
+            depAirport: {},
             duration: null,
         };
     },
+    mounted () {
+        this.getAirports();
+    },
     methods: {
-       departureSearch() {
-            axios.get('/searchairport', {
-                params: { keyword: this.from }
-            })
-            .then(res => this.depAirport = res.data)
-            .then(res => localStorage.setItem("departure", JSON.stringify(res.data)))
+        getAirports: function() {
+          axios.get('/getairports')
+            .then(res => this.airports = res.data)
             .catch(error => {});
-       },
-        arrivalSearch() {
-            axios.get('/searchairport', {
-                params: { keyword: this.to }
-            })
-            .then(res => this.arrAirport = res.data)
-            .catch(error => {});
+        },
+        itemVisible: function(airport, model) {
+            let currentName = airport.name.toLowerCase()
+            let currentInput = model.toLowerCase()
+            return currentName.includes(currentInput)
         },
         getFlightTime: function() {
             if (this.duration) {
@@ -117,6 +110,7 @@ export default {
             border-radius: .75rem;
             li {
                 padding: .5rem;
+                cursor: pointer;
             }
         }
     }

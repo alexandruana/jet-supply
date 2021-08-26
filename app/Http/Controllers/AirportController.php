@@ -15,20 +15,18 @@ class AirportController extends Controller
      */
     public function index()
     {
-        //
+        $airports = DB::table('airports')
+            ->get();
+
+        return response()->json($airports);
     }
 
     public function searchAirport(Request $request) {
 
         $airports = DB::table('airports')
-            ->where('gps_code', 'LIKE','%'.$request->keyword.'%')
-            ->orwhere('iata_code', 'LIKE','%'.$request->keyword.'%')
-            ->orWhere('municipality', 'LIKE','%'.$request->keyword.'%')
-            ->where( function($query) {
-                $query
-                    ->WhereIn('type', array('small_airport', 'medium_airport', 'large_airport'))
-                    ->whereNotNull('gps_code');
-            })
+            ->where('iata', 'LIKE','%'.$request->keyword.'%')
+            ->orwhere('icao', 'LIKE','%'.$request->keyword.'%')
+            ->orWhere('city', 'LIKE','%'.$request->keyword.'%')
             ->orderBy('type', 'asc')
             ->get();
 
