@@ -2,9 +2,10 @@
     <div class="pairing-search">
         <div class="airport-input">
             <label>From</label>
-            <input v-model.trim="from" type="text" placeholder="Airport">
+            <input v-if="Object.keys(depAirport).length === 0" v-model.trim="from" class="dropdown-input" type="text" placeholder="Airport" ref="depInput">
+            <input v-else @click="resetAirport(depAirport, from)" v-model.trim="from" class="dropdown-input__selected" type="text" placeholder="Airport">
             <ul v-show="from && airports">
-                <li v-show="itemVisible(airport, from)" v-for="airport in airports" :key="airport.id" >
+                <li v-show="itemVisible(airport, from)" v-for="airport in airports" :key="airport.id" @click="selectDeparture(airport)">
                     {{ airport.icao }}, {{ airport.iata }} ({{ airport.city }} / {{ airport.name }})
                 </li>
             </ul>
@@ -12,28 +13,30 @@
 
         <div class="airport-input">
             <label>To</label>
-            <input v-model.trim="to" type="text" placeholder="Airport">
+            <input v-if="Object.keys(arrAirport).length === 0" v-model.trim="to" class="dropdown-input" type="text" placeholder="Airport" ref="arrInput">
+            <input v-else @click="resetAirport(arrAirport)" v-model.trim="to" class="dropdown-input__selected" type="text" placeholder="Airport">
             <ul v-show="to && airports">
-                <li v-show="itemVisible(airport, to)" v-for="airport in airports" :key="airport.id" >
+                <li v-show="itemVisible(airport, to)" v-for="airport in airports" :key="airport.id" @click="selectArrival(airport)">
                     {{ airport.icao }}, {{ airport.iata }} ({{ airport.city }} / {{ airport.name }})
                 </li>
             </ul>
         </div>
-
         <div class="airport-input">
             <label>Duration</label>
             <input id="durationInput" v-model="duration" tabindex="2" maxlength="5" type="text" placeholder="hh:mm">
         </div>
-
         <div class="result">
             {{ getFlightTime() }}
         </div>
     </div>
+    <button @click="reset">Reset</button>
 
 </template>
 
 <script>
-import {Duration} from "luxon";
+import { Duration } from "luxon";
+import { mapActions } from "vuex";
+import { mapGetters } from "vuex";
 
 export default {
     name: "PairingSearch",
@@ -43,17 +46,53 @@ export default {
             to: '',
             airports: [],
             depAirport: {},
+            arrAirport: {},
             duration: null,
         };
     },
     mounted () {
         this.getAirports();
     },
+    computed: {
+        ...mapGetters([
+            'allAirports'
+        ]),
+    },
     methods: {
         getAirports: function() {
           axios.get('/getairports')
             .then(res => this.airports = res.data)
             .catch(error => {});
+        },
+        selectDeparture: function(airport) {
+            this.depAirport = airport
+            this.from = `${this.depAirport.icao}, ${this.depAirport.iata} (${this.depAirport.city}) / ${this.depAirport.name}`
+            this.addAirport(this.depAirport)
+            console.log(airport)
+        },
+        selectArrival: function(airport) {
+            this.arrAirport = airport
+            this.to = `${this.arrAirport.icao}, ${this.arrAirport.iata} (${this.arrAirport.city}) / ${this.arrAirport.name}`
+            this.addAirport(this.arrAirport)
+            console.log(airport)
+        },
+        reset: function() {
+            this.allAirports.forEach( (airport, index) => {
+                this.removeAirport(index)
+                console.log(`${airport.name} ${index}`);
+            })
+        },
+        resetAirport: function(airport) {
+            if (airport === this.depAirport) {
+                this.from = ''
+                this.depAirport = {}
+                this.$nextTick( () => this.$refs.depInput.focus() )
+            } else {
+                this.to = ''
+                this.arrAirport = {}
+                this.$nextTick( () => this.$refs.arrInput.focus() )
+            }
+            this.removeAirport(airport.id)
         },
         itemVisible: function(airport, model) {
             let currentName = airport.name.toLowerCase()
@@ -68,10 +107,12 @@ export default {
                 }).toFormat("hh:mm")
 
                 return time
-
-
             }
         },
+        ...mapActions([
+            'addAirport',
+            'removeAirport'
+        ]),
     },
 }
 </script>

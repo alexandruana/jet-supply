@@ -30,6 +30,7 @@
         "webpack": "^5.45.1"
     },
     "dependencies": {
-        "luxon": "^2.0.1"
+        "luxon": "^2.0.1",
+        "vuex": "^4.0.2"
     }
 }

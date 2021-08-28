@@ -4,8 +4,7 @@ require('./bootstrap');
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
-import { DateTime } from "luxon";
-
+import store from './store'
 
 // Import components...
 
@@ -17,6 +16,7 @@ createInertiaApp({
         createApp({ render: () => h(app, props) })
             .mixin({ methods: { route } })
             .use(plugin)
+            .use(store)
             .mount(el);
     },
 });

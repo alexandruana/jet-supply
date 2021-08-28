@@ -1,25 +1,16 @@
 <template>
     <div class="overview-panel">
 
-        <div class="overview-figures">
-            <div class="kpi">
-                <div class="kpi__label">
-                    Latitude
-                </div>
-                <div class="kpi__value">
-                    Some coordinates
-                </div>
-            </div>
-        </div>
-
         <div class="overview-map">
-        Here comes the map.
+            Here comes the map.
         </div>
 
     </div>
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
     name: "TripOverview",
     data() {
@@ -70,16 +61,21 @@ export default {
     ]
         }
     },
-    methods: {
-    getCost: function(aircraft) {
-       for (let i = 0; i < this.aircraft.length; i++) {
-           // Identifying aircraft
-           if(this.aircraft[i].name === aircraft) {
-               // Calculating cost
-               // return this.aircraft[i].hourlyRate * (rtime * 1440)
-           }
-        }
+    computed: {
+        ...mapGetters([
+            'allAirports'
+        ]),
     },
+    methods: {
+        getCost: function(aircraft) {
+           for (let i = 0; i < this.aircraft.length; i++) {
+               // Identifying aircraft
+               if(this.aircraft[i].name === aircraft) {
+                   // Calculating cost
+                   // return this.aircraft[i].hourlyRate * (rtime * 1440)
+               }
+            }
+        },
     }
 }
 </script>
