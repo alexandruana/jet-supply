@@ -1,7 +1,7 @@
 <template>
-    <div class="overview-panel p-8">
+    <div class="overview-panel">
 
-        <div class="overview-map max-w-lg">
+        <div class="overview-map">
             <trip-map :departure="allAirports.departure" :arrival="allAirports.arrival"></trip-map>
         </div>
 

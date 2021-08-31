@@ -10,6 +10,15 @@ export default {
     mounted() {
         this.initMapBox()
     },
+    watch: {
+      departure: function(val) {
+          // Example of a MapDataEvent of type "sourcedata"
+          console.log("Departure added.")
+      },
+      arrival: function(val) {
+          console.log("Arrival added.")
+      }
+    },
     methods: {
         initMapBox: function() {
             mapboxgl.accessToken = 'pk.eyJ1IjoiYWxleGFuZHJ1YW5hIiwiYSI6ImNrZTl3NzJ3bzIxNG4yc2w2aG03dHNkMDUifQ.xaSxrVMLZtfGAlWoGvB1PQ';
@@ -20,14 +29,49 @@ export default {
                 zoom: 6
             });
 
-            const marker1 = new mapboxgl.Marker({ color: '#FFFFFF' })
-                .setLngLat([22.253, 45.419])
-                .addTo(map);
+            const airports = {
+                "type": "FeatureCollection",
+                "features": [
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                21.337,
+                                45.809
+                            ]
+                        }
+                    },
+                    {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": "Point",
+                            "coordinates": [
+                                22.254,
+                                45.41998
+                            ]
+                        }
+                    },
+                ]
+            }
 
-            const marker2 = new mapboxgl.Marker({ color: '#FFFFFF' })
-                .setLngLat([21.337, 45.809])
-                .addTo(map);
+            map.on('load', function() {
+                /* Add the data to your map as a layer */
+                map.addSource('places', {
+                    'type': 'geojson',
+                    'data': airports
+                });
+                function addMarkers() {
+                    for( const marker of airports.features ) {
+                        new mapboxgl.Marker()
+                            .setLngLat(marker.geometry.coordinates)
+                            .addTo(map);
+                    }
+                }
+                addMarkers()
+            });
         },
+
     },
     props: {
         departure: Object,

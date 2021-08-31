@@ -18491,11 +18491,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl/dist/mapbox-gl.js */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 /* harmony import */ var mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "TripMap",
   mounted: function mounted() {
     this.initMapBox();
+  },
+  watch: {
+    departure: function departure(val) {
+      // Example of a MapDataEvent of type "sourcedata"
+      console.log("Departure added.");
+    },
+    arrival: function arrival(val) {
+      console.log("Arrival added.");
+    }
   },
   methods: {
     initMapBox: function initMapBox() {
@@ -18506,12 +18521,47 @@ __webpack_require__.r(__webpack_exports__);
         center: [22.253, 45.419],
         zoom: 6
       });
-      var marker1 = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({
-        color: '#FFFFFF'
-      }).setLngLat([22.253, 45.419]).addTo(map);
-      var marker2 = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({
-        color: '#FFFFFF'
-      }).setLngLat([21.337, 45.809]).addTo(map);
+      var airports = {
+        "type": "FeatureCollection",
+        "features": [{
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [21.337, 45.809]
+          }
+        }, {
+          "type": "Feature",
+          "geometry": {
+            "type": "Point",
+            "coordinates": [22.254, 45.41998]
+          }
+        }]
+      };
+      map.on('load', function () {
+        /* Add the data to your map as a layer */
+        map.addSource('places', {
+          'type': 'geojson',
+          'data': airports
+        });
+
+        function addMarkers() {
+          var _iterator = _createForOfIteratorHelper(airports.features),
+              _step;
+
+          try {
+            for (_iterator.s(); !(_step = _iterator.n()).done;) {
+              var marker = _step.value;
+              new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)().setLngLat(marker.geometry.coordinates).addTo(map);
+            }
+          } catch (err) {
+            _iterator.e(err);
+          } finally {
+            _iterator.f();
+          }
+        }
+
+        addMarkers();
+      });
     }
   },
   props: {
@@ -19537,10 +19587,10 @@ var _withId = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.withScopeId)("dat
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-27b89d89");
 
 var _hoisted_1 = {
-  "class": "overview-panel p-8"
+  "class": "overview-panel"
 };
 var _hoisted_2 = {
-  "class": "overview-map max-w-lg"
+  "class": "overview-map"
 };
 
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
