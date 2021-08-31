@@ -1,27 +1,36 @@
 import axios from "axios";
 
 const state = {
-    airports: [],
+    strict: true,
+    trip: {
+        departure: {},
+        arrival: {}
+    },
 };
 
 const getters = {
-    allAirports: (state) => state.airports
+    allAirports: (state) => state.trip,
 };
 
 const actions = {
-    addAirport({ commit }, airport) {
-        commit('setAirport', airport);
+    addAirport({ commit }, { airport, point }) {
+        commit('ADD_AIRPORT', { airport, point })
     },
     removeAirport({ commit }, id) {
-        commit('clearAirport', id)
+        commit('CLEAR_AIRPORT', id)
     }
 };
 
 const mutations = {
-    setAirport: (state, airport) => state.airports.push(airport),
-    clearAirport: (state, id) => {
-        let index = state.airports.findIndex(airport => airport.id === id)
-        state.airports.splice(index, 1)
+    ADD_AIRPORT: (state, { airport, point }) => {
+        state.trip[point] = airport
+    },
+    CLEAR_AIRPORT: (state, id) => {
+        for (const element in state.trip) {
+            if (state.trip[element].id === id) {
+                state.trip[element] = {}
+            }
+        }
     },
 };
 

@@ -29,7 +29,6 @@
             {{ getFlightTime() }}
         </div>
     </div>
-    <button @click="reset">Reset</button>
 
 </template>
 
@@ -64,22 +63,20 @@ export default {
             .then(res => this.airports = res.data)
             .catch(error => {});
         },
-        selectDeparture: function(airport) {
+        selectDeparture: function (airport) {
             this.depAirport = airport
             this.from = `${this.depAirport.icao}, ${this.depAirport.iata} (${this.depAirport.city}) / ${this.depAirport.name}`
-            this.addAirport(this.depAirport)
-            console.log(airport)
+            this.addAirport({
+                airport: this.depAirport,
+                point: 'departure'
+            })
         },
         selectArrival: function(airport) {
             this.arrAirport = airport
             this.to = `${this.arrAirport.icao}, ${this.arrAirport.iata} (${this.arrAirport.city}) / ${this.arrAirport.name}`
-            this.addAirport(this.arrAirport)
-            console.log(airport)
-        },
-        reset: function() {
-            this.allAirports.forEach( (airport, index) => {
-                this.removeAirport(index)
-                console.log(`${airport.name} ${index}`);
+            this.addAirport({
+                airport: this.arrAirport,
+                point: 'arrival'
             })
         },
         resetAirport: function(airport) {
@@ -168,3 +165,4 @@ export default {
         text-align: center;
     }
 </style>
+

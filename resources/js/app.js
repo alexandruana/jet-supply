@@ -1,4 +1,5 @@
 require('./bootstrap');
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 // Import modules...
 import { createApp, h } from 'vue';

@@ -1,8 +1,8 @@
 <template>
-    <div class="overview-panel">
+    <div class="overview-panel p-8">
 
-        <div class="overview-map">
-            Here comes the map.
+        <div class="overview-map max-w-lg">
+            <trip-map :departure="allAirports.departure" :arrival="allAirports.arrival"></trip-map>
         </div>
 
     </div>
@@ -10,6 +10,7 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex";
+import TripMap from "@/Components/TripMap";
 
 export default {
     name: "TripOverview",
@@ -58,32 +59,23 @@ export default {
                     cateringRate: 75,
                     nightStopRate: 1000
                 }
-    ]
+    ],
         }
+    },
+    components: {
+        TripMap,
     },
     computed: {
         ...mapGetters([
             'allAirports'
         ]),
     },
-    methods: {
-        getCost: function(aircraft) {
-           for (let i = 0; i < this.aircraft.length; i++) {
-               // Identifying aircraft
-               if(this.aircraft[i].name === aircraft) {
-                   // Calculating cost
-                   // return this.aircraft[i].hourlyRate * (rtime * 1440)
-               }
-            }
-        },
-    }
 }
 </script>
 
 <style scoped>
     .overview-panel {
         color: #f1f5f9;
-        padding: 20px;
         min-height: 25vh;
         background: #2d3142;
         border-radius: 20px;
