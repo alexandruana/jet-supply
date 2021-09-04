@@ -21016,10 +21016,11 @@ __webpack_require__.r(__webpack_exports__);
   name: "TripMap",
   data: function data() {
     return {
-      departureMarker: null,
-      arrivalMarker: null,
-      route: null,
-      map: null
+      map: null,
+      blyatjson: {
+        'type': 'FeatureCollection',
+        'features': []
+      }
     };
   },
   mounted: function mounted() {
@@ -21027,25 +21028,68 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     departure: function departure(val) {
-      this.departureMarker.setLngLat([val.longitude, val.latitude]).addTo(this.map);
+      this.setPoint(val);
+      this.map.getSource('places').setData(this.blyatjson);
     },
     arrival: function arrival(val) {
-      this.arrivalMarker.setLngLat([val.longitude, val.latitude]).addTo(this.map);
+      this.setPoint(val);
+      this.map.getSource('places').setData(this.blyatjson);
     }
   },
   methods: {
     // Initialize MapBox map
     initMapBox: function initMapBox() {
+      var _this = this;
+
       (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().accessToken) = 'pk.eyJ1IjoiYWxleGFuZHJ1YW5hIiwiYSI6ImNrZTl3NzJ3bzIxNG4yc2w2aG03dHNkMDUifQ.xaSxrVMLZtfGAlWoGvB1PQ';
       this.map = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Map)({
         container: 'map',
         style: 'mapbox://styles/alexandruana/cksxeq0637zjy17tcvd4h919d',
-        center: [22.253, 45.419],
+        center: [21.261, 46.176],
         zoom: 6
-      }); // Set markers on input
+      }); // Define geoJSON object
 
-      this.arrivalMarker = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({});
-      this.departureMarker = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({});
+      var geojson = {
+        'type': 'FeatureCollection',
+        'features': []
+      }; // Add geoJSON source
+
+      this.map.on('load', function () {
+        _this.map.addSource('places', {
+          type: 'geojson',
+          data: _this.blyatjson
+        }); // Add styles to map
+
+
+        _this.map.addLayer({
+          'id': 'points',
+          'type': 'circle',
+          'source': 'places',
+          'paint': {
+            'circle-radius': 10,
+            'circle-color': '#00a9e2' // red color
+
+          }
+        });
+      });
+    },
+    setPoint: function setPoint(e) {
+      var features = this.map.queryRenderedFeatures(e.point, {
+        layers: ['points']
+      });
+      var point = this.coordinateFeature(e.longitude, e.latitude);
+      this.blyatjson.features.push(point);
+    },
+    // Add locations as geoJSON object
+    coordinateFeature: function coordinateFeature(lng, lat) {
+      return {
+        center: [lng, lat],
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [lng, lat]
+        }
+      };
     }
   },
   props: {
