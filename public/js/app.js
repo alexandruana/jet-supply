@@ -19893,8 +19893,17 @@ __webpack_require__.r(__webpack_exports__);
   name: "TripMap",
   data: function data() {
     return {
-      departureMarker: null,
-      arrivalMarker: null,
+      geojson: {
+        'type': 'FeatureCollection',
+        'features': []
+      },
+      linestring: {
+        'type': 'Feature',
+        'geometry': {
+          'type': 'LineString',
+          'coordinates': []
+        }
+      },
       map: null
     };
   },
@@ -19903,10 +19912,10 @@ __webpack_require__.r(__webpack_exports__);
   },
   watch: {
     departure: function departure(val) {
-      this.departureMarker.setLngLat([val.longitude, val.latitude]).addTo(this.map);
+      this.setPoint(val);
     },
     arrival: function arrival(val) {
-      this.arrivalMarker.setLngLat([val.longitude, val.latitude]).addTo(this.map);
+      this.setPoint(val);
     }
   },
   computed: {
@@ -19918,27 +19927,6 @@ __webpack_require__.r(__webpack_exports__);
           units: 'kilometers'
         });
         return dst;
-      }
-    },
-    getGreatCircle: function getGreatCircle() {
-      if (Object.keys(this.departure).length && Object.keys(this.arrival).length) {
-        var pt1 = (0,_turf_helpers__WEBPACK_IMPORTED_MODULE_1__.point)([this.departure.longitude, this.departure.latitude]);
-        var pt2 = (0,_turf_helpers__WEBPACK_IMPORTED_MODULE_1__.point)([this.arrival.longitude, this.arrival.latitude]); // Create routes source
-
-        this.map.addSource('routes', {
-          type: 'geojson',
-          data: (0,_turf_great_circle__WEBPACK_IMPORTED_MODULE_3__.default)(pt1, pt2)
-        }); // Create routes style (the lines themself)
-
-        this.map.addLayer({
-          id: 'routes',
-          source: 'routes',
-          type: 'line',
-          paint: {
-            'line-width': 1,
-            'line-color': '#00a9e2'
-          }
-        });
       }
     }
   },
@@ -19953,33 +19941,63 @@ __webpack_require__.r(__webpack_exports__);
         style: 'mapbox://styles/alexandruana/cksxeq0637zjy17tcvd4h919d',
         center: [22.253, 45.419],
         zoom: 4
-      }); // Set markers on input
-
-      this.arrivalMarker = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({});
-      this.departureMarker = new (mapbox_gl_dist_mapbox_gl_js__WEBPACK_IMPORTED_MODULE_0___default().Marker)({}); // Add greatCircleLines
+      }); // Add greatCircleLines
 
       this.map.on('load', function () {
-        console.log('Map loaded.');
+        console.log('Map loaded.'); // Create geoJSON source
 
-        if (Object.keys(_this.departure).length && Object.keys(_this.arrival).length) {
-          // Create routes source
-          _this.map.addSource('routes', {
-            type: 'geojson',
-            data: _this.getGreatCircle
-          }); // Create routes style (the lines themself)
+        _this.map.addSource('points', {
+          type: 'geojson',
+          data: _this.geojson
+        });
+
+        _this.map.addLayer({
+          id: 'points',
+          type: 'circle',
+          source: 'points',
+          paint: {
+            'circle-radius': 8,
+            'circle-color': '#00a9e2'
+          },
+          filter: ['in', '$type', 'Point']
+        }); // Create routes style (the lines themself)
 
 
-          _this.map.addLayer({
-            id: 'routes',
-            source: 'routes',
-            type: 'line',
-            paint: {
-              'line-width': 1,
-              'line-color': '#00a9e2'
-            }
-          });
-        }
+        _this.map.addLayer({
+          id: 'routes',
+          source: 'points',
+          type: 'line',
+          paint: {
+            'line-width': 2,
+            'line-color': '#00a9e2'
+          },
+          filter: ['in', '$type', 'LineString']
+        });
       });
+    },
+    coordinateFeature: function coordinateFeature(lng, lat) {
+      return {
+        type: 'Feature',
+        geometry: {
+          type: 'Point',
+          coordinates: [lng, lat]
+        }
+      };
+    },
+    setPoint: function setPoint(feature) {
+      var point = this.coordinateFeature(feature.longitude, feature.latitude);
+      this.geojson.features.push(point);
+      this.map.getSource('points').setData(this.geojson);
+    },
+    setGreatCircle: function setGreatCircle() {
+      if (this.geojson.features.length > 1) {
+        this.linestring.geometry.coordinates = this.geojson.features.map(function (point) {
+          return point.geometry.coordinates;
+        });
+      }
+
+      this.geojson.features.push(this.linestring);
+      this.map.getSource('points').setData(this.geojson);
     }
   },
   props: {
@@ -20990,7 +21008,11 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)();
 
 var render = /*#__PURE__*/_withId(function (_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2], 64
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    onClick: _cache[1] || (_cache[1] = function () {
+      return $options.setGreatCircle && $options.setGreatCircle.apply($options, arguments);
+    })
+  }, "Press me")], 64
   /* STABLE_FRAGMENT */
   );
 });

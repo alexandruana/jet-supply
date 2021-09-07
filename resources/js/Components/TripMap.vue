@@ -1,6 +1,7 @@
 <template>
     <div id="map"></div>
     <div id="distance" class="distance-container"></div>
+    <button @click="setGreatCircle">Press me</button>
 </template>
 
 <script>
@@ -13,8 +14,17 @@ export default {
     name: "TripMap",
     data() {
         return {
-            departureMarker: null,
-            arrivalMarker: null,
+            geojson: {
+                'type': 'FeatureCollection',
+                'features': []
+            },
+            linestring: {
+                'type': 'Feature',
+                'geometry': {
+                    'type': 'LineString',
+                    'coordinates': []
+                }
+            },
             map: null
         }
     },
@@ -23,12 +33,10 @@ export default {
     },
     watch: {
         departure: function(val) {
-            this.departureMarker.setLngLat([val.longitude, val.latitude])
-                .addTo(this.map);
+            this.setPoint(val)
         },
         arrival: function(val) {
-          this.arrivalMarker.setLngLat([val.longitude, val.latitude])
-              .addTo(this.map);
+            this.setPoint(val)
         }
     },
     computed: {
@@ -40,29 +48,6 @@ export default {
               return dst;
           }
       },
-      getGreatCircle: function() {
-          if(Object.keys(this.departure).length && Object.keys(this.arrival).length) {
-
-              let pt1 = point([this.departure.longitude, this.departure.latitude]);
-              let pt2 = point([this.arrival.longitude, this.arrival.latitude]);
-
-              // Create routes source
-              this.map.addSource('routes', {
-                  type: 'geojson',
-                  data: greatCircle(pt1, pt2)
-              });
-              // Create routes style (the lines themself)
-              this.map.addLayer({
-                  id: 'routes',
-                  source: 'routes',
-                  type: 'line',
-                  paint: {
-                      'line-width': 1,
-                      'line-color': '#00a9e2'
-                  }
-              });
-          }
-      }
     },
     methods: {
         // Initialize MapBox map
@@ -75,33 +60,61 @@ export default {
                 zoom: 4
             });
 
-             // Set markers on input
-            this.arrivalMarker = new mapboxgl.Marker({});
-            this.departureMarker = new mapboxgl.Marker({});
-
             // Add greatCircleLines
             this.map.on('load', () => {
                 console.log('Map loaded.')
 
-                if(Object.keys(this.departure).length && Object.keys(this.arrival).length) {
-                    // Create routes source
-                    this.map.addSource('routes', {
-                        type: 'geojson',
-                        data: this.getGreatCircle
-                    });
-                    // Create routes style (the lines themself)
-                    this.map.addLayer({
-                        id: 'routes',
-                        source: 'routes',
-                        type: 'line',
-                        paint: {
-                            'line-width': 1,
-                            'line-color': '#00a9e2'
-                        }
-                    });
-                }
+                // Create geoJSON source
+                this.map.addSource('points', {
+                    type: 'geojson',
+                    data: this.geojson
+                });
+                this.map.addLayer({
+                    id: 'points',
+                    type: 'circle',
+                    source: 'points',
+                    paint: {
+                        'circle-radius': 8,
+                        'circle-color': '#00a9e2'
+                    },
+                    filter: ['in', '$type', 'Point']
+                });
+                // Create routes style (the lines themself)
+                this.map.addLayer({
+                    id: 'routes',
+                    source: 'points',
+                    type: 'line',
+                    paint: {
+                        'line-width': 2,
+                        'line-color': '#00a9e2'
+                    },
+                    filter: ['in', '$type', 'LineString']
+                });
             })
         },
+        coordinateFeature: function (lng, lat) {
+            return {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [lng, lat]
+                },
+            };
+        },
+        setPoint: function(feature) {
+            const point = this.coordinateFeature(feature.longitude, feature.latitude)
+            this.geojson.features.push(point)
+            this.map.getSource('points').setData(this.geojson)
+        },
+        setGreatCircle: function() {
+            if(this.geojson.features.length > 1) {
+                this.linestring.geometry.coordinates = this.geojson.features.map(
+                    (point) => point.geometry.coordinates
+                );
+            }
+            this.geojson.features.push(this.linestring)
+            this.map.getSource('points').setData(this.geojson);
+        }
     },
     props: {
         departure: Object,
