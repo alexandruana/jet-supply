@@ -1,17 +1,17 @@
 <template>
-  <label class="block">
+  <label class="block relative">
     <span class="text-gray-700 font-bold">{{ label }}</span>
     <input
         type="text"
-        class="mt-1 block rounded-md border-0 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 bg-transparent"
+        class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
         autocomplete="off"
         :placeholder="placeholder"
         v-model.trim="keyword"
     >
-    <ul>
-      <li v-for="result in filteredResults" :key="result.id">
+    <ul v-if="filteredResults != null" class="mt-2 absolute shadow-md rounded-lg">
+      <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="setItem(result)">
         <NuxtLink to="/">
-          {{ result.name }}
+          {{ result.icao }}, {{ result.iata }} {{ result.name }}
         </NuxtLink>
       </li>
     </ul>
@@ -30,7 +30,7 @@ export default defineComponent({
     },
     computed: {
       filteredResults() {
-        if (!this.keyword) return null
+        if (this.keyword.length < 3) return null
   
         return this.items.filter(item => { 
           if (!item.icao) return false
@@ -40,6 +40,11 @@ export default defineComponent({
             .toLowerCase()
             .includes(this.keyword.toLowerCase())
         })
+      }
+    },
+    methods: {
+      setItem: function(item) {
+        console.log(item.name)
       }
     },
     props: {
@@ -52,3 +57,6 @@ export default defineComponent({
     }
 })
 </script>
+
+<style lang="scss">
+</style>
