@@ -9,9 +9,9 @@
         v-model.trim="keyword"
     >
     <ul>
-      <li v-for="result in results" :key="result.id">
+      <li v-for="result in filteredResults" :key="result.id">
         <NuxtLink to="/">
-          {{ result.icao }}, {{ result.iata }} / {{ result.name }}
+          {{ result.name }}
         </NuxtLink>
       </li>
     </ul>
@@ -30,16 +30,16 @@ export default defineComponent({
     },
     computed: {
       filteredResults() {
-        let tempItems = this.items
-        
-        if (this.keyword != '' && this.keyword) {
-          tempItems = tempItems.filter( (item) => {
-            return item.icao
+        if (!this.keyword) return null
+  
+        return this.items.filter(item => { 
+          if (!item.icao) return false
+
+          return item.icao
+            .toString()
             .toLowerCase()
             .includes(this.keyword.toLowerCase())
-          })
-        }
-        return tempItems
+        })
       }
     },
     props: {
