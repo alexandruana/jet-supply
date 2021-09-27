@@ -7,9 +7,10 @@
         autocomplete="off"
         :placeholder="placeholder"
         v-model.trim="keyword"
+        @click="resetAirport"
     >
     <ul v-if="filteredResults != null" class="mt-2 absolute shadow-md rounded-lg">
-      <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="setItem(result)">
+      <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="selectAirport(result)">
         <NuxtLink to="/">
           {{ result.icao }}, {{ result.iata }} {{ result.name }}
         </NuxtLink>
@@ -20,6 +21,7 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
+import { mapActions } from 'vuex'
 
 export default defineComponent({
     setup(props) {},
@@ -43,13 +45,25 @@ export default defineComponent({
       }
     },
     methods: {
-      setItem: function(item) {
-        console.log(item.name)
-      }
+      selectAirport: function(airport) {
+        this.addAirport({airport: airport, type: this.type})
+        this.keyword = `${airport.icao}, ${airport.iata} (${airport.city}) / ${airport.name}`
+      },
+      resetAirport: function() {
+        if (this.keyword != null) {
+          this.removeAirport(this.type)
+          this.keyword = ''
+        }
+      },
+      ...mapActions([
+        'addAirport',
+        'removeAirport'
+      ])
     },
     props: {
       label: String,
       placeholder: String,
+      type: String,
       items: {  
         type: Array,
         required: true

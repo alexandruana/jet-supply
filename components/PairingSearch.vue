@@ -1,7 +1,7 @@
 <template>
      <div class="grid grid-cols-2 gap-5 rounded-lg border-2 shadow-lg max-w-lg mx-auto py-8 px-5 my-10 bg-gray-50">
-        <SearchInput label="From" placeholder="Where from?" :items="getAirports"/>
-        <SearchInput label="To" placeholder="Where to?" :items="getAirports"/>
+        <SearchInput label="From" placeholder="Where from?" :items="getAirports" type="departure" />
+        <SearchInput label="To" placeholder="Where to?" :items="getAirports" type="arrival" />
     </div>
 </template>
 
@@ -22,7 +22,6 @@ export default defineComponent({
     },
     methods: {
         ...mapActions([
-            'debug',
             'loadAirports'
         ])
     }

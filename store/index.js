@@ -2,6 +2,11 @@ import axios from 'axios'
 
 export const state = () => ({
     airports: [],
+    pairing: {
+        departure: null,
+        arrival: null
+    },
+    loading: false
 })
 
 export const getters = {
@@ -11,13 +16,23 @@ export const getters = {
 }
 
 export const mutations = {
-    SET_AIRPORTS(state, airports) {
-        state.airports = airports
+    SET_AIRPORTS(state, payload) {
+        state.airports = payload
+    },
+    SET_LOADING(state, payload) {
+        state.loading = payload
+    },
+    SET_AIRPORT(state, { airport, type }) {
+        state.pairing[type] = airport
+    },
+    CLEAR_AIRPORT(state, type) {
+        state.pairing[type] = null
     }
 }
 
 export const actions = {
     loadAirports({ commit }) {
+        commit('SET_LOADING', true)
         axios.get('https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat')
             .then(response => {
                 // Get each row of data from the source
@@ -42,10 +57,14 @@ export const actions = {
                 });
 
                 commit('SET_AIRPORTS', airports)
+                commit('SET_LOADING', false)
             })
     },
-    debug() {
-        console.log('Airports loaded')
+    addAirport({ commit }, { airport, type }) {
+        commit('SET_AIRPORT', { airport, type })
+    },
+    removeAirport({ commit }, type) {
+        commit('CLEAR_AIRPORT', type)
     }
 }
 
