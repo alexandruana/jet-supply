@@ -31,6 +31,9 @@ export const mutations = {
 }
 
 export const actions = {
+    nuxtServerInit({ commit, dispatch }) {
+        dispatch('loadAirports')
+    },
     loadAirports({ commit }) {
         commit('SET_LOADING', true)
         axios.get('https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat')
@@ -55,10 +58,14 @@ export const actions = {
                         latitude: fields[7],
                     };
                 });
+                console.log('BLYAT')
 
                 commit('SET_AIRPORTS', airports)
                 commit('SET_LOADING', false)
             })
+            .catch(( error ) => {
+                console.log(error)
+            }) 
     },
     addAirport({ commit }, { airport, type }) {
         commit('SET_AIRPORT', { airport, type })

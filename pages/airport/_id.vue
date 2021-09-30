@@ -1,5 +1,8 @@
 <template>
-    <h1>{{ airport }}</h1>
+    <div class="rounded-lg border-2 shadow-lg max-w-lg mx-auto py-8 px-5 my-10 bg-gray-50">
+        <h1 class="text-center">Airport</h1>
+        <pre>{{ airport }}</pre>
+    </div>
 </template>
 
 <script>
@@ -14,7 +17,8 @@ export default defineComponent({
         }
     },
     created() {
-        const airport = this.getAirports.find((home) => home.icao == this.$route.params.id)
+        // this.$store.dispatch('loadAirports')
+        const airport = this.getAirports.find((airport) => airport.icao == this.$route.params.id)
         this.airport = airport
     },
     computed: {

@@ -64,10 +64,6 @@ export default defineComponent({
       label: String,
       placeholder: String,
       type: String,
-      items: {  
-        type: Array,
-        required: true
-      },
     }
 })
 </script>
