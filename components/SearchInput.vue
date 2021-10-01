@@ -1,22 +1,25 @@
 <template>
-  <label class="block relative">
-    <span class="text-gray-700 font-bold">{{ label }}</span>
-    <input
-        type="text"
-        class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
-        autocomplete="off"
-        :placeholder="placeholder"
-        v-model.trim="keyword"
-        @click="resetAirport"
-    >
+  <div class="search-input relative">
+    <label class="block">
+      <span class="text-gray-700 font-bold">{{ label }}</span>
+      <input
+          type="text"
+          class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
+          autocomplete="off"
+          :placeholder="placeholder"
+          v-model.trim="keyword"
+          @click="resetAirport"
+      >
+    </label>
     <ul v-if="filteredResults != null" class="mt-2 absolute shadow-md rounded-lg">
-      <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="selectAirport(result)">
-        <NuxtLink to="/" class="block">
-          {{ result.icao }}, {{ result.iata }} {{ result.name }}
-        </NuxtLink>
-      </li>
-    </ul>
-  </label>
+        <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="selectAirport(result)">
+          <NuxtLink to="/" class="block">
+            {{ result.icao }}, {{ result.iata }} {{ result.name }}
+          </NuxtLink>
+        </li>
+      </ul>
+      <NuxtLink :to="`/airport/LRAR`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
+    </div>
 </template>
 
 <script>

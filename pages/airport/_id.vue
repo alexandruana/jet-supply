@@ -1,7 +1,6 @@
 <template>
     <div class="rounded-lg border-2 shadow-lg max-w-lg mx-auto py-8 px-5 my-10 bg-gray-50">
-        <h1 class="text-center">Airport</h1>
-        <pre>{{ airport }}</pre>
+        <h1 class="text-center">{{ airport.name }}</h1>
     </div>
 </template>
 
@@ -11,6 +10,11 @@ import { mapGetters } from 'vuex'
 
 export default defineComponent({
     setup() {},
+    head() {
+        return {
+            title: this.airport.name
+        }
+    },
     data() {
         return {
             airport: {}
