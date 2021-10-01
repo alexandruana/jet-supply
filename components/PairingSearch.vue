@@ -7,7 +7,7 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
-import { mapGetters, mapActions } from 'vuex'
+import { mapGetters } from 'vuex'
 
 export default defineComponent({
     setup() {    
@@ -19,8 +19,3 @@ export default defineComponent({
     },
 })
 </script>
-
-
-<style lang="scss" scoped>
-
-</style>

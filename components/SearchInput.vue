@@ -11,7 +11,7 @@
     >
     <ul v-if="filteredResults != null" class="mt-2 absolute shadow-md rounded-lg">
       <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="selectAirport(result)">
-        <NuxtLink to="/">
+        <NuxtLink to="/" class="block">
           {{ result.icao }}, {{ result.iata }} {{ result.name }}
         </NuxtLink>
       </li>
@@ -21,7 +21,7 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api'
-import { mapActions } from 'vuex'
+import { mapGetters, mapActions } from 'vuex'
 
 export default defineComponent({
     setup(props) {},
@@ -31,10 +31,13 @@ export default defineComponent({
         }
     },
     computed: {
+      ...mapGetters({
+            getAirports: 'getAirports'
+      }),
       filteredResults() {
         if (this.keyword.length < 3) return null
   
-        return this.items.filter(item => { 
+        return this.getAirports.filter(item => { 
           if (!item.icao) return false
 
           return item.icao

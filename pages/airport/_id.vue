@@ -17,7 +17,6 @@ export default defineComponent({
         }
     },
     created() {
-        // this.$store.dispatch('loadAirports')
         const airport = this.getAirports.find((airport) => airport.icao == this.$route.params.id)
         this.airport = airport
     },
