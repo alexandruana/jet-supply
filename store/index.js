@@ -31,8 +31,33 @@ export const mutations = {
 }
 
 export const actions = {
-    nuxtServerInit({ commit, dispatch }) {
-        dispatch('loadAirports')
+    async nuxtServerInit({ commit }) {
+        await axios.get('https://raw.githubusercontent.com/jpatokal/openflights/master/data/airports.dat')
+            .then(response => {
+                // Get each row of data from the source
+                const rows = response.data.split('\n');
+
+                // Convert data from row to object
+                const airports = rows.map(row => {
+                    // Parse the comma-separated fields from the line by using
+                    const fields = row.split(',')
+                        .map(x => x.replace(/(^"|"$)/g, ''));
+
+                    return {
+                        id: fields[0],
+                        name: fields[1],
+                        city: fields[2],
+                        country: fields[3],
+                        iata: fields[4],
+                        icao: fields[5],
+                        longitude: fields[6],
+                        latitude: fields[7],
+                    };
+                });
+                
+                commit('SET_AIRPORTS', airports)
+            })
+        console.log('nuxtServerInit called.');
     },
     loadAirports({ commit }) {
         commit('SET_LOADING', true)
@@ -58,8 +83,7 @@ export const actions = {
                         latitude: fields[7],
                     };
                 });
-                console.log('BLYAT')
-
+                
                 commit('SET_AIRPORTS', airports)
                 commit('SET_LOADING', false)
             })
@@ -70,7 +94,7 @@ export const actions = {
     addAirport({ commit }, { airport, type }) {
         commit('SET_AIRPORT', { airport, type })
     },
-    removeAirport({ commit }, type) {
+      removeAirport({ commit }, type) {
         commit('CLEAR_AIRPORT', type)
     }
 }
