@@ -9,7 +9,7 @@ import { defineComponent } from '@vue/composition-api'
 import { mapGetters } from 'vuex'
 
 export default defineComponent({
-    setup() {},
+    layout: 'airport',
     head() {
         return {
             title: this.airport.name
