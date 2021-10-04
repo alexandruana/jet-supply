@@ -3,11 +3,11 @@
     <label class="block">
       <span class="text-gray-700 font-bold">{{ label }}</span>
       <input
-          type="text"
+          type="search"
           class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
           autocomplete="off"
           :placeholder="placeholder"
-          v-model.trim="keyword"
+          v-model.trim="searchQuery"
           @click="resetAirport"
       >
     </label>
@@ -48,6 +48,14 @@ export default defineComponent({
             .toLowerCase()
             .includes(this.keyword.toLowerCase())
         })
+      },
+      searchQuery: {
+        get() {
+          return this.$store.state.pairing[this.type]
+        },
+        set(value) {
+          this.$store.commit('SET_AIRPORT', {airport: value, type: this.type})
+        }
       }
     },
     methods: {
