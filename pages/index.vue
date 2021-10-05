@@ -4,6 +4,7 @@
 
 <script>
 export default {
+  layout: 'default',
   head() {
     return {
       title: 'Homepage',

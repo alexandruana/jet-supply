@@ -12,7 +12,7 @@ export const state = () => ({
 export const getters = {
     getAirports: (state) => {
       return state.airports
-    }
+    },
 }
 
 export const mutations = {
