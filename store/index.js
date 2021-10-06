@@ -2,6 +2,10 @@ import axios from 'axios'
 
 export const state = () => ({
     airports: [],
+    filteredAirports: [],
+    filter: {
+        keyword: ''
+    },
     pairing: {
         departure: null,
         arrival: null
@@ -22,7 +26,7 @@ export const mutations = {
     SET_LOADING(state, payload) {
         state.loading = payload
     },
-    SET_AIRPORT(state, { airport, type }) {
+    UPDATE_AIRPORT(state, { airport, type }) {
         state.pairing[type] = airport
     },
     CLEAR_AIRPORT(state, type) {
@@ -67,9 +71,9 @@ export const actions = {
             }) 
     },
     addAirport({ commit }, { airport, type }) {
-        commit('SET_AIRPORT', { airport, type })
+        commit('UPDATE_AIRPORT', { airport, type })
     },
-      removeAirport({ commit }, type) {
+    removeAirport({ commit }, type) {
         commit('CLEAR_AIRPORT', type)
     }
 }
