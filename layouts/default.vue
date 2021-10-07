@@ -1,7 +1,8 @@
 <template>
-    <div>
+    <div class="flex flex-col h-screen justify-between">
         <navbar/>
         <nuxt/>
+        <footeer/>
     </div>
 </template>
 
