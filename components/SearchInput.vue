@@ -6,8 +6,18 @@
           type="search"
           class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
           autocomplete="off"
+          v-if="!isAirportSet"
           :placeholder="placeholder"
           v-model.trim="keyword"
+          @click="resetAirport"
+      >
+      <input
+          type="search"
+          class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
+          autocomplete="off"
+          v-else
+          :placeholder="placeholder"
+          :value="`${this.$store.state.pairing[this.type].city}, ${this.$store.state.pairing[this.type].iata}`"
           @click="resetAirport"
       >
     </label>
@@ -18,7 +28,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink v-if="isAirportSet === true" :to="`/airport/${this.$store.state.pairing[this.type].icao}`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
+      <NuxtLink v-if="isAirportSet" :to="`/airport/${this.$store.state.pairing[this.type].icao}`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
     </div>
 </template>
 
@@ -50,11 +60,7 @@ export default defineComponent({
         })
       },
       isAirportSet() {
-        if(this.$store.state.pairing[this.type]) {
-          return true;
-        } else {
-          return false;
-        }
+        return this.$store.state.pairing[this.type]
       }
     },
     methods: {
