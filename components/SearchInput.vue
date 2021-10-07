@@ -7,7 +7,7 @@
           class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
           autocomplete="off"
           :placeholder="placeholder"
-          v-model.trim="searchQuery"
+          v-model.trim="keyword"
           @click="resetAirport"
       >
     </label>
@@ -18,7 +18,7 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink :to="`/airport/LRAR`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
+      <NuxtLink v-if="isAirportSet === true" :to="`/airport/${this.$store.state.pairing[this.type].icao}`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
     </div>
 </template>
 
@@ -49,24 +49,25 @@ export default defineComponent({
             .includes(this.keyword.toLowerCase())
         })
       },
-      searchQuery: {
-        get() {
-          return this.$store.state.pairing[this.type]
-        },
-        set(value) {
-          this.$store.commit('SET_AIRPORT', {airport: value, type: this.type})
+      isAirportSet() {
+        if(this.$store.state.pairing[this.type]) {
+          return true;
+        } else {
+          return false;
         }
       }
     },
     methods: {
       selectAirport: function(airport) {
         this.addAirport({airport: airport, type: this.type})
-        this.keyword = `${airport.icao}, ${airport.iata} (${airport.city}) / ${airport.name}`
+        this.keyword = `${this.$store.state.pairing[this.type].name} (${this.$store.state.pairing[this.type].iata })`
+        localStorage.setItem(this.type, airport.city + " " + airport.icao);
       },
       resetAirport: function() {
         if (this.keyword != null) {
           this.removeAirport(this.type)
           this.keyword = ''
+          localStorage.removeItem(this.type)
         }
       },
       ...mapActions([
