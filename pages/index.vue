@@ -1,5 +1,8 @@
 <template>
-  <PairingSearch/>
+  <div>
+    <PairingSearch/>
+    <MapBox/>
+  </div>
 </template>
 
 <script>
