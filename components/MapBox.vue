@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto shadow-lg rounded-lg h-96">
-        <div id="map"></div>
+        <div id="map" class="rounded-lg"></div>
     </div>
 </template>
 
@@ -27,3 +27,10 @@ export default defineComponent({
     
 })
 </script>
+
+<style>
+    #map {
+        width: 100%;
+        height: 100%;
+    } 
+</style>
