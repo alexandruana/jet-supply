@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto shadow-lg rounded-lg h-96">
+    <div class="container mx-auto shadow-lg rounded-lg max-w-4xl h-96">
         <div id="map" class="rounded-lg"></div>
     </div>
 </template>
@@ -9,6 +9,11 @@ import { defineComponent } from '@vue/composition-api'
 import mapboxgl from 'mapbox-gl';
 
 export default defineComponent({
+    data () {
+        return {
+            map: null,
+        }
+    },
     mounted() {
         this.initMapBox();
     },
