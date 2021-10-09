@@ -5,13 +5,30 @@
 </template>
 
 <script>
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api';
 import mapboxgl from 'mapbox-gl';
+import { point } from '@turf/helpers';
 
 export default defineComponent({
     data () {
         return {
+            geojson: {
+                'type': 'FeatureCollection',
+                'features': []
+            },
             map: null,
+        }
+    },
+    watch: {
+        departure: function(val) {
+            if(val != null) {
+                this.setPoint(val) 
+            }
+        },
+        arrival: function(val) {
+            if(val != null) {
+                this.setPoint(val)   
+            }
         }
     },
     mounted() {
@@ -27,8 +44,45 @@ export default defineComponent({
                 center: [22.253, 45.419],
                 zoom: 4
             });
+
+            this.map.on('load', () => {
+                this.map.addSource('points', {
+                    type: 'geojson',
+                    data: this.geojson
+                });
+                 this.map.addLayer({
+                    id: 'points',
+                    type: 'circle',
+                    source: 'points',
+                    paint: {
+                        'circle-radius': 8,
+                        'circle-color': '#00a9e2'
+                    },
+                    filter: ['in', '$type', 'Point']
+                });
+
+
+            });
         },
-    }
+         coordinateFeature: function (lng, lat) {
+            return {
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    coordinates: [lng, lat]
+                },
+            };
+        },
+        setPoint: function(feature) {
+            const pt = point([feature.latitude, feature.longitude])
+            this.geojson.features.push(pt)
+            this.map.getSource('points').setData(this.geojson)
+        },
+    },
+    props: [
+        'departure',
+        'arrival'
+    ]
     
 })
 </script>

@@ -11,6 +11,8 @@
   "dependencies": {
     "@algolia/autocomplete-js": "^1.4.0",
     "@algolia/autocomplete-theme-classic": "^1.4.0",
+    "@turf/helpers": "^6.5.0",
+    "@turf/turf": "^6.5.0",
     "@vue/composition-api": "^1.1.5",
     "algoliasearch": "^4.10.5",
     "axios": "^0.21.4",
@@ -20,6 +22,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.2.0",
+    "@types/mapbox-gl": "^2.4.2",
     "postcss": "^8.3.5"
   }
 }

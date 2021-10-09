@@ -1,11 +1,12 @@
 <template>
   <div>
     <PairingSearch/>
-    <MapBox/>
+    <MapBox :departure="pairing.departure" :arrival="pairing.arrival"/>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 export default {
   layout: 'default',
   head() {
@@ -17,6 +18,11 @@ export default {
         hid: 'description'
       }]
     }
+  },
+  computed: {
+    ...mapState([
+        'pairing'
+    ])
   },
 }
 </script>
