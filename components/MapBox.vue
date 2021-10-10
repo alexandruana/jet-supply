@@ -22,12 +22,14 @@ export default defineComponent({
     watch: {
         departure: function(val) {
             if(val != null) {
-                this.setPoint(val) 
+                this.setPoint(val);
+                this.removePoint(val);
             }
         },
         arrival: function(val) {
             if(val != null) {
-                this.setPoint(val)   
+                this.setPoint(val);
+                this.removePoint(val);
             }
         }
     },
@@ -64,20 +66,18 @@ export default defineComponent({
 
             });
         },
-         coordinateFeature: function (lng, lat) {
-            return {
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    coordinates: [lng, lat]
-                },
-            };
-        },
         setPoint: function(feature) {
-            const pt = point([feature.latitude, feature.longitude])
+            const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
             this.geojson.features.push(pt)
             this.map.getSource('points').setData(this.geojson)
         },
+        removePoint: function(feature) {
+            const features = this.geojson.features;
+            const pt = features.filter( (item) => {
+                return item.properties.id == feature.icao
+            });
+            console.log(pt)
+        }
     },
     props: [
         'departure',
