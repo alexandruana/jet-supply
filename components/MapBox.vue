@@ -76,6 +76,7 @@ export default defineComponent({
             const pt = features.filter( (item) => {
                 return item.properties.id == feature.icao
             });
+            console.log(features)
             console.log(pt)
         }
     },
