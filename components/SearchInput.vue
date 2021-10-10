@@ -6,18 +6,8 @@
           type="search"
           class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
           autocomplete="off"
-          v-if="!isAirportSet"
           :placeholder="placeholder"
           v-model.trim="keyword"
-          @click="resetAirport"
-      >
-      <input
-          type="search"
-          class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-blue-500"
-          autocomplete="off"
-          v-else
-          :placeholder="placeholder"
-          :value="`${this.$store.state.pairing[this.type].city}, ${this.$store.state.pairing[this.type].iata}`"
           @click="resetAirport"
       >
     </label>
@@ -63,17 +53,27 @@ export default defineComponent({
         return this.$store.state.pairing[this.type]
       }
     },
+    mounted() {
+      if(JSON.parse(localStorage.getItem(this.type))) {
+        try {
+          this.keyword = JSON.parse(localStorage.getItem(this.type)).city + ", " + JSON.parse(localStorage.getItem(this.type)).iata;
+        } catch(e) {
+          localStorage.removeItem(this.type)
+        }
+      }
+    },
     methods: {
       selectAirport: function(airport) {
         this.addAirport({airport: airport, type: this.type})
-        this.keyword = `${this.$store.state.pairing[this.type].name} (${this.$store.state.pairing[this.type].iata })`
-        localStorage.setItem(this.type, airport.city + " " + airport.icao);
+        localStorage.setItem(this.type, JSON.stringify(airport))
+        const ap = JSON.parse(localStorage.getItem(this.type))
+        this.keyword = `${ap.city}, ${ap.iata }`
       },
       resetAirport: function() {
         if (this.keyword != null) {
           this.removeAirport(this.type)
-          this.keyword = ''
           localStorage.removeItem(this.type)
+          this.keyword = ''
         }
       },
       ...mapActions([
