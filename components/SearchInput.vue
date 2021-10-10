@@ -1,5 +1,5 @@
 <template>
-  <div class="search-input relative">
+  <div class="search-input relative z-50">
     <label class="block">
       <span class="text-gray-700 font-bold">{{ label }}</span>
       <input
@@ -21,8 +21,8 @@
           @click="resetAirport"
       >
     </label>
-    <ul v-if="filteredResults != null" class="mt-2 absolute shadow-md rounded-lg">
-        <li v-for="result in filteredResults" :key="result.id" class="p-2 bg-white hover:bg-gray-100" @click="selectAirport(result)">
+    <ul v-if="filteredResults != null" class="mt-2 absolute bg-white shadow-md rounded-b w-full">
+        <li v-for="result in filteredResults" :key="result.id" class="p-2 hover:bg-gray-100" @click="selectAirport(result)">
           <NuxtLink to="/" class="block">
             {{ result.icao }}, {{ result.iata }} {{ result.name }}
           </NuxtLink>
