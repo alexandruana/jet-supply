@@ -35,6 +35,15 @@ export default defineComponent({
     },
     mounted() {
         this.initMapBox();
+        if(JSON.parse(localStorage.getItem(this.type))) {
+            try {
+                console.log('localStorage exists.')
+                // this.keyword = JSON.parse(localStorage.getItem(this.type)).city + ", " + JSON.parse(localStorage.getItem(this.type)).iata;
+            } catch(e) {
+                console.log('localStorage missing')
+                // localStorage.removeItem(this.type)
+            }
+        }
     },
     methods: {
         // Initialize MapBox map

@@ -18,7 +18,6 @@
           </NuxtLink>
         </li>
       </ul>
-      <NuxtLink v-if="isAirportSet" :to="`/airport/${this.$store.state.pairing[this.type].icao}`" class="text-gray-300 mt-2 text-xs text-right">Details</NuxtLink>
     </div>
 </template>
 
@@ -49,9 +48,6 @@ export default defineComponent({
             .includes(this.keyword.toLowerCase())
         })
       },
-      isAirportSet() {
-        return this.$store.state.pairing[this.type]
-      }
     },
     mounted() {
       if(JSON.parse(localStorage.getItem(this.type))) {
