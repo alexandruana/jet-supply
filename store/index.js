@@ -17,6 +17,9 @@ export const getters = {
     getAirports: (state) => {
       return state.airports
     },
+    getPairing: (state) => {
+        return state.pairing
+    }
 }
 
 export const mutations = {

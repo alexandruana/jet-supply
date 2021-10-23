@@ -6,8 +6,9 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import mapboxgl from 'mapbox-gl';
+import { mapGetters } from 'vuex'
 import { point } from '@turf/helpers';
+import mapboxgl from 'mapbox-gl';
 
 export default defineComponent({
     data () {
@@ -19,31 +20,21 @@ export default defineComponent({
             map: null,
         }
     },
+    computed: {
+        ...mapGetters({
+            getPairing: 'getPairing'
+        })
+    },
     watch: {
         departure: function(val) {
-            if(val != null) {
-                this.setPoint(val);
-                this.removePoint(val);
-            }
+            this.updateMap();
         },
         arrival: function(val) {
-            if(val != null) {
-                this.setPoint(val);
-                this.removePoint(val);
-            }
+            this.updateMap();
         }
     },
     mounted() {
         this.initMapBox();
-        if(JSON.parse(localStorage.getItem(this.type))) {
-            try {
-                console.log('localStorage exists.')
-                // this.keyword = JSON.parse(localStorage.getItem(this.type)).city + ", " + JSON.parse(localStorage.getItem(this.type)).iata;
-            } catch(e) {
-                console.log('localStorage missing')
-                // localStorage.removeItem(this.type)
-            }
-        }
     },
     methods: {
         // Initialize MapBox map
@@ -74,6 +65,9 @@ export default defineComponent({
 
 
             });
+        },
+        updateMap: function() {
+            console.log('Map updated.')
         },
         setPoint: function(feature) {
             const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
