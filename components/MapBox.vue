@@ -6,7 +6,6 @@
 
 <script>
 import { defineComponent } from '@vue/composition-api';
-import { mapGetters } from 'vuex'
 import { point } from '@turf/helpers';
 import mapboxgl from 'mapbox-gl';
 
@@ -20,17 +19,20 @@ export default defineComponent({
             map: null,
         }
     },
-    computed: {
-        ...mapGetters({
-            getPairing: 'getPairing'
-        })
-    },
     watch: {
         departure: function(val) {
-            this.updateMap();
+            if(val != null) {
+                this.setPoint(val)
+            } else {
+                this.removePoint(val)
+            }
         },
         arrival: function(val) {
-            this.updateMap();
+            if(val != null) {
+                this.setPoint(val)
+            } else {
+                this.removePoint(val)
+            }
         }
     },
     mounted() {
@@ -66,9 +68,6 @@ export default defineComponent({
 
             });
         },
-        updateMap: function() {
-            console.log('Map updated.')
-        },
         setPoint: function(feature) {
             const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
             this.geojson.features.push(pt)
@@ -78,9 +77,7 @@ export default defineComponent({
             const features = this.geojson.features;
             const pt = features.filter( (item) => {
                 return item.properties.id == feature.icao
-            });
-            console.log(features)
-            console.log(pt)
+            })
         }
     },
     props: [
