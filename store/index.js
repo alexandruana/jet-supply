@@ -2,7 +2,6 @@ import axios from 'axios'
 
 export const state = () => ({
     airports: [],
-    filteredAirports: [],
     filter: {
         keyword: ''
     },

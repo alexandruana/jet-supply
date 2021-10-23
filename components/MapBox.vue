@@ -7,6 +7,7 @@
 <script>
 import { defineComponent } from '@vue/composition-api';
 import { point } from '@turf/helpers';
+import { mapGetters } from 'vuex';
 import mapboxgl from 'mapbox-gl';
 
 export default defineComponent({
@@ -19,20 +20,17 @@ export default defineComponent({
             map: null,
         }
     },
+    computed: {
+        ...mapGetters([
+            'getPairing'
+        ])
+    },
     watch: {
         departure: function(val) {
-            if(val != null) {
-                this.setPoint(val)
-            } else {
-                this.removePoint(val)
-            }
+            this.updateMap(val)
         },
         arrival: function(val) {
-            if(val != null) {
-                this.setPoint(val)
-            } else {
-                this.removePoint(val)
-            }
+            this.updateMap(val)
         }
     },
     mounted() {
@@ -54,8 +52,8 @@ export default defineComponent({
                     type: 'geojson',
                     data: this.geojson
                 });
-                 this.map.addLayer({
-                    id: 'points',
+                this.map.addLayer({
+                    id: 'measure-points',
                     type: 'circle',
                     source: 'points',
                     paint: {
@@ -65,19 +63,25 @@ export default defineComponent({
                     filter: ['in', '$type', 'Point']
                 });
 
-
             });
-        },
-        setPoint: function(feature) {
-            const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
-            this.geojson.features.push(pt)
-            this.map.getSource('points').setData(this.geojson)
         },
         removePoint: function(feature) {
             const features = this.geojson.features;
             const pt = features.filter( (item) => {
                 return item.properties.id == feature.icao
             })
+        },
+        updateMap(feature) {
+            if(feature != null) {
+                const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
+                this.geojson.features.push(pt)
+                this.map.getSource('points').setData(this.geojson)
+            } else {
+                // Code to remove marker
+                this.geojson.features.pop()
+                this.map.getSource('points').setData(this.geojson)
+            }
+
         }
     },
     props: [
