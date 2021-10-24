@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="relative">
     <PairingSearch/>
     <MapBox :departure="pairing.departure" :arrival="pairing.arrival"/>
   </div>

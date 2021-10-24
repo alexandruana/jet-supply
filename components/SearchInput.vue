@@ -1,7 +1,6 @@
 <template>
   <div class="search-input relative z-50">
     <label class="block">
-      <span class="text-gray-700 font-bold">{{ label }}</span>
       <input
           type="search"
           class="mt-1 p-2 block min-w-full border-0 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 bg-transparent border-b-2 border-jet-blue-light"

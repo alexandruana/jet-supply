@@ -1,7 +1,8 @@
 <template>
-     <div class="grid grid-cols-2 gap-5 rounded-lg border-2 shadow-lg max-w-2xl mx-auto py-8 px-5 my-10 bg-gray-50">
-        <SearchInput label="From" placeholder="Where from?" type="departure" />
-        <SearchInput label="To" placeholder="Where to?" type="arrival" />
+     <div class="grid grid-cols-3 gap-5 rounded-lg border-2 max-w-2xl mx-auto py-8 px-5 my-10 bg-gray-50">
+        <SearchInput icon="aircraft-depart" placeholder="Departure" type="departure" />
+        <SearchInput icon="aircraft-land" placeholder="Arrival" type="arrival" />
+        <DateInput />
     </div>
 </template>
 
