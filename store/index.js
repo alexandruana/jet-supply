@@ -2,9 +2,6 @@ import axios from 'axios'
 
 export const state = () => ({
     airports: [],
-    filter: {
-        keyword: ''
-    },
     pairing: {
         departure: null,
         arrival: null

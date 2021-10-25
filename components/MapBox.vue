@@ -65,12 +65,6 @@ export default defineComponent({
 
             });
         },
-        removePoint: function(feature) {
-            const features = this.geojson.features;
-            const pt = features.filter( (item) => {
-                return item.properties.id == feature.icao
-            })
-        },
         updateMap(feature) {
             if(feature != null) {
                 const pt = point([feature.latitude, feature.longitude], {id: feature.icao})
