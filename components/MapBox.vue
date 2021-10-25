@@ -72,8 +72,6 @@ export default defineComponent({
                 this.map.getSource('points').setData(this.geojson)
             } else {
                 // Code to remove marker
-                this.geojson.features.pop()
-                this.map.getSource('points').setData(this.geojson)
             }
 
         }
