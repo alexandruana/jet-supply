@@ -12,6 +12,7 @@
     "@algolia/autocomplete-js": "^1.4.0",
     "@algolia/autocomplete-theme-classic": "^1.4.0",
     "@mathieustan/vue-datepicker": "^0.2.11",
+    "@turf/great-circle": "^6.5.0",
     "@turf/helpers": "^6.5.0",
     "@turf/turf": "^6.5.0",
     "@vue/composition-api": "^1.1.5",

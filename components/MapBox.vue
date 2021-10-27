@@ -7,6 +7,7 @@
 <script>
 import { defineComponent } from "@vue/composition-api";
 import { point } from "@turf/helpers";
+import { greatCircle } from "@turf/great-circle";
 import { mapGetters } from "vuex";
 import mapboxgl from "mapbox-gl";
 
@@ -17,6 +18,13 @@ export default defineComponent({
         type: "FeatureCollection",
         features: [],
       },
+      linestring: {
+        'type': 'Feature',
+        'geometry': {
+            'type': 'LineString',
+            'coordinates': []
+        }
+    },
       map: null,
     };
   },
@@ -27,6 +35,7 @@ export default defineComponent({
     departure: function (val, oldVal) {
       if (val) {
         this.addPoint(val);
+        this.getRoute();
       } else if (oldVal) {
         this.removePoint(oldVal);
       }
@@ -34,6 +43,7 @@ export default defineComponent({
     arrival: function (val, oldVal) {
       if (val) {
         this.addPoint(val);
+        this.getRoute();
       } else if (oldVal) {
         this.removePoint(oldVal);
       }
@@ -69,6 +79,20 @@ export default defineComponent({
           },
           filter: ["in", "$type", "Point"],
         });
+        this.map.addLayer({
+            id: 'measure-lines',
+            type: 'line',
+            source: 'points',
+            layout: {
+                'line-cap': 'round',
+                'line-join': 'round'
+            },
+            paint: {
+                'line-color': '#000',
+                'line-width': 2.5
+            },
+            filter: ['in', '$type', 'LineString']
+        });
       });
     },
     addPoint(feature) {
@@ -85,6 +109,13 @@ export default defineComponent({
       this.geojson.features.splice(index, 1);
       this.map.getSource("points").setData(this.geojson);
     },
+    getRoute(feature) {
+        const features = this.map.queryRenderedFeatures({
+            layers: ['measure-points']
+        });
+
+        console.log(features)
+    }
   },
   props: ["departure", "arrival"],
 });
