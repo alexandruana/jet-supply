@@ -7,7 +7,7 @@
 <script>
 import { defineComponent } from "@vue/composition-api";
 import { point } from "@turf/helpers";
-import { greatCircle } from "@turf/great-circle";
+import { greatCircle } from "@turf/turf";
 import { mapGetters } from "vuex";
 import mapboxgl from "mapbox-gl";
 
@@ -65,14 +65,14 @@ export default defineComponent({
       });
 
       this.map.on("load", () => {
-        this.map.addSource("points", {
+        this.map.addSource("geojson", {
           type: "geojson",
           data: this.geojson,
         });
         this.map.addLayer({
           id: "measure-points",
           type: "circle",
-          source: "points",
+          source: "geojson",
           paint: {
             "circle-radius": 8,
             "circle-color": "#00a9e2",
@@ -82,13 +82,13 @@ export default defineComponent({
         this.map.addLayer({
             id: 'measure-lines',
             type: 'line',
-            source: 'points',
+            source: 'geojson',
             layout: {
                 'line-cap': 'round',
                 'line-join': 'round'
             },
             paint: {
-                'line-color': '#000',
+                'line-color': '#00a9e2',
                 'line-width': 2.5
             },
             filter: ['in', '$type', 'LineString']
@@ -100,21 +100,27 @@ export default defineComponent({
         id: feature.icao,
       });
       this.geojson.features.push(pt);
-      this.map.getSource("points").setData(this.geojson);
+      this.map.getSource("geojson").setData(this.geojson);
     },
     removePoint(feature) {
       let index = this.geojson.features.findIndex(
         (el) => el.properties.id === feature.icao
       );
       this.geojson.features.splice(index, 1);
-      this.map.getSource("points").setData(this.geojson);
+      this.map.getSource("geojson").setData(this.geojson);
     },
-    getRoute(feature) {
-        const features = this.map.queryRenderedFeatures({
-            layers: ['measure-points']
-        });
-
-        console.log(features)
+    getRoute() {
+        if(this.geojson.features.length > 1) {
+            this.linestring.geometry.coordinates = this.geojson.features.map(
+                (point) => point.geometry.coordinates
+            );
+            this.geojson.features.push(this.linestring);
+            this.map.getSource("geojson").setData(this.geojson);
+            
+            
+            console.log(this.linestring);
+            console.log("Route set.");
+        }
     }
   },
   props: ["departure", "arrival"],
