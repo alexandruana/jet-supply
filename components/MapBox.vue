@@ -57,19 +57,21 @@ export default defineComponent({
 
         this.map.on("load", () => {
             this.map.addSource("geojson", {
-            type: "geojson",
-            data: this.geojson,
+                type: "geojson",
+                data: this.geojson,
             });
+
             this.map.addLayer({
-            id: "measure-points",
-            type: "circle",
-            source: "geojson",
-            paint: {
-                "circle-radius": 8,
-                "circle-color": "#00a9e2",
-            },
-            filter: ["in", "$type", "Point"],
+                id: "measure-points",
+                type: "circle",
+                source: "geojson",
+                paint: {
+                    "circle-radius": 8,
+                    "circle-color": "#00a9e2",
+                },
+                filter: ["in", "$type", "Point"],
             });
+
             this.map.addLayer({
                 id: 'measure-lines',
                 type: 'line',
@@ -84,31 +86,38 @@ export default defineComponent({
                 },
                 filter: ['in', '$type', 'LineString']
             });
-        });
-        this.map.on('sourcedataloading', (e) => {
-            if(e.isSourceLoaded && e.source.data.features.length > 1) {
-                const features = e.source.data.features;
-                const linestring = features.map(
-                    (point) => point.geometry.coordinates
-                );
 
-                const pt1 = linestring[0];
-                const pt2 = linestring[1];
+            this.map.on('sourcedataloading', (e) => {
+                const features = this.map.querySourceFeatures('geojson', {
+                    sourceLayer: 'measure-points'
+                });
+                console.log(features)
+                
+                if(e.isSourceLoaded && e.source.data.features.length == 2) {
+                    const features = e.source.data.features;
+                    const linestring = features.map(
+                        (point) => point.geometry.coordinates
+                    );
+                    this.geojson.features.push(linestring);
+                    this.map.getSource("geojson").setData(this.geojson);
+                /*  const features = e.source.data.features;
+                    const linestring = features.map(
+                        (point) => point.geometry.coordinates
+                    );
 
-                const arc = greatCircle(pt1, pt2);
+                    const pt1 = linestring[0];
+                    const pt2 = linestring[1];
 
-                this.geojson.features.push(arc);
+                    const arc = greatCircle(pt1, pt2);
 
-                let index = features.findIndex(
-                    (el) => el.geometry.type === "LineString"
-                );
-            } else if (e.isSourceLoaded && e.source.data.features.length < 2) {
-                /* let index = features.findIndex(
-                    (el) => el.geometry.type === "LineString"
-                );
-                features.splice(index, 1); */
-                console.log('Remove arc.');
-            }
+                    this.geojson.features.push(arc);
+
+                    let index = features.findIndex(
+                        (el) => el.geometry.type === "LineString"
+                    ); */
+                }
+            })
+
         });
     },
     addPoint(feature) {
