@@ -23,11 +23,17 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     'mapbox-gl/dist/mapbox-gl.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
+
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/]
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     { src: '~/plugins/datepicker.js', ssr: false },
+    { src: '~/plugins/fontawesome.js', ssr: false }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

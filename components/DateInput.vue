@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b-2 flex flex-col border-jet-blue-light">
+  <div class="flex flex-col">
     <client-only>
       <datepicker v-model="date" color="#00A9E2"> </datepicker>
     </client-only>

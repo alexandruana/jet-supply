@@ -1,15 +1,23 @@
 <template>
   <div
-    class="grid grid-flow-col auto-cols-max gap-5 py-8 px-5 mt-5 bg-gray-50 rounded-lg"
+    class="grid grid-flow-col auto-cols-max py-8 px-5 mt-5 divide-x divide-gray-500 bg-gray-50 rounded-lg"
   >
-    <SearchInput
-      icon="aircraft-depart"
-      placeholder="Departure"
-      type="departure"
-    />
-    <SearchInput icon="aircraft-land" placeholder="Arrival" type="arrival" />
-    <CounterInput placeholder="0" />
-    <DateInput />
+    <div class="px-6">
+      <SearchInput
+        icon="aircraft-depart"
+        placeholder="Departure"
+        type="departure"
+      />
+    </div>
+    <div class="px-6">
+      <SearchInput icon="aircraft-land" placeholder="Arrival" type="arrival" />
+    </div>
+    <div class="px-6">
+      <CounterInput placeholder="0" />
+    </div>
+    <div class="px-6">
+      <DateInput />
+    </div>
   </div>
 </template>
 
