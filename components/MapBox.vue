@@ -1,7 +1,5 @@
 <template>
-  <div class="container mx-auto shadow-lg rounded-lg max-w-4xl h-96">
-    <div id="map" class="rounded-lg"></div>
-  </div>
+  <div id="map" class="rounded-lg"></div>
 </template>
 
 <script>

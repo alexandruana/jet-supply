@@ -1,13 +1,14 @@
 <template>
-    <div class="counter-input h-10 w-32">
-            <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
-                <button data-action="decrement" class="bg-jet-blue-light text-white hover:text-white hover:bg-jet-blue h-full w-20 rounded-l cursor-pointer outline-none transition-all" @click="decrement">
-                    <span class="m-auto text-2xl font-thin">−</span>
-                </button>
-                <input type="number" min="0" :value="this.pax" v-bind="this.pax" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number"></input>
-                <button data-action="increment" class="bg-jet-blue-light text-white hover:bg-jet-blue h-full w-20 rounded-r cursor-pointer transition-all" @click="increment">
-                    <span class="m-auto text-2xl font-thin">+</span>
-                </button>
+    <div class="counter-input flex flex-row items-center">
+        <div class="mr-3">
+            <font-awesome-icon :icon="{ prefix: 'fas', iconName: icon }" class="text-jet-blue-light fa-xl"/>
+        </div>
+        <div class="flex flex-row p-2 rounded-lg relative">
+            <input
+            class="border-0 focus:outline-none focus:ring-0 bg-transparent text-sm md:text-base font-semibold"
+            type="number"
+            min="0" 
+            :value="this.pax"/>
         </div>
     </div>
 </template>
@@ -30,23 +31,11 @@ export default defineComponent({
         }
     },
     props: [
+        'icon',
         'placeholder'
     ]
 })
 </script>
 
 <style lang="scss" scoped>
-    input[type='number']::-webkit-inner-spin-button,
-    input[type='number']::-webkit-outer-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-    }
-
-    .custom-number-input input:focus {
-        outline: none !important;
-    }
-
-    .custom-number-input button:focus {
-        outline: none !important;
-    }
 </style>

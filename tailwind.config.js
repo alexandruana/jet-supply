@@ -9,6 +9,9 @@ module.exports = {
           DEFAULT: '#3A3F55',
           dark: '#2D3142'
         }
+      },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       }
     },
   },
