@@ -6,7 +6,7 @@
 					<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">JetSupply</span>
 				</a>
 
-				<div>
+				<div class="mb-8 md:mb-0">
 					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
 					<ul class="text-gray-600 dark:text-gray-400">
 						<li class="mb-4">
@@ -17,7 +17,7 @@
 						</li>
 					</ul>
 				</div>
-				<div>
+				<div class="mb-8 md:mb-0">
 					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
 					<ul class="text-gray-600 dark:text-gray-400">
 						<li class="mb-4">

@@ -1,7 +1,7 @@
 <template>
 	<main>
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-			Not yet available.
+			Here comes the policy.
 		</div>
 	</main>
 </template>
