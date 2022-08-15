@@ -24,6 +24,9 @@ module.exports = {
       "closeBracket": 0,
       "alignAttributesVertically": true,
       "ignores": []
+    }],
+    "vue/multi-word-component-names": ["error", {
+      "ignores": ['default']
     }]
   }
 }
