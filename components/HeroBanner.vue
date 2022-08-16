@@ -10,7 +10,7 @@
 							<span class="block xl:inline">Taking you places</span>
 							<span class="block text-jet-light xl:inline">wherever, whenever.</span>
 						</h1>
-						<p class="mt-3 text-base text-gray-300 shadow-xl drop-shadow sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+						<p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
 							Get access to over 3.000 aircraft worldwide and plan your trips to over 73.000 unique
 							airport pairs with our tailor made
 							travel solutions.
