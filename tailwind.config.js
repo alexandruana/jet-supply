@@ -4,7 +4,7 @@ module.exports = {
     theme: {
       extend: {
         colors: {
-          'jet-blue': {
+          'jet': {
             light:'#00A9E2',
             DEFAULT: '#3A3F55',
             dark: '#2D3142'

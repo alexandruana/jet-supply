@@ -3,7 +3,7 @@
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="grid sm:grid-cols-4 grid-cols-2 gap-4">
 				<div>
-					<h2 class="text-base text-jet-blue-light font-semibold tracking-wide uppercase">What we do</h2>
+					<h2 class="text-base text-jet-light font-semibold tracking-wide uppercase">What we do</h2>
 					<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 						Seamless travel solutions
 					</p>
