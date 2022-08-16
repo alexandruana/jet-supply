@@ -7,8 +7,8 @@
 					<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
 						Seamless travel solutions
 					</p>
-					<p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect
-						adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+					<p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
+						Regardless if it's a transcontinental flight or a day-return trip, we take you from A to B hasslefree.
 					</p>
 				</div>
 				<div
@@ -18,8 +18,9 @@
 						<a href="#">
 							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Private jets</h5>
 						</a>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-							technology acquisitions of 2021 so far, in reverse chronological order.</p>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Find out which aircraft best suits your needs and access a wider network of airports.
+						</p>
 					</div>
 				</div>
 				<div
@@ -27,10 +28,11 @@
 					<img class="rounded-t-lg" src="~/assets/img/heli_interior.jpg" alt="" />
 					<div class="p-5">
 						<a href="#">
-							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Helicopter</h5>
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Helicoptes</h5>
 						</a>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-							technology acquisitions of 2021 so far, in reverse chronological order.</p>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Get from the aircraft to your final destination quick and easy with modern helicopters.
+						</p>
 					</div>
 				</div>
 				<div
@@ -40,8 +42,9 @@
 						<a href="#">
 							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Transfers</h5>
 						</a>
-						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise
-							technology acquisitions of 2021 so far, in reverse chronological order.</p>
+						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+							Waste no time and have fully flexibility from touchdown to take-off with a fleet of top class vehicles.
+						</p>
 					</div>
 				</div>
 			</div>
