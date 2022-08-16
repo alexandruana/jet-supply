@@ -8,6 +8,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'jet-supply',
+    titleTemplate: 'Jet Supply: %s',
     htmlAttrs: {
       lang: 'en'
     },

@@ -8,6 +8,19 @@
 
 <script>
 export default {
-	name: 'PrivacyPolicy'
+	name: 'PrivacyPolicy',
+	head () {
+		return {
+			title: 'Privacy Policy',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{
+					hid: 'description',
+					name: 'description',
+					content: 'Privacy policy'
+				}
+			]
+		}
+	}
 }
 </script>
