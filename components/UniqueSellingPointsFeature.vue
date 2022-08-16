@@ -3,11 +3,16 @@
 	<div class="py-12 bg-white">
 		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 			<div class="lg:text-center">
-				<h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">What we offer</h2>
-				<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">A better way
-					to travel</p>
-				<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">Lorem ipsum dolor sit amet consect
-					adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
+				<h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+					What we offer
+				</h2>
+				<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+					The perks of flying with us
+				</p>
+				<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+					We continuously evaluate the markets as well as enhance our processes and services
+					to provide you with the utmost flexibility and transparency.
+				</p>
 			</div>
 
 			<div class="mt-10">
@@ -31,9 +36,9 @@
 							</div>
 							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">Worldwide network</p>
 						</dt>
-						<dd class="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-							blanditiis ratione.</dd>
+						<dd class="mt-2 ml-16 text-base text-gray-500">
+							Reach unparalleled flexibility with access to over three thousand aircraft worldwide, capable of flying to some of the world's most remote airports.
+						</dd>
 					</div>
 
 					<div class="relative">
@@ -57,9 +62,9 @@
 							</div>
 							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
 						</dt>
-						<dd class="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-							blanditiis ratione.</dd>
+						<dd class="mt-2 ml-16 text-base text-gray-500">
+							Experience full transparency of what's included and conclude the booking process in one easy transaction.
+						</dd>
 					</div>
 
 					<div class="relative">
@@ -83,9 +88,9 @@
 							</div>
 							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">Fiat or Crypto Payments</p>
 						</dt>
-						<dd class="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-							blanditiis ratione.</dd>
+						<dd class="mt-2 ml-16 text-base text-gray-500">
+							Take advantage of a wide array of payment solutions, from wire and debit / credit cards to some of the most popular crypto currencies.
+						</dd>
 					</div>
 
 					<div class="relative">
@@ -109,9 +114,10 @@
 							</div>
 							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">24/7 support</p>
 						</dt>
-						<dd class="mt-2 ml-16 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur
-							adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate
-							blanditiis ratione.</dd>
+						<dd class="mt-2 ml-16 text-base text-gray-500">
+							Regardless of the time of your flight, our team will assist you throughout the booking process and ensure your arrival at the final
+							destination stress-free.
+						</dd>
 					</div>
 				</dl>
 			</div>

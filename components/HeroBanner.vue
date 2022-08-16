@@ -9,7 +9,7 @@
 							<span class="block text-indigo-600 xl:inline">wherever, whenever.</span>
 						</h1>
 						<p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-							Get access to over 600 aircraft and plan your trips to over 73.000 unique airport pairs with our tailor made
+							Get access to over 3.000 aircraft worldwide and plan your trips to over 73.000 unique airport pairs with our tailor made
 							travel solutions.
 						</p>
 					</div>
