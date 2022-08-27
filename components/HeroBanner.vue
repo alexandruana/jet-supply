@@ -1,12 +1,12 @@
 <template>
 	<div
-		class="hero__banner h-screen bg-gradient-radial bg-gradient-to-r from-transparent to-jet-dark flex flex-col justify-center relative bg-center bg-cover overflow-hidden">
-		<img src="~/assets/img/praetor600.jpeg" class="w-full h-full object-cover absolute mix-blend-darken" />
+		class="hero__banner h-screen bg-gradient-radial bg-jet-dark flex flex-col justify-center relative bg-center bg-cover overflow-hidden">
+		<img src="~/assets/img/praetor600.jpeg" class="w-full h-full object-cover absolute opacity-40" />
 		<div class="container mx-auto sm:py-12 lg:py-20 xl:py-28">
 			<div class="relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
 				<div class="mx-auto max-w-7xl px-4 sm:px-6 sm:mt-12 lg:px-8 md:mt-16 lg:mt-20 xl:mt-28">
 					<div class="sm:text-center lg:text-left">
-						<h1 class="text-4xl filter drop-shadow-custom tracking-tight font-extrabold text-gray-900 drop-shadow-xl sm:text-5xl md:text-6xl">
+						<h1 class="text-4xl filter drop-shadow-custom tracking-tight font-extrabold text-gray-300 sm:text-5xl md:text-6xl">
 							<span class="block xl:inline">Taking you places</span>
 							<span class="block text-jet-light xl:inline">wherever, whenever.</span>
 						</h1>
