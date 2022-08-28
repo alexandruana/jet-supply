@@ -28,7 +28,7 @@
 					<img class="rounded-t-lg" src="~/assets/img/heli_interior.jpg" alt="" />
 					<div class="p-5">
 						<a href="#">
-							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Helicoptes</h5>
+							<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Helicopters</h5>
 						</a>
 						<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
 							Get from the aircraft to your final destination quick and easy with modern helicopters.
