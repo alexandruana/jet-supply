@@ -43,7 +43,7 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-		<div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+		<div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-40">
 			<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
 				<div class="pt-5 pb-6 px-5">
 					<div class="flex items-center justify-between">
@@ -69,43 +69,47 @@
 							</button>
 						</div>
 					</div>
-					<div class="mt-6">
-						<nav class="grid gap-y-8">
-							<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-								<!-- Heroicon name: outline/chart-bar -->
-								<svg
-									class="flex-shrink-0 h-6 w-6 text-indigo-600"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true">
-									<path stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-								</svg>
-								<span class="ml-3 text-base font-medium text-gray-900"> Analytics </span>
-							</a>
 
-							<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-								<!-- Heroicon name: outline/cursor-arrow-rays -->
-								<svg
-									class="flex-shrink-0 h-6 w-6 text-indigo-600"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true">
-									<path stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-								</svg>
-								<span class="ml-3 text-base font-medium text-gray-900"> Engagement </span>
-							</a>
-						</nav>
-					</div>
+					<transition>
+						<div class="mt-6">
+							<nav class="grid gap-y-8">
+								<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<!-- Heroicon name: outline/chart-bar -->
+									<svg
+										class="flex-shrink-0 h-6 w-6 text-indigo-600"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true">
+										<path stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+									</svg>
+									<span class="ml-3 text-base font-medium text-gray-900"> Home </span>
+								</a>
+
+								<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									<!-- Heroicon name: outline/cursor-arrow-rays -->
+									<svg
+										class="flex-shrink-0 h-6 w-6 text-indigo-600"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true">
+										<path stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
+									</svg>
+									<span class="ml-3 text-base font-medium text-gray-900"> Privacy Policy </span>
+								</a>
+							</nav>
+						</div>
+					</transition>
+
 				</div>
 			</div>
 		</div>
@@ -127,3 +131,15 @@ export default {
 	}
 }
 </script>
+
+<style>
+.v-enter-active,
+.v-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+	opacity: 0;
+}
+</style>
