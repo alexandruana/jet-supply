@@ -5,7 +5,7 @@
 			<div
 				class="flex items-center justify-between border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10">
 				<div class="flex justify-start lg:w-0 lg:flex-1">
-					<NuxtLink to="/" class="text-lg font-semibold">
+					<NuxtLink to="/" class="text-lg md:text-xl font-semibold">
 						Jet<span class="text-jet-light">Supply</span>
 					</NuxtLink>
 				</div>
@@ -48,72 +48,74 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-		<div v-if="isOpen" class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden">
-			<div class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
-				<div class="px-4 pt-5 pb-6">
-					<div class="flex items-center justify-between">
-						<NuxtLink to="/" class="text-lg font-semibold">
-							Jet<span class="text-jet-light">Supply</span>
-						</NuxtLink>
-						<div class="-my-2  -mr-2">
-							<button
-								@click="toggle"
-								type="button"
-								class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-								<span class="sr-only">Close menu</span>
-								<!-- Heroicon name: outline/x-mark -->
-								<svg
-									class="h-6 w-6"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									aria-hidden="true">
-									<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-								</svg>
-							</button>
+		<transition>
+			<div v-if="isOpen" class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden">
+				<div class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+					<div class="px-4 pt-5 pb-6">
+						<div class="flex items-center justify-between">
+							<NuxtLink to="/" class="text-lg font-semibold">
+								Jet<span class="text-jet-light">Supply</span>
+							</NuxtLink>
+							<div class="-my-2  -mr-2">
+								<button
+									@click="toggle"
+									type="button"
+									class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+									<span class="sr-only">Close menu</span>
+									<!-- Heroicon name: outline/x-mark -->
+									<svg
+										class="h-6 w-6"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor"
+										aria-hidden="true">
+										<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+									</svg>
+								</button>
+							</div>
 						</div>
-					</div>
-					<div class="mt-6">
-						<nav class="grid gap-y-8">
-							<NuxtLink to="/" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
-								<!-- Heroicon name: outline/chart-bar -->
-								<svg
-									class="h-6 w-6 flex-shrink-0 text-jet-light"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-								</svg>
-								<span class="ml-3 text-base font-medium text-gray-900">Home</span>
-							</NuxtLink>
-							<NuxtLink to="/privacypolicy" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
-								<svg
-									class="h-6 w-6 flex-shrink-0 text-jet-light"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor">
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
-								</svg>
+						<div class="mt-6">
+							<nav class="grid gap-y-8">
+								<NuxtLink to="/" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+									<!-- Heroicon name: outline/chart-bar -->
+									<svg
+										class="h-6 w-6 flex-shrink-0 text-jet-light"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+									</svg>
+									<span class="ml-3 text-base font-medium text-gray-900">Home</span>
+								</NuxtLink>
+								<NuxtLink to="/privacypolicy" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+									<svg
+										class="h-6 w-6 flex-shrink-0 text-jet-light"
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke-width="1.5"
+										stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+									</svg>
 
-								<span class="ml-3 text-base font-medium text-gray-900">Privacy policy</span>
-							</NuxtLink>
-						</nav>
+									<span class="ml-3 text-base font-medium text-gray-900">Privacy policy</span>
+								</NuxtLink>
+							</nav>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</transition>
 	</div>
 </template>
 
