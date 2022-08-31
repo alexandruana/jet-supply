@@ -1,34 +1,39 @@
 <template>
-	<div class="relative bg-transparent">
-		<div class="max-w-7xl mx-auto px-4 sm:px-6">
+	<!-- This example requires Tailwind CSS v2.0+ -->
+	<div class="relative bg-white">
+		<div class="mx-auto px-4 md:px-6 max-w-7xl">
 			<div
-				class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+				class="flex items-center justify-between border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10">
 				<div class="flex justify-start lg:w-0 lg:flex-1">
-					<a href="#"
-						class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">JetSupply</a>
+					<NuxtLink to="/" class="text-lg font-semibold">
+						Jet<span class="text-jet-light">Supply</span>
+					</NuxtLink>
 				</div>
-				<div class="-mr-2 -my-2 md:hidden">
-					<button type="button"
-						class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+				<div class="-my-2 -mr-2 md:hidden">
+					<button
+						@click="toggle"
+						type="button"
+						class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
 						aria-expanded="false">
 						<span class="sr-only">Open menu</span>
-						<!-- Heroicon name: outline/menu -->
-						<svg
-							class="h-6 w-6"
+						<!-- Heroicon name: outline/bars-3 -->
+						<svg class="h-6 w-6"
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
-							stroke-width="2"
+							stroke-width="1.5"
 							stroke="currentColor"
 							aria-hidden="true">
-							<path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
 						</svg>
 					</button>
 				</div>
-				<nav class="hidden md:flex space-x-10">
-					<a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900"> Home </a>
-					<a href="/privacypolicy" class="text-base font-medium text-gray-500 hover:text-gray-900"> Privacy
-						policy </a>
+				<nav class="hidden space-x-10 md:flex">
+					<NuxtLink to="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Home</NuxtLink>
+					<NuxtLink to="/privacypolicy" class="text-base font-medium text-gray-500 hover:text-gray-900">Privacy policy</NuxtLink>
 				</nav>
 			</div>
 		</div>
@@ -43,17 +48,18 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-		<div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-40">
-			<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-				<div class="pt-5 pb-6 px-5">
+		<div v-if="isOpen" class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden">
+			<div class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+				<div class="px-4 pt-5 pb-6">
 					<div class="flex items-center justify-between">
-						<div>
-							<a href="/" class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">JetSupply</a>
-						</div>
-						<div class="-mr-2">
-							<button type="button"
+						<NuxtLink to="/" class="text-lg font-semibold">
+							Jet<span class="text-jet-light">Supply</span>
+						</NuxtLink>
+						<div class="-my-2  -mr-2">
+							<button
 								@click="toggle"
-								class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+								type="button"
+								class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
 								<span class="sr-only">Close menu</span>
 								<!-- Heroicon name: outline/x-mark -->
 								<svg
@@ -69,47 +75,42 @@
 							</button>
 						</div>
 					</div>
+					<div class="mt-6">
+						<nav class="grid gap-y-8">
+							<NuxtLink to="/" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+								<!-- Heroicon name: outline/chart-bar -->
+								<svg
+									class="h-6 w-6 flex-shrink-0 text-jet-light"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+								</svg>
+								<span class="ml-3 text-base font-medium text-gray-900">Home</span>
+							</NuxtLink>
+							<NuxtLink to="/privacypolicy" class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50">
+								<svg
+									class="h-6 w-6 flex-shrink-0 text-jet-light"
+									xmlns="http://www.w3.org/2000/svg"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+								</svg>
 
-					<transition>
-						<div class="mt-6">
-							<nav class="grid gap-y-8">
-								<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-									<!-- Heroicon name: outline/chart-bar -->
-									<svg
-										class="flex-shrink-0 h-6 w-6 text-indigo-600"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										aria-hidden="true">
-										<path stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-									</svg>
-									<span class="ml-3 text-base font-medium text-gray-900"> Home </span>
-								</a>
-
-								<a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
-									<!-- Heroicon name: outline/cursor-arrow-rays -->
-									<svg
-										class="flex-shrink-0 h-6 w-6 text-indigo-600"
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										aria-hidden="true">
-										<path stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" />
-									</svg>
-									<span class="ml-3 text-base font-medium text-gray-900"> Privacy Policy </span>
-								</a>
-							</nav>
-						</div>
-					</transition>
-
+								<span class="ml-3 text-base font-medium text-gray-900">Privacy policy</span>
+							</NuxtLink>
+						</nav>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -133,13 +134,4 @@ export default {
 </script>
 
 <style>
-.v-enter-active,
-.v-leave-active {
-	transition: opacity 0.5s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-	opacity: 0;
-}
 </style>
