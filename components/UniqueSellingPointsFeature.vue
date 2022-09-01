@@ -86,10 +86,10 @@
 										d="M13 10V3L4 14h7v7l9-11h-7z" />
 								</svg>
 							</div>
-							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">Fiat or Crypto Payments</p>
+							<p class="ml-16 text-lg leading-6 font-medium text-gray-900">Easy Payments</p>
 						</dt>
 						<dd class="mt-2 ml-16 text-base text-gray-500">
-							Take advantage of a wide array of payment solutions, from wire and debit / credit cards to some of the most popular crypto currencies.
+							Take advantage of a wide array of payment solutions, from international wire transfers to credit cards we got you covered in a couple of clicks.
 						</dd>
 					</div>
 
