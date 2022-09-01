@@ -3,10 +3,14 @@
 		<HeroBanner />
 		<AlternateFeature />
 		<UniqueSellingPointsFeature />
+		<div>
+			<ContactForm />
+		</div>
 	</main>
 </template>
 
 <script>
+import ContactForm from '~/components/ContactForm.vue'
 export default {
 	name: 'IndexPage',
 	head () {
@@ -17,10 +21,11 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Home page.'
+					content: 'Home page'
 				}
 			]
 		}
-	}
+	},
+	components: { ContactForm }
 }
 </script>
