@@ -10,10 +10,10 @@
 					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
 					<ul class="text-gray-600 dark:text-gray-400">
 						<li class="mb-4">
-							<NuxtLink to="/" class="hover:underline">Home</NuxtLink>
+							<NuxtLink to="/" class="hover:text-gray-900">Home</NuxtLink>
 						</li>
 						<li>
-							<NuxtLink to="/privacypolicy" class="hover:underline">Privacy policy</NuxtLink>
+							<NuxtLink to="/privacypolicy" class="hover:text-gray-900">Privacy policy</NuxtLink>
 						</li>
 					</ul>
 				</div>
@@ -21,10 +21,10 @@
 					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contact</h2>
 					<ul class="text-gray-600 dark:text-gray-400">
 						<li class="mb-4">
-							<a href="mailto:sales@jet-supply.com" class="hover:underline">sales@jet-supply.com</a>
+							<a href="mailto:sales@jet-supply.com">sales@jet-supply.com</a>
 						</li>
 						<li class="mb-4">
-							<p class="hover:underline">+48 603 951 000</p>
+							<p>+48 603 951 000</p>
 						</li>
 					</ul>
 				</div>
