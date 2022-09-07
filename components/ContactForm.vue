@@ -1,6 +1,6 @@
 <template>
 	<div class="max-w-7xl mx-auto grid gap-y-5 md:gap-y-0 grid-cols-1 md:grid-cols-3 px-4 lg:px-8">
-		<div class="p-8 md:p-12 border rounded-md md:rounded-tr-none md:rounded-br-none bg-gradient-tui">
+		<div class="p-8 md:p-12 border md:border-r-0 rounded-md md:rounded-tr-none md:rounded-br-none bg-gradient-tui">
 			<h2 class="mb-4 mt-0 text-xl text-white font-heavy">Contact information</h2>
 			<p class="text-base text-slate-400 mb-6">
 				Request offers or find out more on how to travel hassle free through
@@ -75,7 +75,7 @@
 				</span>
 			</div>
 		</div>
-		<div class="col-span-2 p-8 md:p-12 border rounded-md md:rounded-tl-none md:rounded-bl-none">
+		<div class="col-span-2 p-8 md:p-12 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
 			<form name="contact" netlify method="POST" class="mx-auto">
 				<p class="text-lg mb-6">Send us a message</p>
 				<div class="flex flex-wrap -mx-3 mb-6">
