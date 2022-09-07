@@ -12,6 +12,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'gradient-tui': 'radial-gradient(164.75% 100% at 50% 0,#334155 0,#0f172a 48.73%)'
 			},
 			dropShadow: {
 				'custom': [
