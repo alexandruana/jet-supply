@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<div class="col-span-2 p-8 md:p-12 border rounded-md md:rounded-tl-none md:rounded-bl-none">
-			<form name="Contact" data-netlify="true" method="POST" class="mx-auto">
+			<form name="contact" netlify method="POST" class="mx-auto">
 				<p class="text-lg mb-6">Send us a message</p>
 				<div class="flex flex-wrap -mx-3 mb-6">
 					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
