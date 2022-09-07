@@ -5,7 +5,7 @@
 			<div
 				class="flex items-center justify-between border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10">
 				<div class="flex justify-start lg:w-0 lg:flex-1">
-					<NuxtLink to="/" class="text-lg md:text-xl font-semibold">
+					<NuxtLink to="/" class="text-2xl font-semibold">
 						Jet<span class="text-jet-light">Supply</span>
 					</NuxtLink>
 				</div>

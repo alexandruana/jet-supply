@@ -2,9 +2,9 @@
 	<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900">
 		<div class="max-w-7xl mx-auto">
 			<div class="sm:flex sm:items-center sm:justify-between">
-				<a href="/" class="flex items-center mb-4 sm:mb-0">
-					<span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">JetSupply</span>
-				</a>
+				<NuxtLink to="/" class="flex items-center mb-4 sm:mb-0 text-2xl font-semibold">
+					Jet<span class="text-jet-light">Supply</span>
+				</NuxtLink>
 
 				<div class="mb-8 md:mb-0">
 					<h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Navigation</h2>
@@ -22,6 +22,9 @@
 					<ul class="text-gray-600 dark:text-gray-400">
 						<li class="mb-4">
 							<a href="mailto:sales@jet-supply.com" class="hover:underline">sales@jet-supply.com</a>
+						</li>
+						<li class="mb-4">
+							<p class="hover:underline">+48 603 951 000</p>
 						</li>
 					</ul>
 				</div>

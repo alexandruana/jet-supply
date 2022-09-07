@@ -75,10 +75,10 @@
 				</span>
 			</div>
 		</div>
-		<div class="col-span-2 p-8 md:p-12 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
+		<div class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
 			<form data-netlify="true" name="contact" method="POST" class="mx-auto">
 				<p class="text-lg mb-6">Send us a message</p>
-				<div class="flex flex-wrap -mx-3 mb-0 md:mb-6">
+				<div class="flex flex-wrap -mx-3">
 					<input type="hidden" name="contact" value="contact" />
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first-name">
