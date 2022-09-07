@@ -78,47 +78,47 @@
 		<div class="col-span-2 p-8 md:p-12 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
 			<form data-netlify="true" name="contact" method="POST" class="mx-auto">
 				<p class="text-lg mb-6">Send us a message</p>
-				<div class="flex flex-wrap -mx-3 mb-6">
+				<div class="flex flex-wrap -mx-3 mb-0 md:mb-6">
 					<input type="hidden" name="contact" value="contact" />
-					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="grid-first-name">
+					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first-name">
 							First Name
 						</label>
 						<input
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-							id="grid-first-name"
+							id="first-name"
 							type="text"
 							name="first_name"
 							placeholder="Jane">
 					</div>
-					<div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="grid-first-name">
+					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last-name">
 							Last Name
 						</label>
 						<input
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-							id="grid-first-name"
+							id="last-name"
 							type="text"
 							name="last_name"
 							placeholder="Doe">
 					</div>
 				</div>
-				<div class="flex flex-wrap -mx-3 mb-6">
+				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
 					<div class="w-full px-3">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="grid-password">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="email">
 							E-mail
 						</label>
 						<input
 							class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-							id="email"
+							id="grid-email"
 							type="email"
 							name="email"
 							placeholder="jane@doe.com">
 					</div>
 				</div>
-				<div class="flex flex-wrap -mx-3 mb-6">
+				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
 					<div class="w-full px-3">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="grid-password">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="message">
 							Message
 						</label>
 						<textarea
