@@ -12,7 +12,7 @@
 			</div>
 			<div
 				class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-				<nuxt-img class="rounded-t-lg" src="/images/global6500_interior.jpeg" alt="" />
+				<nuxt-img class="rounded-t-lg" src="/images/global6500_interior.jpeg" alt="global interior" />
 				<div class="p-5">
 					<a href="#">
 						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Private jets</h5>
@@ -24,7 +24,7 @@
 			</div>
 			<div
 				class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-				<nuxt-img class="rounded-t-lg" src="/images/heli_interior.jpg" alt="" />
+				<nuxt-img class="rounded-t-lg" src="/images/heli_interior.jpg" alt="helicopter interior" />
 				<div class="p-5">
 					<a href="#">
 						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Helicopters</h5>
@@ -36,7 +36,7 @@
 			</div>
 			<div
 				class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-				<nuxt-img class="rounded-t-lg" src="/images/7series_interior_cropped.jpg" alt="" />
+				<nuxt-img class="rounded-t-lg" src="/images/7series_interior_cropped.jpg" alt="limousine interior" />
 				<div class="p-5">
 					<a href="#">
 						<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Transfers</h5>
