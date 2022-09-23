@@ -154,7 +154,7 @@
 					<div class="md:w-2/3"></div>
 				</div>
 			</form>
-			<LazyFormModal v-if="showModal" @close="toggle" />
+			<LazyFormModal v-show="showModal" @close="toggle" />
 		</div>
 	</div>
 </template>
