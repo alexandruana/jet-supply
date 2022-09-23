@@ -1,6 +1,6 @@
 <template>
-	<div class="modal-overlay fixed top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-black/60 z-20">
-		<div class="modal px-24 py-16 rounded-lg bg-slate-50 shadow-md relative">
+	<div class="modal-overlay fixed top-0 right-0 bottom-0 left-0 flex justify-center items-center bg-black/60 z-20 px-4">
+		<div class="modal p-10 md:px-24 md:py-16 rounded-lg bg-slate-50 shadow-md relative">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
