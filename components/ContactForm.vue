@@ -79,7 +79,6 @@
 			<form
 				data-netlify="true"
 				name="contact"
-				ref="contactForm"
 				method="POST"
 				class="mx-auto"
 				@submit.prevent="toggle">
