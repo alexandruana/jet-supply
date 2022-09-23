@@ -76,7 +76,13 @@
 			</div>
 		</div>
 		<div class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
-			<form data-netlify="true" name="contact" method="POST" class="mx-auto">
+			<form
+				data-netlify="true"
+				name="contact"
+				ref="contactForm"
+				method="POST"
+				class="mx-auto"
+				@submit.prevent="toggle">
 				<p class="text-lg mb-6">Send us a message</p>
 				<div class="flex flex-wrap -mx-3">
 					<input type="hidden" name="contact" value="contact" />
@@ -89,7 +95,9 @@
 							id="first-name"
 							type="text"
 							name="first_name"
-							placeholder="Jane">
+							v-model="form.firstName"
+							placeholder="Jane"
+							required>
 					</div>
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last-name">
@@ -100,7 +108,9 @@
 							id="last-name"
 							type="text"
 							name="last_name"
-							placeholder="Doe">
+							v-model="form.lastName"
+							placeholder="Doe"
+							required>
 					</div>
 				</div>
 				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
@@ -113,7 +123,9 @@
 							id="grid-email"
 							type="email"
 							name="email"
-							placeholder="jane@doe.com">
+							v-model="form.email"
+							placeholder="jane@doe.com"
+							required>
 					</div>
 				</div>
 				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
@@ -124,7 +136,9 @@
 						<textarea
 							name="message"
 							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
-							id="message">
+							id="message"
+							v-model="form.message"
+							required>
 						</textarea>
 						<p class="text-sm text-slate-400">By submitting this form you agree to our <NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">privacy policy</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.</p>
 					</div>
@@ -133,16 +147,48 @@
 					<div class="md:w-1/3">
 						<button
 							class="shadow bg-jet-light hover:bg-jet-dark focus:shadow-outline focus:outline-none text-white font-medium py-2 px-4 rounded"
-							type="submit">
+							type="submit"
+						>
 							Send
 						</button>
 					</div>
 					<div class="md:w-2/3"></div>
 				</div>
 			</form>
+			<LazyFormModal v-if="showModal" @close="toggle" />
 		</div>
 	</div>
 </template>
+
+<script>
+export default {
+	name: 'ContactForm',
+	data () {
+		return {
+			showModal: false,
+			form: {
+				firstName: '',
+				lastName: '',
+				email: '',
+				message: ''
+			}
+		}
+	},
+	methods: {
+		toggle () {
+			this.showModal = !this.showModal
+			this.resetForm()
+		},
+		resetForm () {
+			const self = this //  you need this because *this* will refer to Object.keys below
+			//  iterate over form properties and unassign keys
+			Object.keys(this.form).forEach(function (key, index) {
+				self.form[key] = ''
+			})
+		}
+	}
+}
+</script>
 
 <style>
 .nuxt-logo {
