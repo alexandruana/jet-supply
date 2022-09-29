@@ -7,14 +7,10 @@
 		<div class="py-14 bg-slate-50">
 			<UniqueSellingPointsFeature />
 		</div>
-		<div class="py-14">
-			<ContactForm />
-		</div>
 	</main>
 </template>
 
 <script>
-import ContactForm from '~/components/ContactForm.vue'
 export default {
 	name: 'IndexPage',
 	head () {
@@ -29,7 +25,6 @@ export default {
 				}
 			]
 		}
-	},
-	components: { ContactForm }
+	}
 }
 </script>
