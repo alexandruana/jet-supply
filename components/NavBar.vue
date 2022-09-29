@@ -53,7 +53,7 @@
 				<div class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
 					<div class="px-4 pt-5 pb-6">
 						<div class="flex items-center justify-between">
-							<NuxtLink to="/" class="text-lg font-semibold">
+							<NuxtLink to="/" class="text-2xl font-semibold">
 								Jet<span class="text-jet-light">Supply</span>
 							</NuxtLink>
 							<div class="-my-2  -mr-2">
