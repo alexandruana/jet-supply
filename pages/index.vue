@@ -8,9 +8,7 @@
 			<UniqueSellingPointsFeature />
 		</div>
 		<div class="py-14">
-			<client-only>
-				<ContactForm />
-			</client-only>
+			<ContactForm />
 		</div>
 	</main>
 </template>
