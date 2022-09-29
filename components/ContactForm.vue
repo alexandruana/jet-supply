@@ -81,6 +81,7 @@
 				name="contact"
 				method="POST"
 				class="mx-auto"
+				action="/"
 				@submit.prevent="toggle">
 				<p class="text-lg mb-6">Send us a message</p>
 				<div class="flex flex-wrap -mx-3">
