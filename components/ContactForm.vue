@@ -76,6 +76,7 @@
 			</div>
 		</div>
 		<div class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
+			<p class="text-lg mb-6">Send us a message</p>
 			<form
 				data-netlify="true"
 				name="contact"
@@ -83,7 +84,6 @@
 				class="mx-auto"
 				action="/"
 			>
-				<p class="text-lg mb-6">Send us a message</p>
 				<div class="flex flex-wrap -mx-3">
 					<input type="hidden" name="contact" value="contact">
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
