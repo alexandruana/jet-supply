@@ -1,7 +1,9 @@
 <template>
 	<div class="max-w-7xl mx-auto grid gap-y-5 md:gap-y-0 grid-cols-1 md:grid-cols-3 px-4 lg:px-8">
 		<div class="p-8 md:p-12 border md:border-r-0 rounded-md md:rounded-tr-none md:rounded-br-none bg-gradient-tui">
-			<h2 class="mb-4 mt-0 text-xl text-white font-heavy">Contact information</h2>
+			<h2 class="mb-4 mt-0 text-xl text-white font-heavy">
+				Contact information
+			</h2>
 			<p class="text-base text-slate-400 mb-6">
 				Request offers or find out more on how to travel hassle free through
 				private charter.
@@ -13,14 +15,16 @@
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="w-6 h-6">
+					class="w-6 h-6"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
 						viewBox="0 0 24 24"
 						stroke-width="1.5"
 						stroke="currentColor"
-						class="w-6 h-6">
+						class="w-6 h-6"
+					>
 						<path
 							stroke-linecap="round"
 							stroke-linejoin="round"
@@ -32,10 +36,9 @@
 							d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
 						/>
 					</svg>
-
 				</svg>
 				<span class="ml-3">
-					Henryka Sienkiewicza 85/87,<br/>
+					Henryka Sienkiewicza 85/87,<br>
 					90-057, Lodz, Poland
 				</span>
 			</div>
@@ -46,7 +49,8 @@
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="w-6 h-6">
+					class="w-6 h-6"
+				>
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
@@ -64,7 +68,8 @@
 					viewBox="0 0 24 24"
 					stroke-width="1.5"
 					stroke="currentColor"
-					class="w-6 h-6">
+					class="w-6 h-6"
+				>
 					<path
 						stroke-linecap="round"
 						d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
@@ -76,7 +81,9 @@
 			</div>
 		</div>
 		<div class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
-			<p class="text-lg mb-6">Send us a message</p>
+			<p class="text-lg mb-6">
+				Send us a message
+			</p>
 			<form
 				data-netlify="true"
 				name="contact"
@@ -84,31 +91,33 @@
 				class="mx-auto"
 				action="/"
 			>
-				<input type="hidden" name="contact" value="contact" />
+				<input type="hidden" name="contact" value="contact">
 				<div class="flex flex-wrap -mx-3">
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first_name">
 							First Name
 						</label>
 						<input
+							id="first_name"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-							id="first-name"
 							type="text"
 							name="first_name"
 							placeholder="Jane"
-							required>
+							required
+						>
 					</div>
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last_name">
 							Last Name
 						</label>
 						<input
+							id="last_name"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-							id="last-name"
 							type="text"
 							name="last_name"
 							placeholder="Doe"
-							required>
+							required
+						>
 					</div>
 				</div>
 				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
@@ -117,12 +126,13 @@
 							E-mail
 						</label>
 						<input
+							id="grid_email"
 							class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-							id="grid-email"
 							type="email"
 							name="email"
 							placeholder="jane@doe.com"
-							required>
+							required
+						>
 					</div>
 				</div>
 				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
@@ -131,12 +141,17 @@
 							Message
 						</label>
 						<textarea
-							name="message"
-							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 							id="message"
-							required>
-						</textarea>
-						<p class="text-sm text-slate-400">By submitting this form you agree to our <NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">privacy policy</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.</p>
+							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+							name="message"
+							required
+						/>
+						<p class="text-sm text-slate-400">
+							By submitting this form you agree to our
+							<NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">
+								privacy policy
+							</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.
+						</p>
 					</div>
 				</div>
 				<div class="md:flex md:items-center">
@@ -148,7 +163,7 @@
 							Send
 						</button>
 					</div>
-					<div class="md:w-2/3"></div>
+					<div class="md:w-2/3" />
 				</div>
 			</form>
 		</div>
