@@ -87,7 +87,7 @@
 				<input type="hidden" name="contact" value="contact" />
 				<div class="flex flex-wrap -mx-3">
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first-name">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first_name">
 							First Name
 						</label>
 						<input
@@ -99,7 +99,7 @@
 							required>
 					</div>
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
-						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last-name">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last_name">
 							Last Name
 						</label>
 						<input
