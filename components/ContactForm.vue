@@ -172,31 +172,7 @@
 
 <script>
 export default {
-	name: 'ContactForm',
-	data () {
-		return {
-			showModal: false,
-			form: {
-				firstName: '',
-				lastName: '',
-				email: '',
-				message: ''
-			}
-		}
-	},
-	methods: {
-		toggle () {
-			this.showModal = !this.showModal
-			this.resetForm()
-		},
-		resetForm () {
-			const self = this //  you need this because *this* will refer to Object.keys below
-			//  iterate over form properties and unassign keys
-			Object.keys(this.form).forEach(function (key, index) {
-				self.form[key] = ''
-			})
-		}
-	}
+	name: 'ContactForm'
 }
 </script>
 
