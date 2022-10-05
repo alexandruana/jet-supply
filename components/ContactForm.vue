@@ -95,7 +95,6 @@
 							id="first-name"
 							type="text"
 							name="first_name"
-							v-model="form.firstName"
 							placeholder="Jane"
 							required>
 					</div>
@@ -108,7 +107,6 @@
 							id="last-name"
 							type="text"
 							name="last_name"
-							v-model="form.lastName"
 							placeholder="Doe"
 							required>
 					</div>
@@ -123,7 +121,6 @@
 							id="grid-email"
 							type="email"
 							name="email"
-							v-model="form.email"
 							placeholder="jane@doe.com"
 							required>
 					</div>
@@ -137,7 +134,6 @@
 							name="message"
 							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 							id="message"
-							v-model="form.message"
 							required>
 						</textarea>
 						<p class="text-sm text-slate-400">By submitting this form you agree to our <NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">privacy policy</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.</p>
