@@ -49,7 +49,7 @@
 			To: "opacity-0 scale-95"
 		-->
 		<transition>
-			<div v-if="isOpen" class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden">
+			<div v-show="isOpen" class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden">
 				<div class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
 					<div class="px-4 pt-5 pb-6">
 						<div class="flex items-center justify-between">
