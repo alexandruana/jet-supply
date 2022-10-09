@@ -163,7 +163,6 @@
 							Send
 						</button>
 					</div>
-					<div class="md:w-2/3" />
 				</div>
 			</form>
 		</div>
