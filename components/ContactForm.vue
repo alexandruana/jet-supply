@@ -89,7 +89,21 @@
 				method="POST"
 				data-netlify="true"
 			>
-				Hi
+				<div class="flex flex-wrap -mx-3">
+					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first_name">
+							First Name
+						</label>
+						<input
+							id="first_name"
+							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+							type="text"
+							name="first_name"
+							placeholder="Jane"
+							required
+						>
+					</div>
+				</div>
 			</form>
 		</div>
 	</div>
