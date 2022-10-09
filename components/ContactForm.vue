@@ -152,6 +152,14 @@
 						</p>
 					</div>
 				</div>
+				<div class="md:w-1/3">
+					<button
+						class="shadow bg-jet-light hover:bg-jet-dark focus:shadow-outline focus:outline-none text-white font-medium py-2 px-4 rounded"
+						type="submit"
+					>
+						Send
+					</button>
+				</div>
 			</form>
 		</div>
 	</div>
