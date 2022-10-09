@@ -146,6 +146,12 @@
 							name="message"
 							required
 						/>
+						<p class="text-sm text-slate-400">
+							By submitting this form you agree to our
+							<NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">
+								privacy policy
+							</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.
+						</p>
 					</div>
 				</div>
 				<div class="md:flex md:items-center">
