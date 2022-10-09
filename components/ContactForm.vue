@@ -89,6 +89,7 @@
 				method="POST"
 				data-netlify="true"
 			>
+				<input type="hidden" name="form-name" value="Contact" />
 				<div class="flex flex-wrap -mx-3">
 					<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
 						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first_name">
@@ -113,6 +114,21 @@
 							type="text"
 							name="last_name"
 							placeholder="Doe"
+							required
+						>
+					</div>
+				</div>
+				<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
+					<div class="w-full px-3">
+						<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="email">
+							E-mail
+						</label>
+						<input
+							id="email"
+							class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+							type="email"
+							name="email"
+							placeholder="jane@doe.com"
 							required
 						>
 					</div>
