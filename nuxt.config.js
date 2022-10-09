@@ -1,6 +1,6 @@
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -9,7 +9,7 @@ export default {
   head: {
     title: 'jet-supply',
     titleTemplate: 'Jet Supply: %s',
-    htmlAttrs: {
+    htmlAttrs: {    
       lang: 'en'
     },
     meta: [
