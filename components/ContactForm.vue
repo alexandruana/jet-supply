@@ -166,6 +166,7 @@
 					</button>
 				</div>
 			</form>
+			<LazyFormModal v-show="showModal" @close="toggle" />
 		</div>
 	</div>
 </template>
@@ -177,6 +178,7 @@ export default {
 	name: 'ContactForm',
 	data () {
 		return {
+			showModal: false,
 			form: {
 				firstName: '',
 				lastName: '',
@@ -205,6 +207,10 @@ export default {
 				}),
 				axiosConfig
 			)
+			this.showModal = !this.showModal
+		},
+		toggle () {
+			this.showModal = !this.showModal
 			this.resetForm()
 		},
 		resetForm () {
