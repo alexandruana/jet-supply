@@ -88,6 +88,7 @@
 				name="Contact"
 				method="POST"
 				data-netlify="true"
+				@submit.prevent="submit"
 			>
 				<input type="hidden" name="form-name" value="Contact" />
 				<div class="flex flex-wrap -mx-3">
@@ -101,6 +102,7 @@
 							type="text"
 							name="first_name"
 							placeholder="Jane"
+							v-model="form.firstName"
 							required
 						>
 					</div>
@@ -114,6 +116,7 @@
 							type="text"
 							name="last_name"
 							placeholder="Doe"
+							v-model="form.lastName"
 							required
 						>
 					</div>
@@ -129,6 +132,7 @@
 							type="email"
 							name="email"
 							placeholder="jane@doe.com"
+							v-model="form.email"
 							required
 						>
 					</div>
@@ -142,6 +146,7 @@
 							id="message"
 							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 							name="message"
+							v-model="form.message"
 							required
 						/>
 						<p class="text-sm text-slate-400">
@@ -167,7 +172,22 @@
 
 <script>
 export default {
-	name: 'ContactForm'
+	name: 'ContactForm',
+	data () {
+		return {
+			form: {
+				firstName: '',
+				lastName: '',
+				email: '',
+				message: ''
+			}
+		}
+	},
+	methods: {
+		submit () {
+			console.log('Form submitted.')
+		}
+	}
 }
 </script>
 
