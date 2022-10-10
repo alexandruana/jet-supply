@@ -98,11 +98,11 @@
 						</label>
 						<input
 							id="first_name"
+							v-model="form.firstName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
 							name="first_name"
 							placeholder="Jane"
-							v-model="form.firstName"
 							required
 						>
 					</div>
@@ -112,11 +112,11 @@
 						</label>
 						<input
 							id="last_name"
+							v-model="form.lastName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
 							name="last_name"
 							placeholder="Doe"
-							v-model="form.lastName"
 							required
 						>
 					</div>
@@ -128,11 +128,11 @@
 						</label>
 						<input
 							id="email"
+							v-model="form.email"
 							class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 							type="email"
 							name="email"
 							placeholder="jane@doe.com"
-							v-model="form.email"
 							required
 						>
 					</div>
@@ -144,9 +144,9 @@
 						</label>
 						<textarea
 							id="message"
+							v-model="form.message"
 							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 							name="message"
-							v-model="form.message"
 							required
 						/>
 						<p class="text-sm text-slate-400">
@@ -205,6 +205,14 @@ export default {
 				}),
 				axiosConfig
 			)
+			this.resetForm()
+		},
+		resetForm () {
+			const self = this //  you need this because *this* will refer to Object.keys below
+			//  iterate over form properties and unassign keys
+			Object.keys(this.form).forEach(function (key, index) {
+				self.form[key] = ''
+			})
 		}
 	}
 }
