@@ -88,7 +88,7 @@
 				name="Contact"
 				method="POST"
 				data-netlify="true"
-				@submit.prevent="submit"
+				@submit.prevent="handleSubmit"
 			>
 				<input type="hidden" name="form-name" value="Contact" />
 				<div class="flex flex-wrap -mx-3">
@@ -171,6 +171,8 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
 	name: 'ContactForm',
 	data () {
@@ -184,8 +186,25 @@ export default {
 		}
 	},
 	methods: {
-		submit () {
-			console.log('Form submitted.')
+		encode (data) {
+			return Object.keys(data)
+				.map(
+					key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+				)
+				.join('&')
+		},
+		handleSubmit () {
+			const axiosConfig = {
+				header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+			}
+			axios.post(
+				'/',
+				this.encode({
+					'form-name': 'ask-question',
+					...this.form
+				}),
+				axiosConfig
+			)
 		}
 	}
 }
