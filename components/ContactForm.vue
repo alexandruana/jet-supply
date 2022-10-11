@@ -167,7 +167,9 @@
 					</button>
 				</div>
 			</form>
-			<LazyFormModal v-show="showModal" @close="toggle" />
+			<transition name="fade">
+				<LazyFormModal v-show="showModal" @close="toggle" />
+			</transition>
 		</div>
 	</div>
 </template>
@@ -180,6 +182,7 @@ export default {
 	data () {
 		return {
 			showModal: false,
+			show: true,
 			form: {
 				firstName: '',
 				lastName: '',
@@ -229,5 +232,12 @@ export default {
 <style>
 .nuxt-logo {
 	height: 180px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>

@@ -1,13 +1,13 @@
 <template>
 	<main>
 		<HeroBanner />
-		<div class="py-20">
+		<div class="py-20 md:py-40">
 			<AlternateFeature />
 		</div>
-		<div class="py-20 bg-slate-50">
+		<div class="py-20 md:py-40 bg-slate-50">
 			<UniqueSellingPointsFeature />
 		</div>
-		<div class="py-20">
+		<div class="py-20 md:py-40">
 			<ContactForm />
 		</div>
 	</main>

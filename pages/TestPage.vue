@@ -1,45 +1,11 @@
 <template>
 	<main class="max-w-7xl">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-		<table border="0" cellpadding="10" cellspacing="0">
-			<tbody style="color: #6B7280;">
-				<tr>
-					<td>
-						<table>
-							<tbody>
-								<tr>
-									<td style="color: #00A9E2; font-size: 18px; font-weight: 700;">
-										Joanna
-									</td>
-								</tr>
-								<tr>
-									<td style="font-weight: 500;">
-										Charter Sales Manager
-									</td>
-								</tr>
-								<tr>
-									<td>
-										+48 603 951 000
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Henryka Sienkiewicza 85/87, Lodz, Poland
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<a href="mailto:sales@jet-supply.com">www.jet-supply.com</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+		<button v-on:click="show = !show">
+			Toggle
+		</button>
+		<transition name="fade">
+			<LazyTestComponent v-show="show" />
+		</transition>
 	</main>
 </template>
 
@@ -57,6 +23,11 @@ export default {
 					content: 'Test page'
 				}
 			]
+		}
+	},
+	data () {
+		return {
+			show: true
 		}
 	}
 }
