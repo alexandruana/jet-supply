@@ -212,7 +212,6 @@ export default {
 		},
 		toggle () {
 			this.showModal = !this.showModal
-			this.resetForm()
 		},
 		resetForm () {
 			const self = this //  you need this because *this* will refer to Object.keys below
