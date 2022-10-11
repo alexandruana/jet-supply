@@ -98,7 +98,7 @@
 						</label>
 						<input
 							id="first_name"
-							v-model="form.firstName"
+							@input="ev => form.firstName = ev.target.value"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
 							name="first_name"
