@@ -98,7 +98,7 @@
 						</label>
 						<input
 							id="first_name"
-							:value="form.firstName"
+							v-model="form.firstName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
 							name="first_name"
@@ -112,7 +112,7 @@
 						</label>
 						<input
 							id="last_name"
-							:value="form.lastName"
+							v-model="form.lastName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
 							name="last_name"
@@ -128,10 +128,10 @@
 						</label>
 						<input
 							id="email"
+							v-model="form.email"
 							class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 							type="email"
 							name="email"
-							:value="form.email"
 							placeholder="jane@doe.com"
 							required
 						>
@@ -144,7 +144,7 @@
 						</label>
 						<textarea
 							id="message"
-							:value="form.message"
+							v-model="form.message"
 							class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 							name="message"
 							required
