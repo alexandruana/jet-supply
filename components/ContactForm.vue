@@ -99,10 +99,10 @@
 						</label>
 						<input
 							id="first_name"
-							@input="ev => form.firstName = ev.target.value"
+							v-model="form.firstName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
-							name="first_name"
+							name="firstName"
 							placeholder="Jane"
 							required
 						>
@@ -116,7 +116,7 @@
 							v-model="form.lastName"
 							class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 							type="text"
-							name="last_name"
+							name="lastName"
 							placeholder="Doe"
 							required
 						>
