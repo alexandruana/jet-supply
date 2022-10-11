@@ -208,6 +208,7 @@ export default {
 				axiosConfig
 			)
 			this.showModal = !this.showModal
+			console.log(this.form)
 		},
 		toggle () {
 			this.showModal = !this.showModal
