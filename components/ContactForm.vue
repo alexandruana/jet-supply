@@ -89,6 +89,7 @@
 				method="POST"
 				data-netlify="true"
 				@submit.prevent="handleSubmit"
+				netlify-honeypot="bot-field"
 			>
 				<input type="hidden" name="form-name" value="Contact" />
 				<div class="flex flex-wrap -mx-3">
@@ -212,6 +213,7 @@ export default {
 		},
 		toggle () {
 			this.showModal = !this.showModal
+			this.resetForm()
 		},
 		resetForm () {
 			const self = this //  you need this because *this* will refer to Object.keys below
