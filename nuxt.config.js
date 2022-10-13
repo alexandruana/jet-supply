@@ -16,7 +16,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      {
+        hid: 'description', 
+        name: 'description', 
+        content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft wherever, whenever'
+      },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -65,7 +69,8 @@ export default {
   sitemap: {
     hostname: main_base_URL
   },
+
   env: {
     main_base_URL
-  }
+  },
 }
