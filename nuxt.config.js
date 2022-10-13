@@ -21,7 +21,32 @@ export default {
         name: 'description', 
         content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods.'
       },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'og:title',
+        property: 'og:title',
+        content: 'Private Jet Charter | Global Network | Low Fees',
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: 'On-demand private jet travel solutions.'
+      },
+      {
+        hid: 'og:type',
+        property: 'og:type',
+        content: 'website',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: 'https://www.jet-supply.com/_nuxt/image/0e7161.jpeg'
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https:///www.jet-supply.com/'
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
