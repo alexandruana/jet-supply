@@ -11,7 +11,7 @@
 							<span class="block text-jet-light xl:inline">wherever, whenever.</span>
 						</h1>
 						<p class="mt-3 filter drop-shadow-custom text-base text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-							Get access to over 3.000 aircraft worldwide and plan your trips to over 73.000 unique
+							Get access to over 2,500 aircraft worldwide and plan your trips to over 73.000 unique
 							airport pairs with our tailor made
 							travel solutions.
 						</p>
