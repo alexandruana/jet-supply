@@ -1,16 +1,13 @@
 <template>
-	<main class="max-w-7xl">
-		<button v-on:click="show = !show">
-			Toggle
-		</button>
-		<transition name="fade">
-			<LazyTestComponent v-show="show" />
-		</transition>
+	<main class="max-w-7xl mx-auto">
+		<FAQComponent></FAQComponent>
 	</main>
 </template>
 
 <script>
+import FAQComponent from '~/components/FAQComponent.vue'
 export default {
+	components: { FAQComponent },
 	name: 'TestArea',
 	head () {
 		return {

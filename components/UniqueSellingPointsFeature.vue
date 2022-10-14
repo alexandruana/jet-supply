@@ -1,7 +1,7 @@
 <template>
 	<!-- This example requires Tailwind CSS v2.0+ -->
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="lg:text-center">
+		<div class="lg:text-center mb-14">
 			<h2 class="text-base text-jet-light font-semibold tracking-wide uppercase">
 				What we offer
 			</h2>
@@ -14,7 +14,7 @@
 			</p>
 		</div>
 
-		<div class="mt-10">
+		<div>
 			<dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
 				<div class="relative mb-10 sm:mb-5">
 					<dt>
