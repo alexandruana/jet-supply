@@ -1,7 +1,8 @@
 <template>
 	<main class="max-w-7xl mx-auto">
+		<OfferBuilder />
 		<label for="file-upload" class="custom-file-upload"> Open PDF </label>
-		<input id="file-upload" type="file" @change="openDocument" class="btn" />
+		<input id="file-upload" class="btn" type="file" @change="openDocument" />
 		<PSPDFKitContainer :pdfFile="pdfFile" @loaded="handleLoaded" />
 	</main>
 </template>
