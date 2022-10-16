@@ -8,53 +8,79 @@
 
 <script>
 export default {
-	name: "TestArea",
+	name: 'TestArea',
 	head() {
-	return {
-		title: "TestArea",
-		meta: [
-		// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-		{
-			hid: "description",
-			name: "description",
-			content: "Test page",
-		},
-		],
-	};
+		return {
+			title: 'TestArea',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{
+					hid: 'description',
+					name: 'description',
+					content:
+						'Test page'
+				}
+			]
+		}
 	},
 	data() {
 		return {
 			show: true,
-			pdfFile: this.pdfFile || "/document.pdf"
-		};
+			pdfFile:
+				this
+					.pdfFile ||
+				'/document.pdf'
+		}
 	},
 	methods: {
-		handleLoaded(instance) {
-			console.log("PSPDFKit has loaded: ", instance);
+		handleLoaded(
+			instance
+		) {
+			console.log(
+				'PSPDFKit has loaded: ',
+				instance
+			)
 			// Do something.
 		},
 
-		openDocument(event) {
-			if (this.pdfFile && this.pdfFile.startsWith("blob:")) {
-				window.URL.revokeObjectURL(this.pdfFile);
+		openDocument(
+			event
+		) {
+			if (
+				this
+					.pdfFile &&
+				this.pdfFile.startsWith(
+					'blob:'
+				)
+			) {
+				window.URL.revokeObjectURL(
+					this
+						.pdfFile
+				)
 			}
-			this.pdfFile = window.URL.createObjectURL(event.target.files[0]);
+			this.pdfFile =
+				window.URL.createObjectURL(
+					event
+						.target
+						.files[0]
+				)
 		}
 	}
-};
+}
 </script>
 
 <style scoped>
 body {
-  	margin: 0;
+	margin: 0;
 }
 
-input[type="file"] {
-  	display: none;
+input[type='file'] {
+	display: none;
 }
 
 .custom-file-upload {
-	border: 1px solid #ccc;
+	border: 1px solid
+		#ccc;
 	border-radius: 4px;
 	display: inline-block;
 	padding: 6px 12px;
