@@ -1,5 +1,7 @@
 <template>
-	<div class="pdf-container"></div>
+	<div
+		class="pdf-container"
+	></div>
 </template>
 
 <script>
@@ -7,24 +9,31 @@
  * PSPDFKit for Web example component.
  */
 export default {
-	name: "PSPDFKit",
+	name: 'PSPDFKit',
 	/**
 	 * The component receives `pdfFile` as a prop, which is type of `String` and is required.
 	 */
 	props: {
 		pdfFile: {
 			type: String,
-			required: true,
-		},
+			required: true
+		}
 	},
 	PSPDFKit: null,
 	/**
 	 * Wait until the template has been rendered to load the document into the library.
 	 */
 	mounted() {
-		this.loadPSPDFKit().then((instance) => {
-			this.$emit("loaded", instance);
-		});
+		this.loadPSPDFKit().then(
+			(
+				instance
+			) => {
+				this.$emit(
+					'loaded',
+					instance
+				)
+			}
+		)
 	},
 	/**
 	 * Watch for `pdfFile` prop changes and trigger unloading and loading when there's a new document to load.
@@ -32,31 +41,52 @@ export default {
 	watch: {
 		pdfFile(val) {
 			if (val) {
-				this.loadPSPDFKit();
+				this.loadPSPDFKit()
 			}
-		},
+		}
 	},
 	/**
 	 * Our component has the `loadPSPDFKit` method. This unloads and cleans up the component and triggers document loading.
 	 */
 	methods: {
 		async loadPSPDFKit() {
-			import("pspdfkit")
-				.then((PSPDFKit) => {
-					this.PSPDFKit = PSPDFKit;
-					PSPDFKit.unload(".pdf-container");
-					return PSPDFKit.load({
-						document: this.pdfFile,
-						container: ".pdf-container",
-						baseUrl: "http://localhost:3000/",
-					});
-				})
-				.catch((error) => {
-					console.error(error);
-				});
-		},
-	},
-};
+			import(
+				'pspdfkit'
+			)
+				.then(
+					(
+						PSPDFKit
+					) => {
+						this.PSPDFKit =
+							PSPDFKit
+						PSPDFKit.unload(
+							'.pdf-container'
+						)
+						return PSPDFKit.load(
+							{
+								document:
+									this
+										.pdfFile,
+								container:
+									'.pdf-container',
+								baseUrl:
+									'http://localhost:3000/'
+							}
+						)
+					}
+				)
+				.catch(
+					(
+						error
+					) => {
+						console.error(
+							error
+						)
+					}
+				)
+		}
+	}
+}
 </script>
 
 <style scoped>

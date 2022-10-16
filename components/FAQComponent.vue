@@ -1,8 +1,24 @@
 <template>
-	<div class="faq-item">
+	<div
+		class="faq-item"
+	>
 		<button>
-			<div class="flex justify-between items-center">
-				<h3 class="font-medium text-gray-900">What are the steps in chartering a private jet?</h3>
+			<div
+				class="flex justify-between items-center"
+			>
+				<h3
+					class="font-medium text-gray-900"
+				>
+					What
+					are
+					the
+					steps
+					in
+					chartering
+					a
+					private
+					jet?
+				</h3>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"

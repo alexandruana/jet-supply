@@ -1,5 +1,5 @@
 <template>
-	<main class="max-w-7xl mx-auto"></main>
+	<main class="max-w-7xl mx-auto">
 		<label for="file-upload" class="custom-file-upload"> Open PDF </label>
 		<input id="file-upload" type="file" @change="openDocument" class="btn" />
 		<PSPDFKitContainer :pdfFile="pdfFile" @loaded="handleLoaded" />

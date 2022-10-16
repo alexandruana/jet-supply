@@ -1,26 +1,71 @@
 <template>
-	<div class="max-w-7xl mx-auto">
-		<div class="lg:text-center mb-14">
-			<h2 class="text-base text-jet-light font-semibold tracking-wide uppercase">
+	<div
+		class="max-w-7xl mx-auto"
+	>
+		<div
+			class="lg:text-center mb-14"
+		>
+			<h2
+				class="text-base text-jet-light font-semibold tracking-wide uppercase"
+			>
 				Connect
 			</h2>
-			<p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-jet-dark sm:text-4xl">
-				Interested in private charter?
+			<p
+				class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-jet-dark sm:text-4xl"
+			>
+				Interested
+				in
+				private
+				charter?
 			</p>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-				Our team is here to provide round-the-clock support and travel advice.
+			<p
+				class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"
+			>
+				Our team
+				is here
+				to
+				provide
+				round-the-clock
+				support
+				and
+				travel
+				advice.
 			</p>
 		</div>
-		<div class="mx-auto grid gap-y-5 md:gap-y-0 grid-cols-1 md:grid-cols-3 px-4 lg:px-8">
-			<div class="p-8 md:p-12 border md:border-r-0 rounded-md md:rounded-tr-none md:rounded-br-none bg-gradient-tui">
-				<h2 class="mb-4 mt-0 text-xl text-white font-heavy">
-					Contact information
+		<div
+			class="mx-auto grid gap-y-5 md:gap-y-0 grid-cols-1 md:grid-cols-3 px-4 lg:px-8"
+		>
+			<div
+				class="p-8 md:p-12 border md:border-r-0 rounded-md md:rounded-tr-none md:rounded-br-none bg-gradient-tui"
+			>
+				<h2
+					class="mb-4 mt-0 text-xl text-white font-heavy"
+				>
+					Contact
+					information
 				</h2>
-				<p class="text-base text-slate-400 mb-6">
-					Request offers or find out more on how to travel hassle free through
-					private charter.
+				<p
+					class="text-base text-slate-400 mb-6"
+				>
+					Request
+					offers
+					or
+					find
+					out
+					more
+					on
+					how
+					to
+					travel
+					hassle
+					free
+					through
+					private
+					charter.
 				</p>
-				<div class="flex items-top mb-5 text-slate-400">
+				<div
+					class="flex items-top mb-5 text-slate-400"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -49,12 +94,20 @@
 							/>
 						</svg>
 					</svg>
-					<span class="ml-3">
-						Henryka Sienkiewicza 85/87,<br>
-						90-057, Lodz, Poland
+					<span
+						class="ml-3"
+					>
+						Henryka
+						Sienkiewicza
+						85/87,<br />
+						90-057,
+						Lodz,
+						Poland
 					</span>
 				</div>
-				<div class="flex items-center mb-5 text-slate-400">
+				<div
+					class="flex items-center mb-5 text-slate-400"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -69,11 +122,18 @@
 							d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
 						/>
 					</svg>
-					<span class="ml-3">
-						+48 603 951 000
+					<span
+						class="ml-3"
+					>
+						+48
+						603
+						951
+						000
 					</span>
 				</div>
-				<div class="flex items-center mb-5 text-slate-400">
+				<div
+					class="flex items-center mb-5 text-slate-400"
+				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						fill="none"
@@ -87,90 +147,171 @@
 							d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"
 						/>
 					</svg>
-					<span class="ml-3">
+					<span
+						class="ml-3"
+					>
 						sales@jet-supply.com
 					</span>
 				</div>
 			</div>
-			<div class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none">
-				<p class="text-lg mb-6">
-					Send us a message
+			<div
+				class="col-span-2 p-8 md:p-12 bg-slate-50 border md:border-l-0 rounded-md md:rounded-tl-none md:rounded-bl-none"
+			>
+				<p
+					class="text-lg mb-6"
+				>
+					Send
+					us a
+					message
 				</p>
 				<form
 					name="Contact"
 					method="POST"
 					data-netlify="true"
-					@submit.prevent="handleSubmit"
+					@submit.prevent="
+						handleSubmit
+					"
 					netlify-honeypot="bot-field"
 				>
-					<input type="hidden" name="form-name" value="Contact" />
-					<div class="flex flex-wrap -mx-3">
-						<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
-							<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="first_name">
-								First name
+					<input
+						type="hidden"
+						name="form-name"
+						value="Contact"
+					/>
+					<div
+						class="flex flex-wrap -mx-3"
+					>
+						<div
+							class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0"
+						>
+							<label
+								class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
+								for="first_name"
+							>
+								First
+								name
 							</label>
 							<input
 								id="first_name"
-								v-model="form.firstName"
+								v-model="
+									form.firstName
+								"
 								class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 								type="text"
 								name="firstName"
 								placeholder="Jane"
 								required
-							>
+							/>
 						</div>
-						<div class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0">
-							<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="last_name">
-								Last name
+						<div
+							class="w-full md:w-1/2 px-3 mb-3 md:mb-6 md:mb-0"
+						>
+							<label
+								class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
+								for="last_name"
+							>
+								Last
+								name
 							</label>
 							<input
 								id="last_name"
-								v-model="form.lastName"
+								v-model="
+									form.lastName
+								"
 								class="appearance-none block w-full bg-transparent text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
 								type="text"
 								name="lastName"
 								placeholder="Doe"
 								required
-							>
+							/>
 						</div>
 					</div>
-					<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
-						<div class="w-full px-3">
-							<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="email">
+					<div
+						class="flex flex-wrap -mx-3 mb-3 md:mb-6"
+					>
+						<div
+							class="w-full px-3"
+						>
+							<label
+								class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
+								for="email"
+							>
 								E-mail
 							</label>
 							<input
 								id="email"
-								v-model="form.email"
+								v-model="
+									form.email
+								"
 								class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 								type="email"
 								name="email"
 								placeholder="jane@doe.com"
 								required
-							>
+							/>
 						</div>
 					</div>
-					<div class="flex flex-wrap -mx-3 mb-3 md:mb-6">
-						<div class="w-full px-3">
-							<label class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2" for="message">
+					<div
+						class="flex flex-wrap -mx-3 mb-3 md:mb-6"
+					>
+						<div
+							class="w-full px-3"
+						>
+							<label
+								class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
+								for="message"
+							>
 								Message
 							</label>
 							<textarea
 								id="message"
-								v-model="form.message"
-								class=" no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+								v-model="
+									form.message
+								"
+								class="no-resize appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
 								name="message"
 								required
 							/>
-							<p class="text-sm text-slate-400">
-								By submitting this form you agree to our
-								<NuxtLink to="/privacypolicy" class="text-jet-light hover:text-jet-dark">
-									privacy policy
-								</NuxtLink> which explains how we may collect, use and disclose your personal information including to third parties.
+							<p
+								class="text-sm text-slate-400"
+							>
+								By
+								submitting
+								this
+								form
+								you
+								agree
+								to
+								our
+								<NuxtLink
+									to="/privacypolicy"
+									class="text-jet-light hover:text-jet-dark"
+								>
+									privacy
+									policy
+								</NuxtLink>
+								which
+								explains
+								how
+								we
+								may
+								collect,
+								use
+								and
+								disclose
+								your
+								personal
+								information
+								including
+								to
+								third
+								parties.
 							</p>
 						</div>
 					</div>
-					<div class="md:w-1/3">
+					<div
+						class="md:w-1/3"
+					>
 						<button
 							class="shadow bg-jet-light hover:bg-jet-dark focus:shadow-outline focus:outline-none text-white font-medium py-2 px-4 rounded"
 							type="submit"
@@ -179,8 +320,17 @@
 						</button>
 					</div>
 				</form>
-				<transition name="fade">
-					<LazyFormModal v-show="showModal" @close="toggle" />
+				<transition
+					name="fade"
+				>
+					<LazyFormModal
+						v-show="
+							showModal
+						"
+						@close="
+							toggle
+						"
+					/>
 				</transition>
 			</div>
 		</div>
@@ -192,51 +342,92 @@ import axios from 'axios'
 
 export default {
 	name: 'ContactForm',
-	data () {
+	data() {
 		return {
 			showModal: false,
 			show: true,
 			form: {
-				firstName: '',
-				lastName: '',
+				firstName:
+					'',
+				lastName:
+					'',
 				email: '',
-				message: ''
+				message:
+					''
 			}
 		}
 	},
 	methods: {
-		encode (data) {
-			return Object.keys(data)
+		encode(data) {
+			return Object.keys(
+				data
+			)
 				.map(
-					key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+					(
+						key
+					) =>
+						`${encodeURIComponent(
+							key
+						)}=${encodeURIComponent(
+							data[
+								key
+							]
+						)}`
 				)
-				.join('&')
+				.join(
+					'&'
+				)
 		},
-		handleSubmit () {
-			const axiosConfig = {
-				header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-			}
+		handleSubmit() {
+			const axiosConfig =
+				{
+					header: {
+						'Content-Type':
+							'application/x-www-form-urlencoded'
+					}
+				}
 			axios.post(
 				'/',
-				this.encode({
-					'form-name': 'Contact',
-					...this.form
-				}),
+				this.encode(
+					{
+						'form-name':
+							'Contact',
+						...this
+							.form
+					}
+				),
 				axiosConfig
 			)
-			this.showModal = !this.showModal
-			console.log(this.form)
+			this.showModal =
+				!this
+					.showModal
+			console.log(
+				this.form
+			)
 		},
-		toggle () {
-			this.showModal = !this.showModal
+		toggle() {
+			this.showModal =
+				!this
+					.showModal
 			this.resetForm()
 		},
-		resetForm () {
-			const self = this //  you need this because *this* will refer to Object.keys below
+		resetForm() {
+			const self =
+				this //  you need this because *this* will refer to Object.keys below
 			//  iterate over form properties and unassign keys
-			Object.keys(this.form).forEach(function (key, index) {
-				self.form[key] = ''
-			})
+			Object.keys(
+				this.form
+			).forEach(
+				function (
+					key,
+					index
+				) {
+					self.form[
+						key
+					] =
+						''
+				}
+			)
 		}
 	}
 }
@@ -247,10 +438,12 @@ export default {
 	height: 180px;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active,
+.fade-leave-active {
+	transition: opacity
+		0.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+	opacity: 0;
 }
 </style>
