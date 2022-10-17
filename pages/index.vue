@@ -7,6 +7,9 @@
 		<div class="py-20 bg-slate-50">
 			<UniqueSellingPointsFeature />
 		</div>
+		<div class="py-20">
+			<FAQFeature />
+		</div>
 		<div class="py-20 pb-10">
 			<ContactForm />
 		</div>
