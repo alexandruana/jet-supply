@@ -4,6 +4,7 @@
 			leg__input
 		"
 	>
+		<h2 class="leading-8 font-extrabold tracking-tight text-jet-dark text-4xl md:text-2xl mb-8">Itinerary</h2>
 		<div
 			class="flex flex-wrap flex-row align-center"
 		>
@@ -124,7 +125,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 

@@ -1,6 +1,5 @@
 <template>
 	<main class="w-full px-20 pt-20">
-		<h2 class="leading-8 font-extrabold tracking-tight text-jet-dark text-4xl md:text-2xl mb-8">Itinerary</h2>
 		<div class="grid grid-cols-3">
 			<div class="col-span-2">
 				<LegInput />
@@ -14,7 +13,7 @@
 
 <script>
 export default {
-	name: 'Offers',
+	name: 'AdminOffers',
 	layout: 'dashboard',
 	head() {
 		return {

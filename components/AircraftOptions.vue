@@ -6,6 +6,7 @@
 			md:mb-0
 		"
 	>
+		<h2 class="leading-8 font-extrabold tracking-tight text-jet-dark text-4xl md:text-2xl mb-8">Aircraft option</h2>
 		<div class="grid grid-cols-2">
 			<div class="aircraft__spec mb-5">
 				<label
@@ -317,6 +318,85 @@
 					</div>
 				</div>
 			</div>
+			<div class="aircraft__spec col-span-2 mb-5">
+				<label
+					class="
+						block
+						uppercase
+						tracking-wide
+						text-gray-700
+						text-xs
+						font-normal
+						mb-2
+					"
+					for="price"
+				>
+					Price
+				</label>
+				<input
+					id="price"
+					v-model="
+						price
+					"
+					class="
+						appearance-none
+						block
+						bg-transparent
+						text-gray-700
+						border
+						border-gray-200
+						rounded
+						py-3
+						px-4
+						mb-3
+						leading-tight
+						focus:outline-none
+						focus:bg-white
+						focus:border-gray-500
+					"
+					type="number"
+					name="price"
+				/>
+			</div>
+			<div class="aircraft__spec col-span-2 mb-5">
+				<label
+					class="
+						block
+						uppercase
+						tracking-wide
+						text-gray-700
+						text-xs
+						font-normal
+						mb-2
+					"
+					for="notes"
+				>
+					Notes / Remarks
+				</label>
+				<textarea
+					id="notes"
+					v-model="
+						notes
+					"
+					class="
+						appearance-none
+						block
+						bg-transparent
+						text-gray-700
+						border
+						border-gray-200
+						rounded
+						py-3
+						px-4
+						mb-3
+						leading-tight
+						focus:outline-none
+						focus:bg-white
+						focus:border-gray-500
+					"
+					name="notes"
+				/>
+			</div>
 		</div>
 	</div>
 </template>
@@ -338,7 +418,8 @@ export default {
 			toilet: '',
 			oa: '',
 			price: '',
-			flightAttendant: ''
+			flightAttendant: '',
+			notes: ''
 		}
 	}
 }
