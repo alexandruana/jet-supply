@@ -7,7 +7,7 @@
 		"
 	>
 		<h2 class="leading-8 font-extrabold tracking-tight text-jet-dark text-4xl md:text-2xl mb-8">Aircraft option</h2>
-		<div class="grid grid-cols-2">
+		<div class="grid grid-cols-2 bg-slate-50 rounded-md md:px-5 md:py-10">
 			<div class="aircraft__spec mb-5">
 				<label
 					class="

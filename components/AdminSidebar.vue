@@ -25,7 +25,7 @@
 			>
 				<li>
 					<NuxtLink
-						to="/offers"
+						to="/adminoffers"
 						class="
 							flex
 							items-center
@@ -67,3 +67,14 @@ export default {
 	name: 'AdminSidebar'
 }
 </script>
+
+<style scoped>
+a.nuxt-link-active {
+	font-weight: bold;
+}
+/* exact link will show the primary color for only the exact matching link */
+a.nuxt-link-exact-active {
+ 	color: #00A9E2;
+	background: #f3f4f6;
+}
+</style>
