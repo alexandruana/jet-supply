@@ -31,16 +31,12 @@
 			</div>
 			<div class="col-span-1">
 				<FAQComponent
-					question="Why charter a private jet?"
-					answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit."
-				/>
-				<FAQComponent
-					question="How can I charter a private aircraft?"
-					answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit."
-				/>
-				<FAQComponent
-					question="What payment methods are accepted?"
-					answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit."
+					v-for="(item, index) in faqs"
+					:key="item.id"
+					:item="item"
+					:active-index=" currentlyActiveIndex === index ? (index = null) : currentlyActiveIndex "
+					:item-index="index"
+					@update:itemIndex="currentlyActiveIndex = $event"
 				/>
 			</div>
 		</div>
@@ -49,6 +45,29 @@
 
 <script>
 export default {
-	name: 'FAQFeature'
+	name: 'FAQFeature',
+	data() {
+		return {
+			faqs: [
+				{ 
+					id: 'faq1', 
+					question: 'Why charter a private jet?', 
+					answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit.'
+				},
+				{
+					id: 'faq2',
+					question: 'How to charter an aircraft?', 
+					answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit.'
+				},
+				{
+					id: 'faq3',
+					question: 'Where can I fly?',
+					answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit.'
+				},
+			],
+			currentlyActiveIndex: null,
+			isActive: null
+		}
+	}
 }
 </script>

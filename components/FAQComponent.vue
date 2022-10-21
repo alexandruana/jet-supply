@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<button
-			@click="toggleAccordion()"
+			@click="updateIndex()"
 			class="
 				flex
 				items-center
@@ -16,12 +16,12 @@
 			:aria-expanded="isOpen"
 			:aria-controls="`collapse${_uid}`"
 		>
-			<span>{{ question }}</span>
+			<span>{{ item.question }}</span>
 			<svg
-				class="w-3 transition-all duration-200 transform"
+				class="w-3 transition-all duration-300 transform"
 				:class="{
-					'rotate-180': isOpen,
-					'rotate-0': !isOpen
+					'rotate-180': activeIndex == itemIndex,
+					'rotate-0': !activeIndex == itemIndex
 				}"
 				fill="none"
 				stroke="currentColor"
@@ -37,8 +37,15 @@
 				/>
 			</svg>
 		</button>
-		<div v-show="isOpen" :id="`collapse${_uid}`" class="py-5 text-gray-500">
-			<p>{{ answer }}</p>
+		<div
+			v-show="activeIndex === itemIndex" :id="`collapse${_uid}`" 
+			class="transition-all duration-200 transform py-5 text-gray-500"
+			:class="{
+				'bg-blue-400': activeIndex == itemIndex,
+				'bg-red-400': !activeIndex == itemIndex 
+			}"
+		>
+			<p>{{ item.answer }}</p>
 		</div>
 	</div>
 </template>
@@ -51,11 +58,28 @@ export default {
 			isOpen: false
 		}
 	},
+	props: {
+		item: {
+			type: Object,
+			default: () => {}
+		},
+		activeIndex: {
+			type: Number,
+			default: null
+		},
+		itemIndex: {
+			type: Number,
+			default: null
+		},
+	},
 	methods: {
 		toggleAccordion() {
 			this.isOpen = !this.isOpen
+		},
+		updateIndex() {
+			console.log('index updated:', this.itemIndex)
+	      	this.$emit('update:itemIndex', this.itemIndex)
 		}
 	},
-	props: ['question', 'answer']
 }
 </script>
