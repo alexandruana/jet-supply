@@ -5,9 +5,9 @@
 		"
 	>
 		<h2 class="leading-8 font-extrabold tracking-tight text-jet-dark text-4xl md:text-2xl mb-8">Itinerary</h2>
-		<div
-			class="flex flex-wrap flex-row align-center"
-		>
+		<form
+			@submit.prevent="addLeg"
+			class="flex flex-row justify-between bg-slate-50 rounded-md md:px-5 md:py-5">
 			<div class="mr-4 mb-3 md:mb-6 md:mb-0">
 				<label
 					class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
@@ -17,7 +17,7 @@
 				</label>
 				<input
 					id="departure_airport"
-					v-model="departureAirport"
+					v-model="leg.depAirport"
 					class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					type="text"
 					name="departureAirport"
@@ -33,8 +33,8 @@
 				</label>
 				<input
 					id="arrival_airport"
-					v-model="arrivalAirport"
-					class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+					v-model="leg.arrAirport"
+					class=" appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					type="text"
 					name="arrivalAirport"
 					placeholder="Arrival airport"
@@ -42,14 +42,14 @@
 			</div>
 			<div class="mr-4 mb-3 md:mb-6 md:mb-0">
 				<label
-					class="block uppercase tracking-wide text-gray-700 text-xs font-normal mb-2"
+					class="block tracking-wide text-gray-700 text-xs font-normal mb-2"
 					for="date"
 				>
 					Date
 				</label>
 				<input
 					id="date"
-					v-model="date"
+					v-model="leg.depDate"
 					class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					type="date"
 					name="date"
@@ -64,7 +64,7 @@
 				</label>
 				<input
 					id="std"
-					v-model="time"
+					v-model="leg.depTime"
 					class="appearance-none block w-full bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
 					type="time"
 					min="00:00"
@@ -81,7 +81,7 @@
 				</label>
 				<input
 					id="pax"
-					v-model="pax"
+					v-model="leg.paxCount"
 					class="appearance-none block bg-transparent text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-center"
 					type="number"
 					name="pax"
@@ -89,7 +89,9 @@
 					max="20"
 				/>
 			</div>
-			<button>
+			<button
+				type="submit"
+			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					fill="none"
@@ -105,30 +107,47 @@
 					/>
 				</svg>
 			</button>
-		</div>
+		</form>
+		{{ leg.depAirport }}
+		{{ leg.arrAirport }}
+		{{ leg.depDate }}
+		{{ leg.depTime }}
+		{{ leg.paxCount }}
 	</div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
 	name: 'LegInput',
 	data() {
 		return {
-			departureAirport:
-				'',
-			arrivalAirport: '',
-			time: '',
-			date: '',
-			pax: ''
+			leg: {
+				depAirport:'',
+				arrAirport: '',
+				depTime: '',
+				depDate: '',
+				paxCount: ''
+			}
 		}
 	},
+	methods: {
+		addLeg (e) {
+			// this.$store.commit('itinerary/add', e.target.value)
+			// e.target.value = ''
+			console.log(e)
+		},
+		...mapMutations({
+			toggle: 'itinerary/toggle'
+		})
+  	}
 }
 </script>
 
 <style>
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+	-webkit-appearance: none; 
+	margin: 0; 
 }
 </style>

@@ -1,0 +1,204 @@
+<template>
+	<table
+		class="
+			min-w-full
+		"
+	>
+		<thead
+			class="
+				bg-slate-50
+				border-b
+				border-slate-200
+			"
+		>
+			<tr>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-left
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					From
+				</th>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-left
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					To
+				</th>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-left
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					Date
+				</th>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-left
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					Time
+				</th>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-left
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					PAX
+				</th>
+				<th
+					scope="col"
+					class="
+						px-6
+						py-3
+						text-sm
+						font-medium
+						text-slate-900
+					"
+				>
+					Action
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr
+				v-for="leg in legs"
+				:key="leg.id"
+				class="
+					odd:bg-white
+					even:bg-slate-50"
+			>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+					"
+				>
+					{{ leg.depAirport }}
+				</td>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+					"
+				>
+					{{ leg.arrAirport }}
+				</td>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+					"
+				>
+					{{ leg.depDate }}
+				</td>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+					"
+				>
+					{{ leg.depTime }}
+				</td>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+					"
+				>
+					{{ leg.paxCount }}
+				</td>
+				<td
+					class="
+						px-6
+						py-4
+						whitespace-nowrap
+						text-sm
+						text-slate-600
+						text-center
+					"
+				>
+					<button>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="
+								w-6
+								h-6
+								mx-auto
+								hover:text-red-500
+								hover:cursor-pointer
+							"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+							/>
+						</svg>
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</template>
+
+<script>
+export default {
+	name: 'LegTable',
+	computed: {
+		legs() {
+			return this.$store.state.itinerary.list
+		}
+	}
+}
+</script>

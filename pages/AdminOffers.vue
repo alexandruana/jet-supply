@@ -1,8 +1,11 @@
 <template>
-	<main class="w-full px-20 pt-20">
-		<div class="grid grid-cols-3">
+	<main class="w-full px-20 py-20">
+		<div class="grid grid-cols-3 md:gap-5">
 			<div class="col-span-2">
-				<LegInput />
+				<div class="grid grid-cols-1 md:gap-10">
+					<LegInput />
+					<LegTable />
+				</div>
 			</div>
 			<div class="col-span-1">
 				<AircraftOptions />
@@ -12,7 +15,9 @@
 </template>
 
 <script>
+import LegTable from '~/components/LegTable.vue'
 export default {
+	components: { LegTable },
 	name: 'AdminOffers',
 	layout: 'dashboard',
 	head() {
