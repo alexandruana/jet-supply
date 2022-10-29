@@ -37,10 +37,10 @@
 					:key="index"
 				>
 					<template slot="title">
-						{{ item.title }}
+						<h3>{{ item.title }}</h3>
 					</template>
 					<template slot="content">
-						{{ item.content }}
+						<p>{{ item.content }}</p>
 					</template>
 				</FAQComponent>
 			</div>

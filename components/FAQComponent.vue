@@ -1,17 +1,7 @@
 <template>
-	<div>
-		<button
-			class="
-				flex
-				items-center
-				justify-between
-				w-full
-				py-5
-				font-medium
-				text-left text-gray-500
-				border-b border-gray-200
-				dark:border-gray-700 dark:text-gray-400
-			"
+	<div class="accordion__item">
+		<div
+			class="accordion__trigger text-lg font-medium flex justify-between py-5 border-b border-slate-200"
 			:class="{ accordion__trigger_active: visible }"
 			@click="open()"
 		>
@@ -35,7 +25,7 @@
 					stroke-linejoin="round"
 				/>
 			</svg>
-		</button>
+		</div>
 		
 		<transition
 			name="accordion"
@@ -45,7 +35,9 @@
 			@after-leave="end"
 		>
 			>
-			<div v-show="visible" class="py-5 text-gray-500">
+			<div
+				class="accordion__content text-gray-500"
+				v-show="visible">
 				<slot name="content"></slot>
 			</div>
 		</transition>
