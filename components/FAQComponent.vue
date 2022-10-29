@@ -13,8 +13,6 @@
 				border-b border-gray-200
 				dark:border-gray-700 dark:text-gray-400
 			"
-			:aria-expanded="isOpen"
-			:aria-controls="`collapse${_uid}`"
 		>
 			<span>{{ item.question }}</span>
 			<svg
@@ -73,9 +71,6 @@ export default {
 		},
 	},
 	methods: {
-		toggleAccordion() {
-			this.isOpen = !this.isOpen
-		},
 		updateIndex() {
 			console.log('index updated:', this.itemIndex)
 	      	this.$emit('update:itemIndex', this.itemIndex)

@@ -32,7 +32,7 @@
 			<div class="col-span-1">
 				<FAQComponent
 					v-for="(item, index) in faqs"
-					:key="item.id"
+					:key="index"
 					:item="item"
 					:active-index=" currentlyActiveIndex === index ? (index = null) : currentlyActiveIndex "
 					:item-index="index"
