@@ -61,6 +61,11 @@ export default {
 				},
 				{
 					id: 'faq3',
+					question: 'What payment methods are accepted?',
+					answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit.'
+				},
+				{
+					id: 'faq4',
 					question: 'Where can I fly?',
 					answer:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus consectetur dignissim odio ut congue. Mauris justo mauris, molestie sed pellentesque in, pretium eget est. Nulla eros elit, mattis vitae neque sit amet, vehicula tincidunt arcu. Sed sit amet consectetur lacus. Vestibulum condimentum metus sed dui cursus blandit.'
 				},
