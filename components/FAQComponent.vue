@@ -41,8 +41,8 @@
 			v-show="activeIndex === itemIndex" :id="`collapse${_uid}`" 
 			class="transition-all duration-200 transform py-5 text-gray-500"
 			:class="{
-				'bg-red-500': activeIndex == itemIndex,
-				'bg-blue-500': !activeIndex == itemIndex 
+				'opacity-100': activeIndex == itemIndex,
+				'opacity-0': !activeIndex == itemIndex 
 			}"
 		>
 			<p>{{ item.answer }}</p>
