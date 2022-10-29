@@ -1,7 +1,6 @@
 <template>
 	<div>
 		<button
-			@click="updateIndex()"
 			class="
 				flex
 				items-center
@@ -13,13 +12,15 @@
 				border-b border-gray-200
 				dark:border-gray-700 dark:text-gray-400
 			"
+			:class="{ accordion__trigger_active: visible }"
+			@click="open()"
 		>
-			<span>{{ item.question }}</span>
+			<slot name="title"></slot>
 			<svg
 				class="w-3 transition-all duration-300 transform"
 				:class="{
-					'rotate-180': activeIndex == itemIndex,
-					'rotate-0': !activeIndex == itemIndex
+					'rotate-180': visible,
+					'rotate-0': !visible
 				}"
 				fill="none"
 				stroke="currentColor"
@@ -35,46 +36,68 @@
 				/>
 			</svg>
 		</button>
-		<div
-			v-show="activeIndex === itemIndex" :id="`collapse${_uid}`" 
-			class="transition-all duration-200 transform py-5 text-gray-500"
-			:class="{
-				'opacity-100': activeIndex == itemIndex,
-				'opacity-0': !activeIndex == itemIndex 
-			}"
+		
+		<transition
+			name="accordion"
+			@enter="start"
+			@after-enter="end"
+			@before-leave="start"
+			@after-leave="end"
 		>
-			<p>{{ item.answer }}</p>
-		</div>
+			>
+			<div v-show="visible" class="py-5 text-gray-500">
+				<slot name="content"></slot>
+			</div>
+		</transition>
 	</div>
 </template>
 
 <script>
 export default {
 	name: 'FAQComponent',
+	inject: ["Accordion"],
 	data() {
 		return {
-			isOpen: false
+			index: null
 		}
 	},
-	props: {
-		item: {
-			type: Object,
-			default: () => {}
-		},
-		activeIndex: {
-			type: Number,
-			default: null
-		},
-		itemIndex: {
-			type: Number,
-			default: null
-		},
+	computed: {
+		visible() {
+			return this.index === this.Accordion.active
+		}
+	},
+	created() {
+		this.index = this.Accordion.count++
 	},
 	methods: {
-		updateIndex() {
-			console.log('index updated:', this.itemIndex)
-	      	this.$emit('update:itemIndex', this.itemIndex)
+		open() {
+			if (this.visible) {
+				this.Accordion.active = null
+			} else {
+				this.Accordion.active = this.index
+			}
+		},
+		start(el) {
+			el.style.height = el.scrollHeight + 'px'
+		},
+		end(el) {
+			el.style.height = ''
 		}
 	},
 }
 </script>
+
+<style scoped>
+.accordion-enter-active,
+.accordion-leave-active {
+	will-change: height, opacity;
+	transition: height 0.3s ease, opacity 0.3s ease;
+	overflow: hidden;
+}
+
+.accordion-enter,
+.accordion-leave-to {
+	height: 0 !important;
+	opacity: 0;
+}
+</style>
