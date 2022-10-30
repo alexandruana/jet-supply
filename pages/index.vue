@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import ContactForm from '~/components/ContactForm.vue'
 export default {
 	name: 'IndexPage',
 	head () {
@@ -33,6 +32,5 @@ export default {
 			]
 		}
 	},
-	components: { ContactForm }
 }
 </script>

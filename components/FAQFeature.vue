@@ -26,16 +26,13 @@
 					Frequently asked questions
 				</p>
 				<p class="mt-4 max-w-2xl text-lg text-gray-500">
-					Got questions? In our FAQs we are addressing some of
-					the most popular questions and concerns when it comes to
+					Got questions? In our FAQs we are addressing some of the
+					most popular questions and concerns when it comes to
 					chartering a private aircraft.
 				</p>
 			</div>
 			<div class="col-span-1">
-				<FAQComponent
-					v-for="(item, index) in faqs"
-					:key="index"
-				>
+				<FAQComponent v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
 						<h3>{{ item.title }}</h3>
 					</template>
@@ -77,11 +74,16 @@ export default {
 						'On-demand charter flights are private jets that you hire for a flight at the time you decide and on the itinerary you choose. You control every detail. You select your aircraft according to size, age and your budget. Once approved and paid for, the aircraft is guaranteed for you and your guests to fly as requested. JetSupply offers very competitive prices for these flights, as we negotiate preferential rates with operators based on a high volume of flight hours year after year.'
 				},
 				{
+					title: 'What are the benefits of on-demand charter flights?',
+					content:
+						'Get from your car to the aircraft in less than 10 minutes through VIP terminals, access airports where no commercial operators reach, stay connected and carry out business from 31,000 feet while enjoying the utmost privacy and comfort.'
+				},
+				{
 					title: 'What type of payment does JetSupply accept?',
 					content:
 						'JetSupply accepts wire, credit card and cryptocurrency transactions. This includes Visa, MasterCard, AmericanExpress. Currently we do not accept Apple Pay and PayPal.'
 				}
-			],
+			]
 		}
 	}
 }

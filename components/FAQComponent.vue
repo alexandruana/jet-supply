@@ -1,5 +1,5 @@
 <template>
-	<div class="accordion__item py-4 border-b border-slate-200">
+	<div class="accordion__item mb-3 py-4 px-4 border-b  border-slate-200">
 		<div
 			class="accordion__trigger text-lg font-medium flex justify-between cursor-pointer"
 			:class="{ accordion__trigger_active: visible }"
@@ -36,8 +36,9 @@
 		>
 			>
 			<div
+				v-show="visible"
 				class="accordion__content text-gray-500"
-				v-show="visible">
+			>
 				<slot name="content"></slot>
 			</div>
 		</transition>
