@@ -26,7 +26,7 @@
 					Frequently asked questions
 				</p>
 				<p class="mt-4 max-w-2xl text-lg text-gray-500">
-					Got questions? Let us clear the air by addressing some of
+					Got questions? In our FAQs we are addressing some of
 					the most popular questions and concerns when it comes to
 					chartering a private aircraft.
 				</p>
