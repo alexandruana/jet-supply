@@ -1,43 +1,43 @@
 <template>
 	<!-- This example requires Tailwind CSS v2.0+ -->
-	<div
-		class="relative bg-white"
-	>
-		<div
-			class="mx-auto px-4 md:px-6 max-w-7xl"
-		>
+	<div class="relative bg-white">
+		<div class="mx-auto px-4 md:px-6 max-w-7xl">
 			<div
-				class="flex items-center justify-between border-b-2 border-gray-100 py-5 md:justify-start md:space-x-10"
+				class="
+					flex
+					items-center
+					justify-between
+					border-b-2 border-gray-100
+					py-5
+					md:justify-start md:space-x-10
+				"
 			>
-				<div
-					class="flex justify-start lg:w-0 lg:flex-1"
-				>
-					<NuxtLink
-						to="/"
-						class="text-2xl font-semibold"
-					>
-						Jet<span
-							class="text-jet-light"
-							>Supply</span
-						>
+				<div class="flex justify-start lg:w-0 lg:flex-1">
+					<NuxtLink to="/" class="text-2xl font-semibold">
+						Jet<span class="text-jet-light">Supply</span>
 					</NuxtLink>
 				</div>
-				<div
-					class="-my-2 -mr-2 md:hidden"
-				>
+				<div class="-my-2 -mr-2 md:hidden">
 					<button
-						@click="
-							toggle
-						"
 						type="button"
-						class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+						class="
+							inline-flex
+							items-center
+							justify-center
+							rounded-md
+							bg-white
+							p-2
+							text-gray-400
+							hover:bg-gray-100 hover:text-gray-500
+							focus:outline-none
+							focus:ring-2
+							focus:ring-inset
+							focus:ring-indigo-500
+						"
 						aria-expanded="false"
+						@click="toggle"
 					>
-						<span
-							class="sr-only"
-							>Open
-							menu</span
-						>
+						<span class="sr-only">Open menu</span>
 						<!-- Heroicon name: outline/bars-3 -->
 						<svg
 							class="h-6 w-6"
@@ -56,19 +56,29 @@
 						</svg>
 					</button>
 				</div>
-				<nav
-					class="hidden space-x-10 md:flex"
-				>
+				<nav class="hidden space-x-10 md:flex">
 					<NuxtLink
 						to="/"
-						class="text-base font-medium text-gray-500 hover:text-gray-900"
-						>Home</NuxtLink
+						class="
+							text-base
+							font-medium
+							text-gray-500
+							hover:text-gray-900
+						"
 					>
+						Home
+					</NuxtLink>
 					<NuxtLink
 						to="/privacypolicy"
-						class="text-base font-medium text-gray-500 hover:text-gray-900"
-						>Privacy
-						policy</NuxtLink
+						class="
+							text-base
+							font-medium
+							text-gray-500
+							hover:text-gray-900
+						"
+					>
+						Privacy policy
+					</NuxtLink
 					>
 				</nav>
 			</div>
@@ -84,46 +94,59 @@
 			From: "opacity-100 scale-100"
 			To: "opacity-0 scale-95"
 		-->
-		<transition>
+		<transition
+			name="accordion"
+			@enter="start"
+			@after-enter="end"
+			@before-leave="start"
+			@after-leave="end"
+		>
 			<div
-				v-show="
-					isOpen
+				v-show="isOpen"
+				class="
+					absolute
+					z-50
+					inset-x-0
+					top-0
+					origin-top-right
+					transform
+					transition
+					md:hidden
 				"
-				class="absolute z-50 inset-x-0 top-0 origin-top-right transform transition md:hidden"
 			>
 				<div
-					class="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5"
+					class="
+						rounded-lg
+						bg-white
+						shadow-lg
+						ring-1 ring-black ring-opacity-5
+					"
 				>
-					<div
-						class="px-4 pt-5 pb-6"
-					>
-						<div
-							class="flex items-center justify-between"
-						>
-							<NuxtLink
-								to="/"
-								class="text-2xl font-semibold"
-							>
-								Jet<span
-									class="text-jet-light"
-									>Supply</span
-								>
+					<div class="px-4 pt-5 pb-6">
+						<div class="flex items-center justify-between">
+							<NuxtLink to="/" class="text-2xl font-semibold">
+								Jet<span class="text-jet-light">Supply</span>
 							</NuxtLink>
-							<div
-								class="-my-2 -mr-2"
-							>
+							<div class="-my-2 -mr-2">
 								<button
-									@click="
-										toggle
-									"
 									type="button"
-									class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+									class="
+										inline-flex
+										items-center
+										justify-center
+										rounded-md
+										bg-white
+										p-2
+										text-gray-400
+										hover:bg-gray-100 hover:text-gray-500
+										focus:outline-none
+										focus:ring-2
+										focus:ring-inset
+										focus:ring-indigo-500
+									"
+									@click="toggle"
 								>
-									<span
-										class="sr-only"
-										>Close
-										menu</span
-									>
+									<span class="sr-only">Close menu</span>
 									<!-- Heroicon name: outline/x-mark -->
 									<svg
 										class="h-6 w-6"
@@ -143,19 +166,27 @@
 								</button>
 							</div>
 						</div>
-						<div
-							class="mt-6"
-						>
-							<nav
-								class="grid gap-y-8"
-							>
+						<div class="mt-6">
+							<nav class="grid gap-y-8">
 								<NuxtLink
 									to="/"
-									class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+									class="
+										-m-3
+										flex
+										items-center
+										rounded-md
+										p-3
+										hover:bg-gray-50
+									"
 								>
 									<!-- Heroicon name: outline/chart-bar -->
 									<svg
-										class="h-6 w-6 flex-shrink-0 text-jet-light"
+										class="
+											h-6
+											w-6
+											flex-shrink-0
+											text-jet-light
+										"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
@@ -169,16 +200,34 @@
 										/>
 									</svg>
 									<span
-										class="ml-3 text-base font-medium text-gray-900"
-										>Home</span
+										class="
+											ml-3
+											text-base
+											font-medium
+											text-gray-900
+										"
 									>
+										Home
+									</span>
 								</NuxtLink>
 								<NuxtLink
 									to="/privacypolicy"
-									class="-m-3 flex items-center rounded-md p-3 hover:bg-gray-50"
+									class="
+										-m-3
+										flex
+										items-center
+										rounded-md
+										p-3
+										hover:bg-gray-50
+									"
 								>
 									<svg
-										class="h-6 w-6 flex-shrink-0 text-jet-light"
+										class="
+											h-6
+											w-6
+											flex-shrink-0
+											text-jet-light
+										"
 										xmlns="http://www.w3.org/2000/svg"
 										fill="none"
 										viewBox="0 0 24 24"
@@ -193,10 +242,15 @@
 									</svg>
 
 									<span
-										class="ml-3 text-base font-medium text-gray-900"
-										>Privacy
-										policy</span
+										class="
+											ml-3
+											text-base
+											font-medium
+											text-gray-900
+										"
 									>
+										Privacy policy
+									</span>
 								</NuxtLink>
 							</nav>
 						</div>
@@ -217,12 +271,29 @@ export default {
 	},
 	methods: {
 		toggle() {
-			this.isOpen =
-				!this
-					.isOpen
+			this.isOpen = !this.isOpen
+		},
+		start(el) {
+			el.style.height = el.scrollHeight + 'px'
+		},
+		end(el) {
+			el.style.height = ''
 		}
 	}
 }
 </script>
 
-<style></style>
+<style scoped>
+.accordion-enter-active,
+.accordion-leave-active {
+	will-change: height, opacity;
+	transition: height 0.3s ease, opacity 0.3s ease;
+	overflow: hidden;
+}
+
+.accordion-enter,
+.accordion-leave-to {
+	height: 0 !important;
+	opacity: 0;
+}
+</style>>
