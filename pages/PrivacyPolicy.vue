@@ -18,7 +18,7 @@
 				</p>
 				<h2 class="text-xl font-semibold mt-5 mb-2">Definitions</h2>
 				<ol>
-					<li>Website - website Jet Supply operating at <NuxtLink to="/">www.jetsupply.com</NuxtLink></li>
+					<li>Website - website Jet Supply operating at <NuxtLink to="/">www.jet-supply.com</NuxtLink></li>
 					<li>External website - websites of partners, service providers or recipients cooperating with the Administrator.</li>
 					<li>Website / Data Administrator - the Website Administrator and the Data Administrator (hereinafter referred to as the Administrator) is Jet Supply, Operating at: Henryka Sienkiewicza 85/87, lok.8, 90-057, Lodz, Poland; With the assigned tax identification number (NIP): 7322208939.</li>
 					<li>User - a natural person for whom the Administrator provides services.</li>
