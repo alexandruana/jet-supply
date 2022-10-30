@@ -2,7 +2,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
 			<div class="col-span-1 mb-14 md:mb-0">
-				<h2
+				<p
 					class="
 						text-base text-jet-light
 						font-semibold
@@ -11,8 +11,8 @@
 					"
 				>
 					FAQ
-				</h2>
-				<p
+				</p>
+				<h2
 					class="
 						mt-2
 						text-3xl
@@ -24,8 +24,8 @@
 					"
 				>
 					Frequently asked questions
-				</p>
-				<p class="mt-4 max-w-2xl text-lg text-gray-500">
+				</h2>
+				<p class="my-4 max-w-full md:max-w-md text-lg text-gray-500">
 					Got questions? In our FAQs we are addressing some of the
 					most popular questions and concerns when it comes to
 					chartering a private aircraft.

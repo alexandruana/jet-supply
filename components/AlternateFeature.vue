@@ -2,7 +2,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="grid sm:grid-cols-4 grid-cols-2 gap-4">
 			<div>
-				<h2
+				<p
 					class="
 						text-base text-jet-light
 						font-semibold
@@ -11,8 +11,8 @@
 					"
 				>
 					What we do
-				</h2>
-				<p
+				</p>
+				<h2
 					class="
 						mt-2
 						text-3xl
@@ -24,7 +24,7 @@
 					"
 				>
 					Seamless travel solutions
-				</p>
+				</h2>
 				<p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
 					Regardless if it's a transcontinental flight or a day-return
 					trip, we take you from A to B hasslefree.

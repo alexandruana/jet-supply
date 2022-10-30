@@ -1,60 +1,58 @@
 <template>
 	<!-- This example requires Tailwind CSS v2.0+ -->
-	<div
-		class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
-	>
-		<div
-			class="lg:text-center mb-14"
-		>
-			<h2
-				class="text-base text-jet-light font-semibold tracking-wide uppercase"
-			>
-				What we
-				offer
-			</h2>
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="lg:text-center mb-14">
 			<p
-				class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+				class="
+					text-base text-jet-light
+					font-semibold
+					tracking-wide
+					uppercase
+				"
 			>
-				The perks
-				of flying
-				with us
+				What we offer
 			</p>
-			<p
-				class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto"
+			<h2
+				class="
+					mt-2
+					text-3xl
+					leading-8
+					font-extrabold
+					tracking-tight
+					text-gray-900
+					sm:text-4xl
+				"
 			>
-				We
-				continuously
-				evaluate
-				the
-				markets
-				as well
-				as
-				enhance
-				our
-				processes
-				and
-				services
-				to
-				provide
-				you with
-				the
-				utmost
-				flexibility
-				and
-				transparency.
+				The perks of flying with us
+			</h2>
+			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+				We continuously evaluate the markets as well as enhance our
+				processes and services to provide you with the utmost
+				flexibility and transparency.
 			</p>
 		</div>
 
 		<div>
 			<dl
-				class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+				class="
+					space-y-10
+					md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10
+				"
 			>
-				<div
-					class="relative mb-10 sm:mb-5"
-				>
+				<div class="relative mb-10 sm:mb-5">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-jet-light text-white"
+							class="
+								absolute
+								flex
+								items-center
+								justify-center
+								h-12
+								w-12
+								rounded-md
+								bg-jet-light
+								text-white
+							"
 						>
 							<!-- Heroicon name: outline/globe-alt -->
 							<svg
@@ -74,46 +72,38 @@
 							</svg>
 						</div>
 						<p
-							class="ml-16 text-lg leading-6 font-medium text-gray-900"
+							class="
+								ml-16
+								text-lg
+								leading-6
+								font-medium
+								text-gray-900
+							"
 						>
-							Worldwide
-							network
+							Worldwide network
 						</p>
 					</dt>
-					<dd
-						class="mt-2 ml-16 text-base text-gray-500"
-					>
-						Reach
-						unparalleled
-						flexibility
-						with
-						access
-						to
-						over
-						three
-						thousand
-						aircraft
-						worldwide,
-						capable
-						of
-						flying
-						to
-						some
-						of
-						the
-						world's
-						most
-						remote
-						airports.
+					<dd class="mt-2 ml-16 text-base text-gray-500">
+						Reach unparalleled flexibility with access to over three
+						thousand aircraft worldwide, capable of flying to some
+						of the world's most remote airports.
 					</dd>
 				</div>
 
-				<div
-					class="relative mb-10 sm:mb-5"
-				>
+				<div class="relative mb-10 sm:mb-5">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-jet-light text-white"
+							class="
+								absolute
+								flex
+								items-center
+								justify-center
+								h-12
+								w-12
+								rounded-md
+								bg-jet-light
+								text-white
+							"
 						>
 							<!-- Heroicon name: outline/scale -->
 							<svg
@@ -133,40 +123,37 @@
 							</svg>
 						</div>
 						<p
-							class="ml-16 text-lg leading-6 font-medium text-gray-900"
+							class="
+								ml-16
+								text-lg
+								leading-6
+								font-medium
+								text-gray-900
+							"
 						>
-							No
-							hidden
-							fees
+							No hidden fees
 						</p>
 					</dt>
-					<dd
-						class="mt-2 ml-16 text-base text-gray-500"
-					>
-						Experience
-						full
-						transparency
-						of
-						what's
-						included
-						and
-						conclude
-						the
-						booking
-						process
-						in
-						one
-						easy
-						transaction.
+					<dd class="mt-2 ml-16 text-base text-gray-500">
+						Experience full transparency of what's included and
+						conclude the booking process in one easy transaction.
 					</dd>
 				</div>
 
-				<div
-					class="relative mb-10 sm:mb-5"
-				>
+				<div class="relative mb-10 sm:mb-5">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-jet-light text-white"
+							class="
+								absolute
+								flex
+								items-center
+								justify-center
+								h-12
+								w-12
+								rounded-md
+								bg-jet-light
+								text-white
+							"
 						>
 							<!-- Heroicon name: outline/lightning-bolt -->
 							<svg
@@ -186,49 +173,38 @@
 							</svg>
 						</div>
 						<p
-							class="ml-16 text-lg leading-6 font-medium text-gray-900"
+							class="
+								ml-16
+								text-lg
+								leading-6
+								font-medium
+								text-gray-900
+							"
 						>
-							Easy
-							Payments
+							Easy Payments
 						</p>
 					</dt>
-					<dd
-						class="mt-2 ml-16 text-base text-gray-500"
-					>
-						Take
-						advantage
-						of
-						a
-						wide
-						array
-						of
-						payment
-						solutions,
-						from
-						international
-						wire
-						transfers
-						to
-						credit
-						cards
-						we
-						got
-						you
-						covered
-						in
-						a
-						couple
-						of
-						clicks.
+					<dd class="mt-2 ml-16 text-base text-gray-500">
+						Take advantage of a wide array of payment solutions,
+						from international wire transfers to credit cards we got
+						you covered in a couple of clicks.
 					</dd>
 				</div>
 
-				<div
-					class="relative mb-10 sm:mb-5"
-				>
+				<div class="relative mb-10 sm:mb-5">
 					<dt>
 						<div
-							class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-jet-light text-white"
+							class="
+								absolute
+								flex
+								items-center
+								justify-center
+								h-12
+								w-12
+								rounded-md
+								bg-jet-light
+								text-white
+							"
 						>
 							<!-- Heroicon name: outline/annotation -->
 							<svg
@@ -248,40 +224,21 @@
 							</svg>
 						</div>
 						<p
-							class="ml-16 text-lg leading-6 font-medium text-gray-900"
+							class="
+								ml-16
+								text-lg
+								leading-6
+								font-medium
+								text-gray-900
+							"
 						>
-							24/7
-							support
+							24/7 support
 						</p>
 					</dt>
-					<dd
-						class="mt-2 ml-16 text-base text-gray-500"
-					>
-						Regardless
-						of
-						the
-						time
-						of
-						your
-						flight,
-						our
-						team
-						will
-						assist
-						you
-						throughout
-						the
-						booking
-						process
-						and
-						ensure
-						your
-						arrival
-						at
-						the
-						final
-						destination
-						stress-free.
+					<dd class="mt-2 ml-16 text-base text-gray-500">
+						Regardless of the time of your flight, our team will
+						assist you throughout the booking process and ensure
+						your arrival at the final destination stress-free.
 					</dd>
 				</div>
 			</dl>
