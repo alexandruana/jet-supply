@@ -1,7 +1,7 @@
 <template>
-	<div class="accordion__item">
+	<div class="accordion__item py-4 border-b border-slate-200">
 		<div
-			class="accordion__trigger text-lg font-medium flex justify-between py-5 border-b border-slate-200"
+			class="accordion__trigger text-lg font-medium flex justify-between cursor-pointer"
 			:class="{ accordion__trigger_active: visible }"
 			@click="open()"
 		>
