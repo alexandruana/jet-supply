@@ -19,7 +19,10 @@
 			</div>
 		</div>
 		<div class="grid grid-cols-2">
-			<div class="cols-span-1">Nav</div>
+			<div class="cols-span-1">
+				<h3>Need more help?</h3>
+				<p>Drop us a message:</p>
+			</div>
 			<div class="cols-span-1">
 				<FAQComponent v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
@@ -94,6 +97,12 @@ export default {
 					content:
 						'Dangereous goods such as flammable materials, corrosive agents or medical substances might not be allowed on board your next charter. The carriage of such items must be approved by the aircraft\'s owner upon booking and is subject to the operator having the accreditations to fly such materials. ',
 					type: 'baggage'
+				},
+				{
+					title: 'What is the Pet Policy?',
+					content:
+						'Pets are family, not cargo. More than anything else, your safety is our first priority, and the same goes for your pets. Flying regulations mean your pets can travel in the cabin with you, but must be restrained for take-offs, landings, and turbulence. At all other times they can be comfortably by your side. <br /> <br />In most instances your pet will require a valid pet passport to confirm all routine health checks are up to date, identification that demonstrates the information of their microchip and valid vaccinations dependent on destination of arrival and departure. Our team will advise on any extra requirements at the time of your booking.',
+					type: 'pet'
 				},
 				{
 					title: 'What is an empty leg flight and why is it affordable?',

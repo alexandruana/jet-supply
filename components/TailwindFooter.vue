@@ -52,7 +52,7 @@
 								to="/faq"
 								class="hover:text-gray-900"
 							>
-								FAQs
+								FAQ
 							</NuxtLink
 							>
 						</li>
