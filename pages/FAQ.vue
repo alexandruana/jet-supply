@@ -20,7 +20,7 @@
 		</div>
 		<div class="grid grid-cols-2">
 			<div class="cols-span-1">
-				<ul>
+				<ul class="bg-slate-200">
 					<li>
 						{{ getCategories }}
 					</li>
@@ -148,13 +148,7 @@ export default {
 	},
 	computed: {
 		getCategories() {
-			if (this.faqs !== null) {
-				this.faqs.forEach(faq => {
-					return faq
-				})
-			} else {
-				return 'FAQs empty'
-			}
+			return null
 		}
 	}
 }
