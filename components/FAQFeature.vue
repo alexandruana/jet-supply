@@ -32,29 +32,6 @@
 				</p>
 			</div>
 			<div class="col-span-1">
-				<p
-					class="
-						text-base text-jet-light
-						font-semibold
-						tracking-wide
-						uppercase
-					"
-				>
-					FAQ
-				</p>
-				<h2
-					class="
-						mt-2
-						text-3xl
-						leading-8
-						font-extrabold
-						tracking-tight
-						text-gray-900
-						sm:text-4xl
-					"
-				>
-					Frequently asked questions
-				</h2>
 				<FAQComponent v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
 						<h3>{{ item.title }}</h3>

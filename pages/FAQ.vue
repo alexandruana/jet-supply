@@ -18,8 +18,8 @@
 				</p>
 			</div>
 		</div>
-		<div class="grid auto-cols-min md:grid-cols-4 gap-10 px-4">
-			<div class="col-span-1">
+		<div class="grid md:grid-cols-4 gap-10 px-4">
+			<div class="col-span-4 md:col-span-1">
 				<ul class="text-slate-300 font-medium">
 					<li
 						v-for="(category, index) in categories" :key="index"
@@ -29,13 +29,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-span-3">
-				<h2
-					v-for="(category, index) in categories" :key="index"
-					class="text-slate-300 text-xl font-medium"
-				>
-					{{ category }}
-				</h2>
+			<div class="col-span-4 md:col-span-3">
 				<FAQComponent v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
 						<h3>{{ item.title }}</h3>
@@ -161,13 +155,10 @@ export default {
 			const categoriesArray = Array.from(categories)
 			return categoriesArray
 		},
-		debug() {
-			return this.faqs.filter(faq => faq.category === 'General')
-		}
 	},
 	methods: {
-		sortFaq(param) {
-			return this.faqs.filter(faq => faq.category === param)
+		filterItems(param) {
+			return this.faqs.filter(a => a.category === param)
 		}
 	}
 }
