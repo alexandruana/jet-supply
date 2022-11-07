@@ -67,6 +67,19 @@
 <script>
 export default {
 	name: 'FAQ',
+	head () {
+		return {
+			title: 'FAQ',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{
+					hid: 'faq-description',
+					name: 'description',
+					content: 'Frequently Asked Questions'
+				}
+			]
+		}
+	},
 	provide() {
 		return { Accordion: this.Accordion }
 	},
