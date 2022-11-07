@@ -1,11 +1,17 @@
 <template>
-	<button class="rounded-lg text-sm font-semibold py-3 px-4 bg-jet-dark text-white hover:bg-jet-light">
+	<NuxtLink
+		class="rounded-lg text-sm font-semibold py-3 px-4 bg-jet-dark text-white hover:bg-jet-light transition-all duration-200"
+		:to="link"
+	>
 		<slot name="title"></slot>
-	</button>
+	</NuxtLink>
 </template>
 
 <script>
 export default {
-	name: 'CallToAction'
+	name: 'CallToAction',
+	props: [
+		'link'
+	]
 }
 </script>

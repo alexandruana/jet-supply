@@ -30,6 +30,13 @@
 					most popular questions and concerns when it comes to
 					chartering a private aircraft.
 				</p>
+				<CallToAction
+					link="/faq"
+				>
+					<template slot="title">
+						See more
+					</template>
+				</CallToAction>
 			</div>
 			<div class="col-span-1">
 				<FAQComponent v-for="(item, index) in faqs" :key="index">
