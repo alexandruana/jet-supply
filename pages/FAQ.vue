@@ -18,9 +18,11 @@
 				</p>
 			</div>
 		</div>
-		<div class="grid md:grid-cols-4 gap-10 px-4">
+		<div class="grid md:grid-cols-4 gap-16 px-4">
 			<div class="col-span-4 hidden md:block md:col-span-1">
-				<ul class="text-slate-300 font-medium fixed">
+				<ul
+					class="sticky top-10 w-full text-slate-300 font-medium p-10 bg-slate-50"
+				>
 					<li
 						v-for="(category, index) in categories"
 						:key="index"
@@ -180,7 +182,6 @@ export default {
 			document.getElementById(id).scrollIntoView({
 				behavior: "smooth"
 			});
-			console.log(id)
 		},
 		filterItems(param) {
 			return this.faqs.filter((a) => a.category === param)
