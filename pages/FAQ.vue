@@ -19,25 +19,44 @@
 			</div>
 		</div>
 		<div class="grid md:grid-cols-4 gap-10 px-4">
-			<div class="col-span-4 md:col-span-1">
-				<ul class="text-slate-300 font-medium">
+			<div class="col-span-4 hidden md:block md:col-span-1">
+				<ul class="text-slate-300 font-medium fixed">
 					<li
-						v-for="(category, index) in categories" :key="index"
-						class="mb-3 hover:cursor-pointer hover:text-jet-light transition-all duration-200"
+						v-for="(category, index) in categories"
+						:key="index"
+						class="
+							mb-3
+							hover:cursor-pointer hover:text-jet-light
+							transition-all
+							duration-200
+						"
 					>
-						{{ category }}
+						<button
+							@click="scroll(index)"
+						>
+							{{ category }}
+						</button>
 					</li>
 				</ul>
 			</div>
+
 			<div class="col-span-4 md:col-span-3">
-				<FAQComponent v-for="(item, index) in faqs" :key="index">
-					<template slot="title">
-						<h3>{{ item.title }}</h3>
-					</template>
-					<template slot="content">
-						<p v-html="item.content">{{ item.content }}</p>
-					</template>
-				</FAQComponent>
+				<div
+					v-for="(category, index) in categories"
+					:key="index"
+					:id="index"
+					class="faq__group mb-10"
+				>
+					<h2 class="text-slate-300 text-xl font-medium mb-3">{{ category }}</h2>
+					<FAQComponent v-for="(item, index) in filterItems(category)" :key="index">
+						<template slot="title">
+							<h3>{{ item.title }}</h3>
+						</template>
+						<template slot="content">
+							<p v-html="item.content">{{ item.content }}</p>
+						</template>
+					</FAQComponent>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -151,14 +170,20 @@ export default {
 	},
 	computed: {
 		categories() {
-			const categories = new Set(this.faqs.map(f => f.category))
+			const categories = new Set(this.faqs.map((f) => f.category))
 			const categoriesArray = Array.from(categories)
 			return categoriesArray
-		},
+		}
 	},
 	methods: {
+		scroll(id) {
+			document.getElementById(id).scrollIntoView({
+				behavior: "smooth"
+			});
+			console.log(id)
+		},
 		filterItems(param) {
-			return this.faqs.filter(a => a.category === param)
+			return this.faqs.filter((a) => a.category === param)
 		}
 	}
 }

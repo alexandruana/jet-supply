@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{360:function(t,e,n){"use strict";n.r(e);var l={name:"CallToAction"},o=n(25),component=Object(o.a)(l,(function(){return(0,this._self._c)("button",{staticClass:"rounded-lg text-sm font-semibold py-3 px-4 bg-jet-dark text-white hover:bg-jet-light"},[this._t("title")],2)}),[],!1,null,null,null);e.default=component.exports}}]);
