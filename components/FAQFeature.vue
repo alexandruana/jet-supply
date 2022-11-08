@@ -25,7 +25,7 @@
 				>
 					Frequently asked questions
 				</h2>
-				<p class="my-4 max-w-full md:max-w-md text-lg text-gray-500">
+				<p class="mt-4 mb-6 max-w-full md:max-w-md text-lg text-gray-500">
 					Got questions? In our FAQs we are addressing some of the
 					most popular questions and concerns when it comes to
 					chartering a private aircraft.

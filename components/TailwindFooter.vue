@@ -3,7 +3,7 @@
 		class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900"
 	>
 		<div class="max-w-7xl mx-auto">
-			<div class="flex items-center justify-between md:items-start">
+			<div class="flex flex-wrap justify-between items-start">
 				<NuxtLink
 					to="/"
 					class="
@@ -13,6 +13,8 @@
 						sm:mb-0
 						text-2xl
 						font-semibold
+						w-full
+						md:max-w-min
 					"
 				>
 					Jet<span class="text-jet-light">Supply</span>
@@ -79,6 +81,9 @@
 						</li>
 						<li class="mb-4">
 							<p>+48 603 951 000</p>
+						</li>
+						<li>
+							Henryka Sienkiewicza 85/87, <br />lok.8, 95-057 Łódź
 						</li>
 					</ul>
 				</div>
