@@ -1,8 +1,8 @@
 <template>
 	<div class="relative px-4 sm:px-6 lg:px-8">
 		<div class="px-4 sm:px-6 lg:px-8">
-			<div class="relative mx-auto max-w-[37.5rem] pt-20 text-center pb-24">
-				<h1 class="text-4xl font-extrabold tracking-tight text-jet-light sm:text-5xl">Privacy policy</h1>
+			<div class="relative mx-auto max-w-[37.5rem] pt-20 text-center pb-12">
+				<h1 class="text-4xl font-extrabold tracking-tight text-jet-light sm:text-5xl">Privacy Policy</h1>
 				<p class="mt-4 text-base leading-7 text-slate-600">Last updated on June 2, 2022</p>
 			</div>
 			<div class="mx-auto max-w-2xl">

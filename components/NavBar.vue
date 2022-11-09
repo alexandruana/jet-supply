@@ -78,8 +78,7 @@
 						"
 					>
 						Privacy policy
-					</NuxtLink
-					>
+					</NuxtLink>
 				</nav>
 			</div>
 		</div>
