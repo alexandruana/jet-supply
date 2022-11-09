@@ -1,4 +1,4 @@
-const main_base_URL =  'https://jet-supply.com';
+const main_base_URL = 'https://jet-supply.com';
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: true,
@@ -10,15 +10,15 @@ export default {
   head: {
     title: 'jet-supply',
     titleTemplate: 'Jet Supply: %s',
-    htmlAttrs: {    
+    htmlAttrs: {
       lang: 'en'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description', 
-        name: 'description', 
+        hid: 'description',
+        name: 'description',
         content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods.'
       },
       { name: 'format-detection', content: 'telephone=no' },
@@ -46,6 +46,11 @@ export default {
         hid: 'og:url',
         property: 'og:url',
         content: 'https:///www.jet-supply.com/'
+      },
+      {
+        hid: 't-type',
+        name: 'twitter:card',
+        content: 'summary_large_image'
       },
     ],
     link: [
@@ -78,7 +83,8 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -90,7 +96,18 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  
+
+  robots: [
+    {
+      UserAgent: '*',
+      Disallow: '/users'
+    },
+    {
+      UserAgent: '*',
+      Disallow: '/admin'
+    }
+  ],
+
   sitemap: {
     hostname: main_base_URL
   },
