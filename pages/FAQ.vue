@@ -11,7 +11,7 @@
 						sm:text-5xl
 					"
 				>
-					Frequently Asked questions
+					Frequently Asked Questions
 				</h1>
 				<p class="mt-4 text-base leading-7 text-slate-600">
 					Have questions? We are here to help.
