@@ -35,6 +35,7 @@
 					>
 						<button
 							@click="scroll(index)"
+							class="w-full text-left"
 						>
 							{{ category }}
 						</button>
@@ -75,7 +76,7 @@ export default {
 				{
 					hid: 'faq-description',
 					name: 'description',
-					content: 'Frequently Asked Questions'
+					content: 'Got questions regarding flying private? Read the frequently asked questions for chartering an aircraft.'
 				}
 			]
 		}

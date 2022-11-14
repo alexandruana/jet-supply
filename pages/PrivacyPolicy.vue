@@ -236,7 +236,7 @@ export default {
 				{
 					hid: 'description',
 					name: 'description',
-					content: 'Privacy policy'
+					content: 'Understand how our website data is being processed by reading our privacy policy.'
 				}
 			]
 		}

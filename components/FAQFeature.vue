@@ -32,6 +32,7 @@
 				</p>
 				<CallToAction
 					link="/faq"
+					description="Link to FAQs"
 				>
 					<template slot="title">
 						See more
