@@ -105,6 +105,10 @@ export default {
     {
       UserAgent: '*',
       Disallow: '/admin'
+    },
+    {
+      UserAgent: '*',
+      Disallow: '/_nuxt'
     }
   ],
 

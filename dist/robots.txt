@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /users
 User-agent: *
 Disallow: /admin
+User-agent: *
+Disallow: /_nuxt
