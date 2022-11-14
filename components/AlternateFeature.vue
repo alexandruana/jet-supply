@@ -47,7 +47,7 @@
 				/>
 				<div class="p-5">
 					<a href="#">
-						<h5
+						<h3
 							class="
 								mb-2
 								text-2xl
@@ -58,7 +58,7 @@
 							"
 						>
 							Private jets
-						</h5>
+						</h3>
 					</a>
 					<p
 						class="
@@ -90,7 +90,7 @@
 				/>
 				<div class="p-5">
 					<a href="#">
-						<h5
+						<h3
 							class="
 								mb-2
 								text-2xl
@@ -101,7 +101,7 @@
 							"
 						>
 							Helicopters
-						</h5>
+						</h3>
 					</a>
 					<p
 						class="
@@ -133,7 +133,7 @@
 				/>
 				<div class="p-5">
 					<a href="#">
-						<h5
+						<h3
 							class="
 								mb-2
 								text-2xl
@@ -144,7 +144,7 @@
 							"
 						>
 							Transfers
-						</h5>
+						</h3>
 					</a>
 					<p
 						class="

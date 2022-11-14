@@ -45,7 +45,8 @@ module.exports = {
 				{
 					ignores:
 						[
-							'default'
+							'default',
+							'error'
 						]
 				}
 			]
