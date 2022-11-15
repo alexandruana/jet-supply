@@ -43,23 +43,23 @@
 				<nuxt-img
 					class="rounded-t-lg"
 					src="/images/global6500_interior.jpeg"
+					width="100%"
+					height="100%"
 					alt="global interior"
 				/>
 				<div class="p-5">
-					<a href="#">
-						<h3
-							class="
-								mb-2
-								text-2xl
-								font-bold
-								tracking-tight
-								text-gray-900
-								dark:text-white
-							"
-						>
-							Private jets
-						</h3>
-					</a>
+					<h3
+						class="
+							mb-2
+							text-2xl
+							font-bold
+							tracking-tight
+							text-gray-900
+							dark:text-white
+						"
+					>
+						Private jets
+					</h3>
 					<p
 						class="
 							mb-3
@@ -86,23 +86,23 @@
 				<nuxt-img
 					class="rounded-t-lg"
 					src="/images/heli_interior.jpg"
+					width="100%"
+					height="100%"
 					alt="helicopter interior"
 				/>
 				<div class="p-5">
-					<a href="#">
-						<h3
-							class="
-								mb-2
-								text-2xl
-								font-bold
-								tracking-tight
-								text-gray-900
-								dark:text-white
-							"
-						>
-							Helicopters
-						</h3>
-					</a>
+					<h3
+						class="
+							mb-2
+							text-2xl
+							font-bold
+							tracking-tight
+							text-gray-900
+							dark:text-white
+						"
+					>
+						Helicopters
+					</h3>
 					<p
 						class="
 							mb-3
@@ -129,23 +129,23 @@
 				<nuxt-img
 					class="rounded-t-lg"
 					src="/images/7series_interior_cropped.jpg"
+					width="100%"
+					height="100%"
 					alt="limousine interior"
 				/>
 				<div class="p-5">
-					<a href="#">
-						<h3
-							class="
-								mb-2
-								text-2xl
-								font-bold
-								tracking-tight
-								text-gray-900
-								dark:text-white
-							"
-						>
-							Transfers
-						</h3>
-					</a>
+					<h3
+						class="
+							mb-2
+							text-2xl
+							font-bold
+							tracking-tight
+							text-gray-900
+							dark:text-white
+						"
+					>
+						Transfers
+					</h3>
 					<p
 						class="
 							mb-3

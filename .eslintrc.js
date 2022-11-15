@@ -43,7 +43,7 @@ module.exports = {
 			[
 				'error',
 				{
-					ignores:
+					'ignores':
 						[
 							'default',
 							'error',

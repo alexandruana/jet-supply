@@ -22,7 +22,7 @@
 					sm:text-4xl
 				"
 			>
-				Interested in private charter?
+				Interested in flying private?
 			</h2>
 			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
 				Our team is here to provide round-the-clock support and travel

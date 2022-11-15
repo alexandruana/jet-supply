@@ -13,7 +13,9 @@
 	>
 		<nuxt-img
 			src="/images/praetor600.jpeg"
-			class="w-full h-full object-cover absolute opacity-40"
+			class="object-cover absolute opacity-40"
+			width="100%"
+			height="100%"
 			alt="praetor 600 background"
 		/>
 		<div class="container mx-auto sm:py-12 lg:py-20 xl:py-28">
@@ -54,7 +56,7 @@
 							"
 						>
 							<span class="block xl:inline">
-								Taking you places
+								Private jet charter
 							</span>
 							<span class="block text-jet-light xl:inline">
 								wherever, whenever.
