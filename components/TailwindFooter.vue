@@ -42,7 +42,7 @@
 						</li>
 						<li class="mb-4">
 							<NuxtLink
-								to="/privacypolicy"
+								to="/privacy"
 								class="hover:text-gray-900"
 							>
 								Privacy policy
