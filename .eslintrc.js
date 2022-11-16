@@ -47,7 +47,9 @@ module.exports = {
 						[
 							'default',
 							'error',
-							'About'
+							'about',
+							'faq',
+							'privacy'
 						]
 				}
 			]
