@@ -27,7 +27,7 @@
 				</h2>
 				<p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
 					Regardless if it's a transcontinental flight or a day-return
-					trip, we take you from A to B hasslefree.
+					trip, JetSupply can take you from A to B hasslefree.
 				</p>
 			</div>
 			<div
@@ -68,7 +68,7 @@
 							dark:text-gray-400
 						"
 					>
-						Find out which aircraft best suits your needs and access
+						Find out which type of private jet best suits your needs and access
 						a wider network of airports.
 					</p>
 				</div>
@@ -111,7 +111,7 @@
 							dark:text-gray-400
 						"
 					>
-						Get from the aircraft to your final destination quick
+						Get from the jet to your final destination quick
 						and easy with modern helicopters.
 					</p>
 				</div>
@@ -155,7 +155,7 @@
 						"
 					>
 						Waste no time and have fully flexibility from touchdown
-						to take-off with a fleet of top class vehicles.
+						to your next take-off with a fleet of top class vehicles.
 					</p>
 				</div>
 			</div>

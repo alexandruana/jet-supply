@@ -26,7 +26,7 @@
 				The perks of flying with us
 			</h2>
 			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-				We continuously evaluate the markets as well as enhance our
+				We continuously evaluate the market as well as enhance our
 				processes and services to provide you with the utmost
 				flexibility and transparency.
 			</p>
@@ -181,7 +181,7 @@
 								text-gray-900
 							"
 						>
-							Easy Payments
+							Easy payments
 						</p>
 					</dt>
 					<dd class="mt-2 ml-16 text-base text-gray-500">

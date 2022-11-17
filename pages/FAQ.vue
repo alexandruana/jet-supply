@@ -70,7 +70,7 @@ export default {
 	name: 'FAQ',
 	head () {
 		return {
-			title: 'FAQ',
+			title: 'Frequently Asked Questions',
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{
@@ -168,6 +168,12 @@ export default {
 					content:
 						'If no empty leg flights are available to accommodate your itinerary, we will try to modify or reroute an empty leg request.',
 					category: 'Chartering'
+				},
+				{
+					title: 'How much does it cost to charter a private jet?',
+					content:
+						'Private jet charter market is affected by seasonality, however depending on which aircraft type you are looking to hire prices range from €2,5000/hour to €8,000/hour.',
+					category: 'Payment'
 				},
 				{
 					title: 'What type of payment does JetSupply accept?',

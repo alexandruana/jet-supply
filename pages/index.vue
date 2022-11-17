@@ -21,7 +21,7 @@ export default {
 	name: 'IndexPage',
 	head () {
 		return {
-			title: 'Homepage',
+			title: 'Private Jet Charter',
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{
