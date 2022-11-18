@@ -1,5 +1,5 @@
 <template>
-	<div class="max-w-7xl px-6 lg:px-8 mx-auto">
+	<div class="container px-6 lg:px-8 mx-auto">
 		<div class="lg:text-center mb-14">
 			<p
 				class="

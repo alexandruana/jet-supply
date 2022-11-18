@@ -13,7 +13,7 @@
 	>
 		<nuxt-img
 			src="/images/praetor600.jpeg"
-			class="object-cover absolute opacity-40"
+			class="object-cover absolute opacity-40 w-full h-full"
 			height="100%"
 			width="100%"
 			format="webp"
