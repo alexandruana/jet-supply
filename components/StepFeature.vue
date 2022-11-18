@@ -25,7 +25,7 @@
 				Chartering a private jet
 			</h2>
 			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-				Receive quotes in as less as one hour.
+				Receive quotes in as little as one hour.
 			</p>
 		</div>
 		<div class="flex flex-wrap w-full">
