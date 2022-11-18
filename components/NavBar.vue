@@ -69,7 +69,7 @@
 						Home
 					</NuxtLink>
 					<NuxtLink
-						to="/privacy"
+						to="/privacypolicy"
 						class="
 							text-base
 							font-medium

@@ -14,8 +14,9 @@
 		<nuxt-img
 			src="/images/praetor600.jpeg"
 			class="object-cover absolute opacity-40"
-			width="100%"
 			height="100%"
+			width="100%"
+			format="webp"
 			alt="praetor 600 background"
 		/>
 		<div class="container mx-auto sm:py-12 lg:py-20 xl:py-28">

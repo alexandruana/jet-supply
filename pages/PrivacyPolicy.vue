@@ -227,7 +227,7 @@
 
 <script>
 export default {
-	name: 'Privacy',
+	name: 'PrivacyPolicy',
 	head () {
 		return {
 			title: 'Privacy Policy',
