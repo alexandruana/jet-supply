@@ -8,6 +8,9 @@
 			<UniqueSellingPointsFeature />
 		</div>
 		<div class="py-10 md:py-20">
+			<StepFeature />
+		</div>
+		<div class="py-10 md:py-20 bg-slate-50">
 			<FAQFeature />
 		</div>
 		<div class="py-10 md:py-20 pb-10">
