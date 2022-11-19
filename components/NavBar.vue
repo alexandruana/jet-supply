@@ -1,7 +1,7 @@
 <template>
 	<!-- This example requires Tailwind CSS v2.0+ -->
 	<div class="relative bg-white">
-		<div class="container mx-auto px-4 md:px-6">
+		<div class="container px-4 md:px-6">
 			<div
 				class="
 					flex

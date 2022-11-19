@@ -19,7 +19,7 @@
 			format="webp"
 			alt="praetor 600 background"
 		/>
-		<div class="container mx-auto sm:py-12 lg:py-20 xl:py-28">
+		<div class="container sm:py-12 lg:py-20 xl:py-28">
 			<div
 				class="
 					relative

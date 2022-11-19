@@ -1,5 +1,5 @@
 <template>
-	<div class="container mx-auto">
+	<div class="container">
 		<div class="px-4 sm:px-6 lg:px-8">
 			<div class="relative mx-auto pt-20 text-center pb-24">
 				<h1
