@@ -14,7 +14,7 @@
 			<FAQFeature />
 		</div>
 		<div class="py-10 md:py-20 pb-10">
-			<ContactForm />
+			<ContactFeature />
 		</div>
 	</main>
 </template>

@@ -1,6 +1,6 @@
 <template>
 	<footer
-		class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900"
+		class="p-4 mt-20 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-900"
 	>
 		<div class="max-w-7xl mx-auto">
 			<div class="flex flex-wrap justify-between items-start">

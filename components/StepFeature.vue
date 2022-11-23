@@ -1,33 +1,16 @@
 <template>
 	<div class="container px-6 lg:px-8 mx-auto">
-		<div class="lg:text-center mb-14">
-			<p
-				class="
-					text-base text-jet-light
-					font-semibold
-					tracking-wide
-					uppercase
-				"
-			>
-				The process
-			</p>
-			<h2
-				class="
-					mt-2
-					text-3xl
-					leading-8
-					font-extrabold
-					tracking-tight
-					text-jet-dark
-					sm:text-4xl
-				"
-			>
+		<Content
+			:class="['mx-auto', 'text-center']"
+		>
+			<template slot="title">The process</template>
+			<template slot="heading">
 				Chartering a private jet
-			</h2>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+			</template>
+			<template slot="content">
 				Receive quotes in as little as one hour.
-			</p>
-		</div>
+			</template>
+		</Content>
 		<div class="flex flex-wrap w-full">
 			<div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
 				<div class="flex relative pb-12">

@@ -2,33 +2,16 @@
 	<div class="container px-4 sm:px-6 lg:px-8">
 		<div class="grid sm:grid-cols-4 grid-cols-2 gap-4">
 			<div>
-				<p
-					class="
-						text-base text-jet-light
-						font-semibold
-						tracking-wide
-						uppercase
-					"
-				>
-					What we do
-				</p>
-				<h2
-					class="
-						mt-2
-						text-3xl
-						leading-8
-						font-extrabold
-						tracking-tight
-						text-gray-900
-						sm:text-4xl
-					"
-				>
-					Seamless travel solutions
-				</h2>
-				<p class="mt-4 max-w-2xl text-lg text-gray-500 lg:mx-auto">
-					Regardless if it's a transcontinental flight or a day-return
-					trip, JetSupply can take you from A to B hasslefree.
-				</p>
+				<Content>
+					<template slot="title">What we do</template>
+					<template slot="heading">
+						Seamless travel solutions
+					</template>
+					<template slot="content">
+						Regardless if it's a transcontinental flight or a day-return
+						trip, JetSupply can take you from A to B hasslefree.
+					</template>
+				</Content>
 			</div>
 			<div
 				class="

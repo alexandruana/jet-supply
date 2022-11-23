@@ -47,7 +47,7 @@
 
 <script>
 export default {
-	name: 'FAQComponent',
+	name: 'Accordion',
 	inject: ["Accordion"],
 	data() {
 		return {

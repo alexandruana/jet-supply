@@ -8,7 +8,8 @@ module.exports = {
 					light: '#00A9E2',
 					DEFAULT: '#3A3F55',
 					dark: '#2D3142'
-				}
+				},
+				'orange': '#fca311'
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -25,6 +26,7 @@ module.exports = {
 				]
 			},
 			rotate: {
+				'55': '50deg',
 				'60': '60deg',
 				'80': '80deg',
 				'220': '220deg'
@@ -32,6 +34,9 @@ module.exports = {
 		},
 		container: {
 			center: true
+		},
+		zIndex: {
+			'100': '100',
 		}
 	},
 	variants: {

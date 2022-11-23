@@ -34,8 +34,8 @@
 						"
 					>
 						<button
-							@click="scroll(index)"
 							class="w-full text-left"
+							@click="scroll(index)"
 						>
 							{{ category }}
 						</button>
@@ -46,19 +46,19 @@
 			<div class="col-span-4 md:col-span-3">
 				<div
 					v-for="(category, index) in categories"
-					:key="index"
 					:id="index"
+					:key="index"
 					class="faq__group mb-10"
 				>
 					<h2 class="text-slate-300 text-xl font-medium mb-3">{{ category }}</h2>
-					<FAQComponent v-for="(item, index) in filterItems(category)" :key="index">
+					<Accordion v-for="(item, index) in filterItems(category)" :key="index">
 						<template slot="title">
 							<h3>{{ item.title }}</h3>
 						</template>
 						<template slot="content">
 							<p v-html="item.content">{{ item.content }}</p>
 						</template>
-					</FAQComponent>
+					</Accordion>
 				</div>
 			</div>
 		</div>
@@ -68,19 +68,6 @@
 <script>
 export default {
 	name: 'FAQ',
-	head () {
-		return {
-			title: 'Frequently Asked Questions',
-			meta: [
-				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
-				{
-					hid: 'faq-description',
-					name: 'description',
-					content: 'Got questions regarding flying private? Read the frequently asked questions for chartering an aircraft.'
-				}
-			]
-		}
-	},
 	provide() {
 		return { Accordion: this.Accordion }
 	},
@@ -186,6 +173,19 @@ export default {
 					content:
 						'Depending on the credit card type, a fee of 3.5% - 4.5% will be charged by the bank settling the transaction.',
 					category: 'Payment'
+				}
+			]
+		}
+	},
+	head () {
+		return {
+			title: 'Frequently Asked Questions',
+			meta: [
+				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
+				{
+					hid: 'faq-description',
+					name: 'description',
+					content: 'Got questions regarding flying private? Read the frequently asked questions for chartering an aircraft.'
 				}
 			]
 		}

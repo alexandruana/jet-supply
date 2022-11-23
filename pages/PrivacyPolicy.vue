@@ -1,10 +1,11 @@
 <template>
 	<div class="relative px-4 sm:px-6 lg:px-8">
 		<div class="px-4 sm:px-6 lg:px-8">
-			<div class="relative mx-auto max-w-[37.5rem] pt-20 text-center pb-12">
-				<h1 class="text-4xl font-extrabold tracking-tight text-jet-light sm:text-5xl">Privacy Policy</h1>
-				<p class="mt-4 text-base leading-7 text-slate-600">Last updated on June 2, 2022</p>
-			</div>
+			<PageHeading>
+				<template slot="title">
+					{{ title }}
+				</template>
+			</PageHeading>
 			<div class="mx-auto max-w-2xl">
 				<p>
 					The following Privacy Policy sets out the rules for saving and accessing data on Users 'Devices
@@ -228,9 +229,15 @@
 <script>
 export default {
 	name: 'PrivacyPolicy',
-	head () {
+	data() {
 		return {
 			title: 'Privacy Policy',
+			description: 'Updated 02 June 2022',
+		}
+	},
+	head () {
+		return {
+			title: this.title,
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{

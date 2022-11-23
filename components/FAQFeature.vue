@@ -1,60 +1,38 @@
 <template>
 	<div class="container px-4 sm:px-6 lg:px-8">
 		<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-			<div class="col-span-1 mb-14 md:mb-0">
-				<p
-					class="
-						text-base text-jet-light
-						font-semibold
-						tracking-wide
-						uppercase
-					"
-				>
-					FAQ
-				</p>
-				<h2
-					class="
-						mt-2
-						text-3xl
-						leading-8
-						font-extrabold
-						tracking-tight
-						text-gray-900
-						sm:text-4xl
-					"
-				>
+			<Content
+				:class="['max-w-lg']"
+			>
+				<template slot="title">FAQ</template>
+				<template slot="heading">
 					Frequently asked questions
-				</h2>
-				<p class="mt-4 mb-6 max-w-full md:max-w-md text-lg text-gray-500">
+				</template>
+				<template slot="content">
 					Got questions? In our FAQs we are addressing some of the
 					most popular questions and concerns when it comes to
 					chartering a private aircraft.
-				</p>
-				<CallToAction
-					link="/faq"
-				>
-					<template slot="title">
-						See more
-					</template>
-				</CallToAction>
-			</div>
+				</template>
+			</Content>
 			<div class="col-span-1">
-				<FAQComponent v-for="(item, index) in faqs" :key="index">
+				<Accordion v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
 						<h3>{{ item.title }}</h3>
 					</template>
 					<template slot="content">
 						<p>{{ item.content }}</p>
 					</template>
-				</FAQComponent>
+				</Accordion>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import Accordion from './Accordion.vue'
 export default {
 	name: 'FAQFeature',
+	components: { Accordion },
 	provide() {
 		return { Accordion: this.Accordion }
 	},
@@ -92,6 +70,6 @@ export default {
 				}
 			]
 		}
-	}
+	},
 }
 </script>

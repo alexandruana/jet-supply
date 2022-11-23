@@ -1,36 +1,19 @@
 <template>
 	<!-- This example requires Tailwind CSS v2.0+ -->
-	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-		<div class="lg:text-center mb-14">
-			<p
-				class="
-					text-base text-jet-light
-					font-semibold
-					tracking-wide
-					uppercase
-				"
-			>
-				What we offer
-			</p>
-			<h2
-				class="
-					mt-2
-					text-3xl
-					leading-8
-					font-extrabold
-					tracking-tight
-					text-gray-900
-					sm:text-4xl
-				"
-			>
+	<div class="container px-4 sm:px-6 lg:px-8">
+		<Content
+			:class="['mx-auto', 'text-center']"
+		>
+			<template slot="title"> What we offer</template>
+			<template slot="heading">
 				The perks of flying with us
-			</h2>
-			<p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+			</template>
+			<template slot="content">
 				We continuously evaluate the market as well as enhance our
 				processes and services to provide you with the utmost
 				flexibility and transparency.
-			</p>
-		</div>
+			</template>
+		</Content>
 
 		<div>
 			<dl
