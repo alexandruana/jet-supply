@@ -16,22 +16,17 @@
 			<div class="col-span-12 md:col-span-6 max-w-md">
 				<Content>
 					<template slot="title"> Our expertise</template>
-					<template slot="heading">
-						Boutique jet charter
-					</template>
+					<template slot="heading"> Boutique jet charter </template>
 					<template slot="content">
-						JetSupply is a Poland based private jet broker company which
-						guarantees a completely neutral search for private jets and
-						helicopters. As we do not operate aircraft ourselves, we
-						support our clients in finding the best solution with the
-						best prices.
+						JetSupply is a Poland based private jet broker company
+						which guarantees a completely neutral search for private
+						jets and helicopters. As we do not operate aircraft
+						ourselves, we support our clients in finding the best
+						solution with the best prices.
 					</template>
 				</Content>
 				<div class="flex flex-row justify-between">
-					<KPI
-						v-for="(item, index) in kpis"
-						:key="index"
-					>
+					<KPI v-for="(item, index) in kpis" :key="index">
 						<template slot="figure">
 							{{ item.figure }}
 						</template>
@@ -42,7 +37,17 @@
 				</div>
 			</div>
 			<div class="col-span-12 md:col-span-6">
-				<div class="relative">
+				<div
+					class="
+						relative
+						flex
+						h-80
+						w-80
+						flex-col
+						items-center
+						justify-center
+					"
+				>
 					<div
 						class="
 							absolute
@@ -50,40 +55,58 @@
 							w-64
 							rotate-60
 							rounded-3xl
-							bg-blue-500
+							bg-jet-light
+							shadow-xl
 						"
 					></div>
-					<nuxt-img
-						class="
-							h-64
-							w-64
-							-rotate-45
-							object-cover object-center
-							rounded-3xl
-						"
-						src="/images/praetor600_interior.jpg"
-						fit="fill"
-						alt="private jet interior"
-					/>
+
+					<svg
+						class="absolute h-[23rem] w-[23rem]"
+						viewbox="1 1 8 8"
+					>
+						<pattern
+							id="image"
+							width="10"
+							height="10"
+							patternUnits="userSpaceOnUse"
+						>
+							<image
+								xlink:href="/images/global6500_interior.jpeg"
+								x="0"
+								y="0"
+								height="10"
+								width="10"
+							/>
+						</pattern>
+						<path
+							d="M5.5 1.5 L8.5 4.5 Q9 5 8.5 5.5 L5.5 8.5 Q5 9 4.5 8.5 L 1.5 5.5 Q1 5 1.5 4.5 L4.5 1.5 Q 5 1 5.5 1.5z"
+							fill="url(#image)"
+						/>
+					</svg>
 				</div>
 			</div>
-			<div class="col-span-12 md:col-span-6">
-				Image
+			<div class="col-span-12 md:col-span-6 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
+				<nuxt-img
+					class="rounded-t-lg h-full"
+					src="/images/fbo_interior.jpg"
+					width="100%"
+					height="100%"
+					alt="global interior"
+				/>
 			</div>
 			<div class="col-span-12 md:col-span-6 max-w-md">
 				<Content>
 					<template slot="title"> Our advantages</template>
-					<template slot="heading">
-						Boutique jet charter
-					</template>
+					<template slot="heading">We focus on finding the best solutions for you</template>
 					<template slot="content">
-						With several years of experience in the aviation industry,
-						our team can assist even with the most difficult charters.
+						With several years of experience in the aviation
+						industry, our team can assist even with the most
+						difficult charters. JetSupply provides round-the-clock
+						support so that you and your travel partners can arrive
+						at your destination fast and stress-free.
 					</template>
 				</Content>
-				<TickList
-					:list="listItems"
-				/>
+				<TickList :list="listItems" />
 			</div>
 		</div>
 	</div>
@@ -124,13 +147,13 @@ export default {
 				},
 				{
 					figure: '10+',
-					description: 'Year Experience'
+					description: 'Years Experience'
 				}
 			],
 			listItems: [
 				'Quick offers',
-				'24/7 support',
-				'No hidden fees',
+				'Dedicated support',
+				'Low fees',
 				'Easy payments'
 			]
 		}
