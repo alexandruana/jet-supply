@@ -7,38 +7,40 @@
 		</PageHeading>
 		<div
 			class="
-				grid grid-cols-12
-				place-content-evenly place-items-center
+				grid grid-cols-12 grid-rows-2
+				place-items-center
 				gap-y-16
-				md:gap-x-8 md:gap-y-24
+				md:gap-x-8 md:gap-y-40
 			"
 		>
-			<Content
-				:class="['col-span-12 md:col-span-6']"
-			>
-				<template slot="title"> Our expertise</template>
-				<template slot="heading">
-					JetSupply - Boutique jet charter
-				</template>
-				<template slot="content">
-					JetSupply is a Poland based private jet broker company which
-					guarantees a completely neutral search for private jets and
-					helicopters. As we do not operate aircraft ourselves, we
-					support our clients in finding the best solution with the
-					best prices.
-				</template>
-			</Content>
-			<KPI
-				v-for="(item, index) in kpis"
-				:key="index"
-			>
-				<template slot="figure">
-					{{ item.figure }}
-				</template>
-				<template slot="description">
-					{{ item.description }}
-				</template>
-			</KPI>
+			<div class="col-span-12 md:col-span-6 max-w-md">
+				<Content>
+					<template slot="title"> Our expertise</template>
+					<template slot="heading">
+						Boutique jet charter
+					</template>
+					<template slot="content">
+						JetSupply is a Poland based private jet broker company which
+						guarantees a completely neutral search for private jets and
+						helicopters. As we do not operate aircraft ourselves, we
+						support our clients in finding the best solution with the
+						best prices.
+					</template>
+				</Content>
+				<div class="flex flex-row justify-between">
+					<KPI
+						v-for="(item, index) in kpis"
+						:key="index"
+					>
+						<template slot="figure">
+							{{ item.figure }}
+						</template>
+						<template slot="description">
+							{{ item.description }}
+						</template>
+					</KPI>
+				</div>
+			</div>
 			<div class="col-span-12 md:col-span-6">
 				<div class="relative">
 					<div
@@ -65,23 +67,23 @@
 					/>
 				</div>
 			</div>
-			<div
-				v-for="(statement, index) in statements"
-				:key="index"
-				class="col-span-12 md:col-span-4"
-			>
-				<CardBordered
-					:class="[
-						index % 2 == 0 ? 'border-orange' : 'border-jet-light'
-					]"
-				>
-					<template slot="title">
-						{{ statement.title }}
+			<div class="col-span-12 md:col-span-6">
+				Image
+			</div>
+			<div class="col-span-12 md:col-span-6 max-w-md">
+				<Content>
+					<template slot="title"> Our advantages</template>
+					<template slot="heading">
+						Boutique jet charter
 					</template>
 					<template slot="content">
-						{{ statement.content }}
+						With several years of experience in the aviation industry,
+						our team can assist even with the most difficult charters.
 					</template>
-				</CardBordered>
+				</Content>
+				<TickList
+					:list="listItems"
+				/>
 			</div>
 		</div>
 	</div>
@@ -124,6 +126,12 @@ export default {
 					figure: '10+',
 					description: 'Year Experience'
 				}
+			],
+			listItems: [
+				'Quick offers',
+				'24/7 support',
+				'No hidden fees',
+				'Easy payments'
 			]
 		}
 	},

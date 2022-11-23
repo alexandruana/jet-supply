@@ -1,5 +1,5 @@
 <template>
-	<div class="mb-14 max-w-2xl">
+	<div class="mb-10">
 		<p
 			class="
 				text-base text-jet-light
@@ -23,7 +23,7 @@
 		>
 			<slot name="heading"></slot>
 		</h2>
-		<p class="mt-4 mb-6 text-lg text-gray-500">
+		<p class="mt-4 mb-6 text-gray-500">
 			<slot name="content"></slot>
 		</p>
 	</div>
