@@ -142,11 +142,11 @@ export default {
 					description: 'Aircraft Available'
 				},
 				{
-					figure: '50k+',
+					figure: '73k+',
 					description: 'Airport Pairs'
 				},
 				{
-					figure: '10+',
+					figure: '5+',
 					description: 'Years Experience'
 				}
 			],
