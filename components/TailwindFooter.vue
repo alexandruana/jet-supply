@@ -46,21 +46,21 @@
 							</NuxtLink
 							>
 						</li>
-						<li class="mb-4">
-							<NuxtLink
-								to="/privacypolicy"
-								class="hover:text-gray-900"
-							>
-								Privacy policy
-							</NuxtLink
-							>
-						</li>
 						<li>
 							<NuxtLink
 								to="/faq"
 								class="hover:text-gray-900"
 							>
 								FAQ
+							</NuxtLink
+							>
+						</li>
+						<li class="mb-4">
+							<NuxtLink
+								to="/privacypolicy"
+								class="hover:text-gray-900"
+							>
+								Privacy policy
 							</NuxtLink
 							>
 						</li>

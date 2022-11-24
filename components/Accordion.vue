@@ -7,7 +7,7 @@
 		>
 			<slot name="title"></slot>
 			<svg
-				class="w-3 transition-all duration-300 transform text-jet-light"
+				class="w-3 ml-3 transition-all duration-300 transform text-jet-light"
 				:class="{
 					'rotate-180': visible,
 					'rotate-0': !visible

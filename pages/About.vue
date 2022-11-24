@@ -36,18 +36,18 @@
 					</KPI>
 				</div>
 			</div>
-			<div class="col-span-12 md:col-span-6 order-2 rounded-2xl bg-gradient-tui shadow-xl">
+			<div class="col-span-12 md:col-span-6 order-2 rounded-2xl bg-gradient-tui rounded-3xl shadow-xl">
 				<nuxt-img
-					class="rounded-2xl"
+					class="rounded-3xl"
 					src="/images/g650_interior.jpg"
 					width="100%"
 					height="100%"
 					alt="global interior"
 				/>
 			</div>
-			<div class="col-span-12 md:col-span-6 order-4 md:order-3 bg-gradient-tui shadow-xl">
+			<div class="col-span-12 md:col-span-6 order-4 md:order-3 bg-gradient-tui rounded-3xl shadow-xl">
 				<nuxt-img
-					class="rounded-2xl"
+					class="rounded-3xl"
 					src="/images/fbo_interior.jpg"
 					width="100%"
 					height="100%"
