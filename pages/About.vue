@@ -57,11 +57,11 @@
 			<div class="col-span-12 md:col-span-6 order-3 md:order-4 max-w-md">
 				<Content>
 					<template slot="title"> Our advantages</template>
-					<template slot="heading">We focus on finding the best solutions for you</template>
+					<template slot="heading">Our goal is finding the best solutions for you</template>
 					<template slot="content">
 						With several years of experience in the aviation
 						industry, our team can assist even with the most
-						difficult charters. JetSupply provides round-the-clock
+						difficult charter flights. JetSupply provides round-the-clock
 						support so that you and your travel partners can arrive
 						at your destination fast and stress-free.
 					</template>

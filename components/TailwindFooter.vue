@@ -46,7 +46,7 @@
 							</NuxtLink
 							>
 						</li>
-						<li>
+						<li class="mb-4">
 							<NuxtLink
 								to="/faq"
 								class="hover:text-gray-900"
