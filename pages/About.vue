@@ -13,7 +13,7 @@
 				md:gap-x-8 md:gap-y-40
 			"
 		>
-			<div class="col-span-12 md:col-span-6 max-w-md">
+			<div class="col-span-12 md:col-span-6 order-1 max-w-md">
 				<Content>
 					<template slot="title"> Our expertise</template>
 					<template slot="heading"> Boutique jet charter </template>
@@ -36,56 +36,16 @@
 					</KPI>
 				</div>
 			</div>
-			<div class="col-span-12 md:col-span-6">
-				<div
-					class="
-						relative
-						flex
-						h-80
-						w-80
-						flex-col
-						items-center
-						justify-center
-					"
-				>
-					<div
-						class="
-							absolute
-							h-64
-							w-64
-							rotate-60
-							rounded-3xl
-							bg-jet-light
-							shadow-xl
-						"
-					></div>
-
-					<svg
-						class="absolute h-[23rem] w-[23rem]"
-						viewbox="1 1 8 8"
-					>
-						<pattern
-							id="image"
-							width="10"
-							height="10"
-							patternUnits="userSpaceOnUse"
-						>
-							<image
-								xlink:href="/images/global6500_interior.jpeg"
-								x="0"
-								y="0"
-								height="10"
-								width="10"
-							/>
-						</pattern>
-						<path
-							d="M5.5 1.5 L8.5 4.5 Q9 5 8.5 5.5 L5.5 8.5 Q5 9 4.5 8.5 L 1.5 5.5 Q1 5 1.5 4.5 L4.5 1.5 Q 5 1 5.5 1.5z"
-							fill="url(#image)"
-						/>
-					</svg>
-				</div>
+			<div class="col-span-12 md:col-span-6 order-2 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
+				<nuxt-img
+					class="rounded-t-lg h-full"
+					src="/images/g650_interior.jpg"
+					width="100%"
+					height="100%"
+					alt="global interior"
+				/>
 			</div>
-			<div class="col-span-12 md:col-span-6 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
+			<div class="col-span-12 md:col-span-6 order-4 md:order-3 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
 				<nuxt-img
 					class="rounded-t-lg h-full"
 					src="/images/fbo_interior.jpg"
@@ -94,7 +54,7 @@
 					alt="global interior"
 				/>
 			</div>
-			<div class="col-span-12 md:col-span-6 max-w-md">
+			<div class="col-span-12 md:col-span-6 order-3 md:order-4 max-w-md">
 				<Content>
 					<template slot="title"> Our advantages</template>
 					<template slot="heading">We focus on finding the best solutions for you</template>
