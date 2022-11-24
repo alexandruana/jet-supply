@@ -19,11 +19,13 @@
 				class="
 					absolute
 					left-0
-					-bottom-8
+					top-12
+					md:-bottom-8
 					w-full
 					h-full
 					z-10
-					text-8xl
+					text-7xl
+					md:text-8xl
 					text-slate-300
 					font-black
 					opacity-20

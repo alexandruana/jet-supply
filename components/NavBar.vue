@@ -170,6 +170,7 @@
 							<nav class="grid gap-y-8">
 								<NuxtLink
 									to="/"
+									@click.native="toggle"
 									class="
 										-m-3
 										flex
@@ -212,6 +213,7 @@
 								</NuxtLink>
 								<NuxtLink
 									to="/about"
+									@click.native="toggle"
 									class="
 										-m-3
 										flex
@@ -228,19 +230,15 @@
 										viewBox="0 0 24 24"
 										stroke-width="1.5"
 										stroke="currentColor"
-										class="
-											w-6
-											h-6
-											flex-shrink-0
-											text-jet-light
-										"
+										class="w-6 h-6 text-jet-light"
 									>
 										<path
 											stroke-linecap="round"
 											stroke-linejoin="round"
-											d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
+											d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
 										/>
 									</svg>
+
 									<span
 										class="
 											ml-3
@@ -254,6 +252,7 @@
 								</NuxtLink>
 								<NuxtLink
 									to="/privacypolicy"
+									@click.native="toggle"
 									class="
 										-m-3
 										flex

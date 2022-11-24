@@ -77,7 +77,7 @@ export default {
 	name: 'About',
 	data() {
 		return {
-			title: 'About',
+			title: 'About us',
 			description: 'Hi',
 			statements: [
 				{
