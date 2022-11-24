@@ -9,7 +9,7 @@
 			class="
 				grid grid-cols-12 grid-rows-2
 				place-items-center
-				gap-y-16
+				gap-y-10
 				md:gap-x-8 md:gap-y-40
 			"
 		>
@@ -36,7 +36,7 @@
 					</KPI>
 				</div>
 			</div>
-			<div class="col-span-12 md:col-span-6 order-2 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
+			<div class="col-span-12 md:col-span-6 order-2 rounded-2xl bg-gradient-tui shadow-xl">
 				<nuxt-img
 					class="rounded-t-lg h-full"
 					src="/images/g650_interior.jpg"
@@ -45,7 +45,7 @@
 					alt="global interior"
 				/>
 			</div>
-			<div class="col-span-12 md:col-span-6 order-4 md:order-3 w-full h-full rounded-2xl bg-gradient-tui shadow-xl">
+			<div class="col-span-12 md:col-span-6 order-4 md:order-3 rounded-2xl bg-gradient-tui shadow-xl">
 				<nuxt-img
 					class="rounded-t-lg h-full"
 					src="/images/fbo_interior.jpg"
