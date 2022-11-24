@@ -14,25 +14,25 @@
 				"
 			>
 				<slot name="title"></slot>
+				<span
+					class="
+						absolute
+						left-0
+						bottom-8
+						md:bottom-10
+						w-full
+						h-full
+						z-10
+						text-7xl
+						md:text-8xl
+						text-slate-300
+						font-black
+						opacity-20
+					"
+				>
+					<slot name="title"></slot>
+				</span>
 			</h1>
-			<p
-				class="
-					absolute
-					left-0
-					top-12
-					md:-bottom-8
-					w-full
-					h-full
-					z-10
-					text-7xl
-					md:text-8xl
-					text-slate-300
-					font-black
-					opacity-20
-				"
-			>
-				<slot name="title"></slot>
-			</p>
 		</div>
 	</div>
 </template>
