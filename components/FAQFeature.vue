@@ -1,20 +1,29 @@
 <template>
 	<div class="container px-4 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-			<Content
-				:class="['max-w-lg']"
-			>
-				<template slot="title">FAQ</template>
-				<template slot="heading">
-					Frequently asked questions
-				</template>
-				<template slot="content">
-					Got questions? In our FAQs we are addressing some of the
-					most popular questions and concerns when it comes to
-					chartering a private aircraft.
-				</template>
-			</Content>
-			<div class="col-span-1">
+		<div class="grid grid-cols-12 gap-y-10 md:gap-x-8">
+			<div class="col-span-12 md:col-span-6">
+				<Content
+					:class="['max-w-lg']"
+				>
+					<template slot="title">FAQ</template>
+					<template slot="heading">
+						Frequently asked questions
+					</template>
+					<template slot="content">
+						Got questions? In our FAQs we are addressing some of the
+						most popular questions and concerns when it comes to
+						chartering a private aircraft.
+					</template>
+				</Content>
+				<CallToAction
+					link="/faq"
+				>
+					<template slot="title">
+						See more
+					</template>
+				</CallToAction>
+			</div>
+			<div class="col-span-12 md:col-span-6">
 				<Accordion v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
 						<h3>{{ item.title }}</h3>
