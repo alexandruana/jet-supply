@@ -42,7 +42,7 @@
 					src="/images/g650_interior.jpg"
 					width="100%"
 					height="100%"
-					alt="global interior"
+					alt="gulfstream interior"
 				/>
 			</div>
 			<div class="col-span-12 md:col-span-6 order-4 md:order-3 bg-gradient-tui rounded-3xl shadow-xl">
@@ -51,7 +51,7 @@
 					src="/images/fbo_interior.jpg"
 					width="100%"
 					height="100%"
-					alt="global interior"
+					alt="lounge interior"
 				/>
 			</div>
 			<div class="col-span-12 md:col-span-6 order-3 md:order-4 max-w-md">
