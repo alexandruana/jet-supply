@@ -1,7 +1,7 @@
 <template>
 	<div class="container px-6 lg:px-8 mx-auto">
 		<Content
-			:class="['mx-auto', 'text-center']"
+			:class="['text-center']"
 		>
 			<template slot="title">The process</template>
 			<template slot="heading">

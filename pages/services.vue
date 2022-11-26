@@ -8,10 +8,10 @@
 			</PageHeading>
 			<div
 				class="
-					grid grid-cols-12 grid-rows-3
+					grid grid-cols-12 grid-rows-2
 					place-items-center
 					gap-y-10
-					md:gap-x-8 md:gap-y-40
+					md:gap-x-8 md:gap-y-26
 				"
 			>
 				<div class="col-span-12 md:col-span-6 max-w-md">
@@ -48,6 +48,17 @@
 					"
 				>
 					Image
+				</div>
+				<div class="col-span-12 max-w-xl">
+					<Content
+						:class="['text-center']"
+					>
+						<template slot="title">Fleet</template>
+						<template slot="heading">Aircraft types</template>
+						<template slot="content">
+							We provide tailor made charter solutions through a wide array of aircraft types.
+						</template>
+					</Content>
 				</div>
 			</div>
 		</div>
