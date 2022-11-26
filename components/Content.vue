@@ -1,6 +1,6 @@
 <template>
 	<div class="mb-10">
-		<p
+		<h4
 			class="
 				text-base text-jet-light
 				font-semibold
@@ -9,7 +9,7 @@
 			"
 		>
 			<slot name="title"></slot>
-		</p>
+		</h4>
 		<h2
 			class="
 				mt-2

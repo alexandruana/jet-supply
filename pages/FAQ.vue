@@ -2,20 +2,11 @@
 	<div class="container">
 		<div class="px-4 sm:px-6 lg:px-8">
 			<div class="relative mx-auto pt-20 text-center pb-24">
-				<h1
-					class="
-						text-4xl
-						font-extrabold
-						tracking-tight
-						text-jet-light
-						sm:text-5xl
-					"
-				>
-					Frequently Asked Questions
-				</h1>
-				<p class="mt-4 text-base leading-7 text-slate-600">
-					Have questions? We are here to help.
-				</p>
+				<PageHeading>
+					<template slot="title">
+						{{ title }}
+					</template>
+				</PageHeading>
 			</div>
 		</div>
 		<div class="grid md:grid-cols-4 gap-16 px-4">
@@ -73,6 +64,8 @@ export default {
 	},
 	data() {
 		return {
+			title: 'Frequently Asked Questions',
+			description: '',
 			Accordion: {
 				count: 0,
 				active: null
@@ -179,7 +172,7 @@ export default {
 	},
 	head () {
 		return {
-			title: 'Frequently Asked Questions',
+			title: this.title,
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{
