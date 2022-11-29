@@ -8,7 +8,7 @@
 			</PageHeading>
 			<div
 				class="
-					grid grid-cols-12 grid-rows-2
+					grid grid-cols-12 grid-rows-3
 					place-items-center
 					gap-y-10
 					md:gap-x-8 md:gap-y-26
@@ -49,16 +49,22 @@
 				>
 					Image
 				</div>
-				<div class="col-span-12 max-w-xl">
-					<Content
-						:class="['text-center']"
-					>
+				<div class="col-span-12">
+					<Content :class="['text-center']">
 						<template slot="title">Fleet</template>
 						<template slot="heading">Aircraft types</template>
 						<template slot="content">
-							We provide tailor made charter solutions through a wide array of aircraft types.
+							We provide tailor made charter solutions through a
+							wide array of aircraft types.
 						</template>
 					</Content>
+					<div>
+						<Card
+							v-for="(aircraft, index) in fleet"
+							:key="index"
+							:aircraft="aircraft"
+						/>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -71,7 +77,81 @@ export default {
 	data() {
 		return {
 			title: 'Services',
-			description: 'Updated 02 June 2022'
+			description: 'Updated 02 June 2022',
+			fleet: [
+				{
+					type: 'Light jets',
+					rate: '€2,800',
+					properties: {
+						range: '3',
+						seats: 6,
+						bags: 6,
+						catering: 'snacks',
+						toilet: 'Yes',
+						fa: 'No'
+					}
+				},
+				{
+					type: 'Super light jets',
+					rate: '€3,600',
+					properties: {
+						range: '3.5',
+						seats: 8,
+						bags: 7,
+						catering: 'snacks',
+						toilet: 'Yes',
+						fa: 'Yes'
+					}
+				},
+				{
+					type: 'Midsize jets',
+					rate: '€4,200',
+					properties: {
+						range: '6',
+						seats: 9,
+						bags: 12,
+						catering: 'hot',
+						toilet: 'Yes',
+						fa: 'Yes'
+					}
+				},
+				{
+					type: 'Heavy jets',
+					rate: '€4,600',
+					properties: {
+						range: '8',
+						seats: 13,
+						bags: 22,
+						catering: 'hot',
+						toilet: 'Yes',
+						fa: 'Yes',
+					}
+				},
+				{
+					type: 'Ultra long range',
+					rate: '€4,600',
+					properties: {
+						range: '16',
+						seats: 16,
+						bags: 20,
+						catering: 'hot',
+						toilet: 'Yes',
+						fa: 'Yes',
+					}
+				},
+				{
+					type: 'VIP airliner',
+					rate: '€8,000',
+					properties: {
+						range: '12',
+						seats: 19,
+						bags: 60,
+						catering: 'hot',
+						toilet: 'Yes',
+						fa: 'Yes',
+					}
+				}
+			]
 		}
 	},
 	head() {
