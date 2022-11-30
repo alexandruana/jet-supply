@@ -45,6 +45,7 @@
 						bg-gradient-tui
 						rounded-3xl
 						shadow-xl
+						max-w-7xl
 					"
 				>
 					Image
@@ -58,11 +59,12 @@
 							wide array of aircraft types.
 						</template>
 					</Content>
-					<div>
+					<div class="flex flex-row flex-wrap justify-between gap-5">
 						<Card
 							v-for="(aircraft, index) in fleet"
 							:key="index"
 							:aircraft="aircraft"
+							class="md:w-1/6"
 						/>
 					</div>
 				</div>
@@ -74,10 +76,19 @@
 <script>
 export default {
 	name: 'Services',
+	components: {
+	},
 	data() {
 		return {
 			title: 'Services',
 			description: 'Updated 02 June 2022',
+			settings: {
+				dots: true,
+				edgeFriction: 0.35,
+				initialSlide: 0,
+				slidesToShow: 1,
+				infinite: false
+			},
 			fleet: [
 				{
 					type: 'Light jets',
@@ -124,7 +135,7 @@ export default {
 						bags: 22,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes',
+						fa: 'Yes'
 					}
 				},
 				{
@@ -136,7 +147,7 @@ export default {
 						bags: 20,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes',
+						fa: 'Yes'
 					}
 				},
 				{
@@ -148,7 +159,7 @@ export default {
 						bags: 60,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes',
+						fa: 'Yes'
 					}
 				}
 			]

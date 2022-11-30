@@ -4,13 +4,13 @@
 		<div class="py-10 md:py-20">
 			<AlternateFeature />
 		</div>
-		<div class="py-10 md:py-20 bg-slate-50">
+		<div class="py-10 md:py-20 bg-slate-50 bg-pattern">
 			<UniqueSellingPointsFeature />
 		</div>
 		<div class="py-10 md:py-20">
 			<StepFeature />
 		</div>
-		<div class="py-10 md:py-20 bg-slate-50">
+		<div class="py-10 md:py-20 bg-slate-50 bg-pattern">
 			<FAQFeature />
 		</div>
 		<div class="py-10 md:py-20 pb-10">

@@ -4,22 +4,24 @@
 			max-w-sm
 			bg-white
 			rounded-lg
-			border border-gray-200
+			border-2 border-gray-200
 			shadow-md
 			dark:bg-gray-800 dark:border-gray-700
 		"
 	>
-		<nuxt-img
-			class="bg-gradient-tui rounded-t-lg h-36"
-			src="/images/heli_interior.jpg"
-			width="100%"
-			height="100%"
-			alt="global interior"
-		/>
+		<div>
+			<nuxt-img
+				class="bg-gradient-tui rounded-t-lg"
+				src="/images/pattern.svg"
+				width="100%"
+				height="100%"
+				alt="global pattern"
+			/>
+		</div>
 		<div class="p-5">
 			<h3
 				class="
-					mb-2
+					mb-5
 					text-2xl
 					font-^medium
 					tracking-tight
@@ -33,7 +35,7 @@
 				class="
 					columns-2
 					mb-8
-					space-y-2
+					space-y-3
 					text-left text-gray-500
 					dark:text-gray-400
 				"
@@ -195,10 +197,10 @@
 						/>
 					</svg>
 
-					<span>{{ aircraft.properties.range }}</span> hours
+					<span>{{ aircraft.properties.range }}  hours</span>
 				</li>
 			</ul>
-			<h4 class="text-right text-xl">{{ aircraft.rate }}</h4>
+			<h4 class="text-right text-xl">{{ aircraft.rate }}<span class="text-md">/h</span></h4>
 		</div>
 	</div>
 </template>
