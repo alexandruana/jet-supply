@@ -8,14 +8,16 @@
 			dark:bg-gray-800 dark:border-gray-700
 		"
 	>
-		<div class="bg-gradient-tui h-52 p-10 flex items-center">
-			<nuxt-img
-				class="rounded-t-lg"
-				:src="aircraft.properties.img"
-				width="100%"
-				height="100%"
-				alt="aircraft image"
-			/>
+		<div class="bg-gradient-tui h-52">
+			<div class="h-full bg-pattern p-10 flex items-center">
+				<nuxt-img
+					class="rounded-t-lg"
+					:src="aircraft.properties.img"
+					width="100%"
+					height="100%"
+					alt="aircraft image"
+				/>
+			</div>
 		</div>
 		<div class="p-5">
 			<h3
