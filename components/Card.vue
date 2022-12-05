@@ -8,13 +8,13 @@
 			dark:bg-gray-800 dark:border-gray-700
 		"
 	>
-		<div>
+		<div class="bg-gradient-tui h-52 p-10 flex items-center">
 			<nuxt-img
-				class="bg-gradient-tui rounded-t-lg"
-				src="/images/pattern.svg"
+				class="rounded-t-lg"
+				:src="aircraft.properties.img"
 				width="100%"
 				height="100%"
-				alt="global pattern"
+				alt="aircraft image"
 			/>
 		</div>
 		<div class="p-5">

@@ -54,10 +54,9 @@
 				<div class="col-span-2">
 					<Content :class="['text-center']">
 						<template slot="title">Fleet</template>
-						<template slot="heading">Aircraft types</template>
+						<template slot="heading">Aircraft categories</template>
 						<template slot="content">
-							We provide tailor made charter solutions through a
-							wide array of aircraft types.
+							Discover the different private jet models across the categories available for charter.
 						</template>
 					</Content>
 					<swiper ref="mySwiper" :options="swiperOptions">
@@ -95,7 +94,6 @@ export default {
 			swiperOptions: {
 				slidesPerView: 3,
 				spaceBetween: 30,
-				centeredSlides: true,
 				pagination: {
 					el: '.swiper-pagination',
 					dynamicBullets: true
@@ -130,7 +128,8 @@ export default {
 						bags: 6,
 						catering: 'snacks',
 						toilet: 'Yes',
-						fa: 'No'
+						fa: 'No',
+						img: '/images/p100_side.png'
 					}
 				},
 				{
@@ -142,7 +141,8 @@ export default {
 						bags: 7,
 						catering: 'snacks',
 						toilet: 'Yes',
-						fa: 'Yes'
+						fa: 'Yes',
+						img: '/images/p300_side.png'
 					}
 				},
 				{
@@ -154,7 +154,8 @@ export default {
 						bags: 12,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes'
+						fa: 'Yes',
+						img: '/images/l500_side.png'
 					}
 				},
 				{
@@ -166,19 +167,22 @@ export default {
 						bags: 22,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes'
+						fa: 'Yes',
+						img: '/images/l650_side.png'
 					}
 				},
 				{
 					type: 'Ultra long range',
-					rate: '€4,600',
+					rate: '€6,000',
 					properties: {
 						range: '16',
 						seats: 16,
 						bags: 20,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes'
+						fa: 'Yes',
+						img: '/images/l500_side.png'
+
 					}
 				},
 				{
@@ -190,7 +194,8 @@ export default {
 						bags: 60,
 						catering: 'hot',
 						toilet: 'Yes',
-						fa: 'Yes'
+						fa: 'Yes',
+						img: '/images/l1000_side.png'
 					}
 				}
 			]
