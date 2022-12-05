@@ -1,7 +1,6 @@
 <template>
 	<div
 		class="
-			max-w-sm
 			bg-white
 			rounded-lg
 			border-2 border-gray-200

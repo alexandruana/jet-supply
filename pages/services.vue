@@ -8,7 +8,7 @@
 			</PageHeading>
 			<div
 				class="
-					grid grid-cols-12 grid-rows-3
+					grid grid-cols-12
 					place-items-center
 					gap-y-10
 					md:gap-x-8 md:gap-y-26
@@ -50,44 +50,74 @@
 				>
 					Image
 				</div>
-				<div class="col-span-12">
-					<Content :class="['text-center']">
-						<template slot="title">Fleet</template>
-						<template slot="heading">Aircraft types</template>
-						<template slot="content">
-							We provide tailor made charter solutions through a
-							wide array of aircraft types.
-						</template>
-					</Content>
-					<div class="flex flex-row flex-wrap justify-between gap-5">
-						<Card
-							v-for="(aircraft, index) in fleet"
-							:key="index"
-							:aircraft="aircraft"
-							class="md:w-1/6"
-						/>
-					</div>
-				</div>
+			</div>
+			<div class="container">
+				<Content :class="['text-center']">
+					<template slot="title">Fleet</template>
+					<template slot="heading">Aircraft types</template>
+					<template slot="content">
+						We provide tailor made charter solutions through a wide
+						array of aircraft types.
+					</template>
+				</Content>
+				<swiper ref="mySwiper" :options="swiperOptions">
+					<swiper-slide
+						v-for="(aircraft, index) in fleet"
+						:key="index"
+					>
+						<Card :aircraft="aircraft" />
+					</swiper-slide>
+					<div class="swiper-pagination" slot="pagination"></div>
+				</swiper>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 export default {
 	name: 'Services',
 	components: {
+		Swiper,
+		SwiperSlide
+	},
+	directives: {
+		swiper: directive
 	},
 	data() {
 		return {
 			title: 'Services',
 			description: 'Updated 02 June 2022',
-			settings: {
-				dots: true,
-				edgeFriction: 0.35,
-				initialSlide: 0,
-				slidesToShow: 1,
-				infinite: false
+			swiperOptions: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+				centeredSlides: true,
+				pagination: {
+					el: '.swiper-pagination',
+					dynamicBullets: true
+				},
+				breakpoints: {
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 40
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 30
+					},
+					640: {
+						slidesPerView: 2,
+						spaceBetween: 20
+					},
+					320: {
+						slidesPerView: 1,
+						spaceBetween: 10
+					}
+				}
+				// Some Swiper option/callback...
 			},
 			fleet: [
 				{
@@ -177,6 +207,18 @@ export default {
 						'At JetSupply we provide an integrated travel solution that takes you from A to B fast, confortable and safe on the most advanced private aircraft available for charter.'
 				}
 			]
+		}
+	},
+	setup() {
+		const onSwiper = (swiper) => {
+			console.log(swiper)
+		}
+		const onSlideChange = () => {
+			console.log('slide change')
+		}
+		return {
+			onSwiper,
+			onSlideChange
 		}
 	}
 }
