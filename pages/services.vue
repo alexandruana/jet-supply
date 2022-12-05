@@ -18,21 +18,26 @@
 				<div class="col-span-2 md:col-span-1">
 					<Content>
 						<template slot="title">Executive travel </template>
-						<template slot="heading">Private jet charter</template>
+						<template slot="heading">
+							JetSupply -<br />
+							Specialised private travel services.
+						</template>
 						<template slot="content">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Aliquam pharetra sapien eget purus ullamcorper
-							suscipit. Suspendisse semper risus efficitur lacus
-							pulvinar facilisis. Fusce semper suscipit nisl, sit
-							amet faucibus turpis pharetra sed. Aliquam erat
-							volutpat. Nulla convallis tellus et arcu pretium,
-							feugiat ornare velit tristique. Aenean molestie, ex
-							in ornare condimentum, odio tellus pulvinar ante, eu
-							semper eros ex at tellus. Nunc ultrices purus et sem
-							vestibulum, id pharetra sapien pretium. Etiam quis
-							orci at sapien consectetur feugiat. Duis consectetur
-							libero tellus, eget ullamcorper metus vestibulum
-							quis.
+							We enable private travel through access to the
+							global business jet charter market. Our team
+							provides bespoke advice when it comes to chartering
+							and aircraft, based on the profile of your trip, the
+							aircraft type preference and budget.
+							<br /><br />
+							All aircraft have the necessary legal permits from
+							the aviation authorities. Jet Supply’s team works
+							only with AOC – certified operators, reliable
+							handling agents and best quality catering suppliers
+							to ensure your private flight needs are met.
+							<br /><br />
+							From departure to arrival we support you throughout
+							all the steps of your journey, while ensuring your
+							safety and comfort. 
 						</template>
 					</Content>
 				</div>
@@ -56,7 +61,8 @@
 						<template slot="title">Fleet</template>
 						<template slot="heading">Aircraft categories</template>
 						<template slot="content">
-							Discover the different private jet models across the categories available for charter.
+							Discover the different private jet models across the
+							categories available for charter.
 						</template>
 					</Content>
 					<swiper ref="mySwiper" :options="swiperOptions">
@@ -182,7 +188,6 @@ export default {
 						toilet: 'Yes',
 						fa: 'Yes',
 						img: '/images/l500_side.png'
-
 					}
 				},
 				{
