@@ -1,5 +1,5 @@
 <template>
-	<div class="relative px-4 sm:px-6 lg:px-8">
+	<div class="relative container px-4 sm:px-6 lg:px-8">
 		<div class="px-4 sm:px-6 lg:px-8">
 			<PageHeading>
 				<template slot="title">
@@ -8,13 +8,14 @@
 			</PageHeading>
 			<div
 				class="
-					grid grid-cols-12
-					place-items-center
+					grid
+					container
+					grid-cols-2
 					gap-y-10
-					md:gap-x-8 md:gap-y-26
+					md:gap-x-8 md:gap-y-40
 				"
 			>
-				<div class="col-span-12 md:col-span-6 max-w-md">
+				<div class="col-span-2 md:col-span-1">
 					<Content>
 						<template slot="title">Executive travel </template>
 						<template slot="heading">Private jet charter</template>
@@ -37,8 +38,8 @@
 				</div>
 				<div
 					class="
-						col-span-12
-						md:col-span-6
+						col-span-2
+						md:col-span-1
 						h-full
 						w-full
 						rounded-2xl
@@ -50,25 +51,25 @@
 				>
 					Image
 				</div>
-			</div>
-			<div class="container">
-				<Content :class="['text-center']">
-					<template slot="title">Fleet</template>
-					<template slot="heading">Aircraft types</template>
-					<template slot="content">
-						We provide tailor made charter solutions through a wide
-						array of aircraft types.
-					</template>
-				</Content>
-				<swiper ref="mySwiper" :options="swiperOptions">
-					<swiper-slide
-						v-for="(aircraft, index) in fleet"
-						:key="index"
-					>
-						<Card :aircraft="aircraft" />
-					</swiper-slide>
-					<div class="swiper-pagination" slot="pagination"></div>
-				</swiper>
+				<div class="col-span-2">
+					<Content :class="['text-center']">
+						<template slot="title">Fleet</template>
+						<template slot="heading">Aircraft types</template>
+						<template slot="content">
+							We provide tailor made charter solutions through a
+							wide array of aircraft types.
+						</template>
+					</Content>
+					<swiper ref="mySwiper" :options="swiperOptions">
+						<swiper-slide
+							v-for="(aircraft, index) in fleet"
+							:key="index"
+						>
+							<Card :aircraft="aircraft" />
+						</swiper-slide>
+						<div class="swiper-pagination" slot="pagination"></div>
+					</swiper>
+				</div>
 			</div>
 		</div>
 	</div>
