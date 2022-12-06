@@ -13,6 +13,7 @@
 		<h2
 			class="
 				mt-2
+				mb-4
 				text-3xl
 				leading-8
 				font-extrabold
@@ -23,7 +24,7 @@
 		>
 			<slot name="heading"></slot>
 		</h2>
-		<p class="mt-4 mb-6 text-gray-500">
+		<p class="mb-6 text-gray-500">
 			<slot name="content"></slot>
 		</p>
 	</div>

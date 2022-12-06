@@ -19,8 +19,7 @@
 					<Content>
 						<template slot="title">Executive travel </template>
 						<template slot="heading">
-							JetSupply -<br />
-							Specialised private travel services.
+							JetSupply: Tailored travel solutions
 						</template>
 						<template slot="content">
 							We enable private travel through access to the
@@ -37,7 +36,7 @@
 							<br /><br />
 							From departure to arrival we support you throughout
 							all the steps of your journey, while ensuring your
-							safety and comfort. 
+							safety and comfort.
 						</template>
 					</Content>
 				</div>
@@ -55,6 +54,128 @@
 					"
 				>
 					Image
+				</div>
+				<div
+					class="
+						col-span-2
+						md:col-span-1
+						h-full
+						w-full
+						rounded-2xl
+						bg-gradient-tui
+						rounded-3xl
+						shadow-xl
+						max-w-7xl
+					"
+				>
+					Image
+				</div>
+				<div class="col-span-2 md:col-span-1">
+					<Content>
+						<template slot="title">Executive travel </template>
+						<template slot="heading">Private charter benefits</template>
+						<template slot="content">
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+								<Highlight>
+									<template slot="icon">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 h-6"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"
+											/>
+										</svg>
+									</template>
+									<template slot="title">
+										Save time
+									</template>
+									<template slot="content">
+										From car to the aircraft in 5 minutes
+										through private jet dedicated terminals.
+									</template>
+								</Highlight>
+								<Highlight>
+									<template slot="icon">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 h-6"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+											/>
+										</svg>
+									</template>
+									<template slot="title">
+										Flexibility
+									</template>
+									<template slot="content">
+										Land or take-off from the airports that
+										suit you best and plan with the timings
+										that fit your schedule.
+									</template>
+								</Highlight>
+								<Highlight>
+									<template slot="icon">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 h-6"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"
+											/>
+										</svg>
+									</template>
+									<template slot="title"> Privacy </template>
+									<template slot="content">
+										Take advantage of privacy with an
+										aircraft fully dedicated to you and your
+										travel companions.
+									</template>
+								</Highlight>
+								<Highlight>
+									<template slot="icon">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="w-6 h-6"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M8.288 15.038a5.25 5.25 0 017.424 0M5.106 11.856c3.807-3.808 9.98-3.808 13.788 0M1.924 8.674c5.565-5.565 14.587-5.565 20.152 0M12.53 18.22l-.53.53-.53-.53a.75.75 0 011.06 0z"
+											/>
+										</svg>
+									</template>
+									<template slot="title"> Comfort </template>
+									<template slot="content">
+										Enjoy à la carte meals, the finest drinks and stay productive while on the go with sattelite wi-fi.
+									</template>
+								</Highlight>
+							</div>
+						</template>
+					</Content>
 				</div>
 				<div class="col-span-2">
 					<Content :class="['text-center']">
@@ -83,12 +204,14 @@
 <script>
 import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import Highlight from '~/components/Highlight.vue'
 
 export default {
 	name: 'Services',
 	components: {
 		Swiper,
-		SwiperSlide
+		SwiperSlide,
+		Highlight
 	},
 	directives: {
 		swiper: directive
@@ -124,6 +247,12 @@ export default {
 				}
 				// Some Swiper option/callback...
 			},
+			listItems: [
+				'Quick offers',
+				'Dedicated support',
+				'Low fees',
+				'Easy payments'
+			],
 			fleet: [
 				{
 					type: 'Light jets',
