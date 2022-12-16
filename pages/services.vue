@@ -12,10 +12,11 @@
 					container
 					grid-cols-2
 					gap-y-10
+					place-content-center
 					md:gap-x-8 md:gap-y-40
 				"
 			>
-				<div class="col-span-2 md:col-span-1">
+				<div class="col-span-2 md:col-span-1 order-1">
 					<Content>
 						<template slot="title">Executive travel </template>
 						<template slot="heading">
@@ -40,42 +41,60 @@
 						</template>
 					</Content>
 				</div>
-				<div
-					class="
-						col-span-2
-						md:col-span-1
-						h-full
-						w-full
-						rounded-2xl
-						bg-gradient-tui
-						rounded-3xl
-						shadow-xl
-						max-w-7xl
-					"
-				>
-					Image
+				<div class="col-span-2 md:col-span-1 order-2">
+					<div
+						class="
+							h-full
+							w-full
+							bg-gradient-tui
+							rounded-3xl
+							shadow-xl
+							max-w-7xl
+						"
+					>
+						<nuxt-img
+							class="rounded-3xl"
+							src="/images/global5000-exterior.jpeg"
+							width="100%"
+							height="100%"
+							alt="aircraft image"
+						/>
+					</div>
 				</div>
-				<div
-					class="
-						col-span-2
-						md:col-span-1
-						h-full
-						w-full
-						rounded-2xl
-						bg-gradient-tui
-						rounded-3xl
-						shadow-xl
-						max-w-7xl
-					"
-				>
-					Image
+				<div class="col-span-2 md:col-span-1 order-4 md:order-3">
+					<div
+						class="
+							h-full
+							w-full
+							bg-gradient-tui
+							rounded-3xl
+							shadow-xl
+							max-w-7xl
+						"
+					>
+						<nuxt-img
+							class="rounded-3xl"
+							src="/images/global7500-interior.jpeg"
+							width="100%"
+							height="100%"
+							alt="aircraft image"
+						/>
+					</div>
 				</div>
-				<div class="col-span-2 md:col-span-1">
+				<div class="col-span-2 md:col-span-1 order-3 md:order-4">
 					<Content>
 						<template slot="title">Executive travel </template>
-						<template slot="heading">Private charter benefits</template>
+						<template slot="heading">
+							Private charter benefits
+						</template>
 						<template slot="content">
-							<div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+							<div
+								class="
+									grid grid-cols-1
+									md:grid-cols-2
+									gap-x-10 gap-y-5
+								"
+							>
 								<Highlight>
 									<template slot="icon">
 										<svg
@@ -170,14 +189,16 @@
 									</template>
 									<template slot="title"> Comfort </template>
 									<template slot="content">
-										Enjoy à la carte meals, the finest drinks and stay productive while on the go with sattelite wi-fi.
+										Enjoy à la carte meals, the finest
+										drinks and stay productive while on the
+										go with sattelite wi-fi.
 									</template>
 								</Highlight>
 							</div>
 						</template>
 					</Content>
 				</div>
-				<div class="col-span-2">
+				<div class="col-span-2 order-5">
 					<Content :class="['text-center']">
 						<template slot="title">Fleet</template>
 						<template slot="heading">Aircraft categories</template>
@@ -363,3 +384,9 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+.doodle {
+	border-radius: 30% 70% 67% 33% / 30% 30% 70% 70%;
+}
+</style>

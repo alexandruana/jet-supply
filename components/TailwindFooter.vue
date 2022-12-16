@@ -41,6 +41,12 @@
 							>
 						</li>
 						<li class="mb-4">
+							<NuxtLink to="/services" class="hover:text-gray-900">
+								Services
+							</NuxtLink
+							>
+						</li>
+						<li class="mb-4">
 							<NuxtLink to="/about" class="hover:text-gray-900">
 								About
 							</NuxtLink
