@@ -20,7 +20,7 @@
 					<Content>
 						<template slot="title">Executive travel </template>
 						<template slot="heading">
-							JetSupply: Tailored travel solutions
+							Jet Supply: Tailored travel solutions
 						</template>
 						<template slot="content">
 							We enable private travel through access to the
@@ -93,6 +93,7 @@
 									grid grid-cols-1
 									md:grid-cols-2
 									gap-x-10 gap-y-5
+									sm:gap-y-2
 								"
 							>
 								<Highlight>
@@ -365,7 +366,7 @@ export default {
 					hid: 'about-description',
 					name: 'description',
 					content:
-						'At JetSupply we provide an integrated travel solution that takes you from A to B fast, confortable and safe on the most advanced private aircraft available for charter.'
+						'At Jet Supply we provide an integrated travel solution that takes you from A to B fast, confortable and safe on the most advanced private aircraft available for charter.'
 				}
 			]
 		}

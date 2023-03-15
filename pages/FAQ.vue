@@ -72,13 +72,13 @@ export default {
 			},
 			faqs: [
 				{
-					title: 'What is JetSupply?',
+					title: 'What is Jet Supply?',
 					content:
-						'Based in Poland, JetSupply is a private jet broker which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.',
+						'Based in Poland, Jet Supply is a private jet broker which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.',
 					category: 'General'
 				},
 				{
-					title: 'Why use JetSupply?',
+					title: 'Why use Jet Supply?',
 					content:
 						'We will always negotiate the best price for your flight whether it is for an on demand charter flight, empty leg or a modified empty leg. Jet Supply gets access to over 2.500 aircraft worldwide and can plan your trips to over 73.000+ unique airport pairs. We address safety, privacy, flexibility of travelling as our key values when organizing every trip for the most demanding clientele. Every quote we make is transparent and absolutely free of charge and does not involve an obligation to purchase the flight.',
 					category: 'General'
@@ -86,7 +86,7 @@ export default {
 				{
 					title: 'What is an on-demand charter flight?',
 					content:
-						'On-demand charter flights are private jets that you hire for a flight at the time you decide and on the itinerary you choose. You control every detail. You select your aircraft according to size, age and your budget. Once approved and paid for, the aircraft is guaranteed for you and your guests to fly as requested. JetSupply offers very competitive prices for these flights, as we negotiate preferential rates with operators based on a high volume of flight hours year after year.',
+						'On-demand charter flights are private jets that you hire for a flight at the time you decide and on the itinerary you choose. You control every detail. You select your aircraft according to size, age and your budget. Once approved and paid for, the aircraft is guaranteed for you and your guests to fly as requested. Jet Supply offers very competitive prices for these flights, as we negotiate preferential rates with operators based on a high volume of flight hours year after year.',
 					category: 'Chartering'
 				},
 				{
@@ -104,7 +104,7 @@ export default {
 				{
 					title: 'What is the Luggage Policy?',
 					content:
-						'Every aircraft has a luggage compartment which varies for each flight. We advise you to contact the JetSupply team in order to find more details about your luggage allowance.  ',
+						'Every aircraft has a luggage compartment which varies for each flight. We advise you to contact the Jet Supply team in order to find more details about your luggage allowance.  ',
 					category: 'Baggage'
 				},
 				{
@@ -134,13 +134,13 @@ export default {
 				{
 					title: 'What are the restrictions of flying on empty legs?',
 					content:
-						'The first and major restriction with empty legs is availability because these flights are not immediately available when and where they are needed. Therefore, luck defines whether an aircraft will be available for your requested destination at your preferred time.<br /> <br /> JetSupply’s Advisors regularly observes on the market and do our best to accommodate your request. The next restriction is type of aircraft since it is chosen by the original passenger. In this instance, luck defines again if an empty leg meets your needs in terms of age, size and passenger capacity. In consequence, the more flexible the client is in terms of timing or destination, the higher chances the client has of finding an empty aircraft.',
+						'The first and major restriction with empty legs is availability because these flights are not immediately available when and where they are needed. Therefore, luck defines whether an aircraft will be available for your requested destination at your preferred time.<br /> <br /> Jet Supply’s Advisors regularly observes on the market and do our best to accommodate your request. The next restriction is type of aircraft since it is chosen by the original passenger. In this instance, luck defines again if an empty leg meets your needs in terms of age, size and passenger capacity. In consequence, the more flexible the client is in terms of timing or destination, the higher chances the client has of finding an empty aircraft.',
 					category: 'Chartering'
 				},
 				{
 					title: 'Are empty legs guaranteed?',
 					content:
-						'As empty leg flights depend on the initial flight taking place, they cannot be fully guaranteed. For long-haul flights, we can usually guarantee empty legs two to three days in advance. For short-haul flights, empty legs are guaranteed one or two days before.<br /> <br /> You will always be informed of the status of the empty leg and will not be required to pay until the flight is confirmed. In case of cancellation, JetSupply Advisors are available 24/7 and will find an alternative solution for your trip.',
+						'As empty leg flights depend on the initial flight taking place, they cannot be fully guaranteed. For long-haul flights, we can usually guarantee empty legs two to three days in advance. For short-haul flights, empty legs are guaranteed one or two days before.<br /> <br /> You will always be informed of the status of the empty leg and will not be required to pay until the flight is confirmed. In case of cancellation, Jet Supply Advisors are available 24/7 and will find an alternative solution for your trip.',
 					category: 'Chartering'
 				},
 				{
@@ -156,9 +156,9 @@ export default {
 					category: 'Payment'
 				},
 				{
-					title: 'What type of payment does JetSupply accept?',
+					title: 'What type of payment does Jet Supply accept?',
 					content:
-						'JetSupply accepts wire, credit card and cryptocurrency transactions. This includes Visa, MasterCard, AmericanExpress. Currently we do not accept Apple Pay and PayPal.',
+						'Jet Supply accepts wire, credit card and cryptocurrency transactions. This includes Visa, MasterCard, AmericanExpress. Currently we do not accept Apple Pay and PayPal.',
 					category: 'Payment'
 				},
 				{

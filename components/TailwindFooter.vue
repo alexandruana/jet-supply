@@ -112,8 +112,8 @@
 				dark:text-gray-400
 			"
 		>
-			© 2022
-			<NuxtLink to="/">JetSupply</NuxtLink>. All Rights Reserved.
+			© 2023
+			<NuxtLink to="/">Jet Supply</NuxtLink>. All Rights Reserved.
 		</span>
 	</footer>
 </template>

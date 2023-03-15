@@ -1,5 +1,5 @@
 <template>
-	<div class="relative mb-10 sm:mb-5">
+	<div class="relative md:mb-10 mb-5">
 		<dt>
 			<div
 				class="

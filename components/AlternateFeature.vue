@@ -9,7 +9,7 @@
 					</template>
 					<template slot="content">
 						Regardless if it's a transcontinental flight or a day-return
-						trip, JetSupply can take you from A to B hasslefree.
+						trip, Jet Supply can take you from A to B hasslefree.
 					</template>
 				</Content>
 			</div>

@@ -18,7 +18,7 @@
 					<template slot="title"> Our expertise</template>
 					<template slot="heading"> Boutique jet charter </template>
 					<template slot="content">
-						JetSupply is a Poland based private jet broker company
+						Jet Supply is a Poland based private jet broker company
 						which guarantees a completely neutral search for private
 						jets and helicopters. As we do not operate aircraft
 						ourselves, we support our clients in finding the best
@@ -61,7 +61,7 @@
 					<template slot="content">
 						With several years of experience in the aviation
 						industry, our team can assist even with the most
-						difficult charter flights. JetSupply provides round-the-clock
+						difficult charter flights. Jet Supply provides round-the-clock
 						support so that you and your travel partners can arrive
 						at your destination fast and stress-free.
 					</template>
@@ -78,22 +78,22 @@ export default {
 	data() {
 		return {
 			title: 'About us',
-			description: 'Hi',
+			description: 'The benefits of flying with Jet Supply',
 			statements: [
 				{
 					title: 'Our mission',
 					content:
-						'JetSupply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
+						'Jet Supply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
 				},
 				{
 					title: 'Our vision',
 					content:
-						'JetSupply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
+						'Jet Supply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
 				},
 				{
 					title: 'Our goal',
 					content:
-						'JetSupply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
+						'Jet Supply is a Poland based private jet broker company which guarantees a completely neutral search for private jets and helicopters. As we do not operate aircraft ourselves, we support our clients in finding the best solution with the best prices.'
 				}
 			],
 			kpis: [
@@ -112,6 +112,8 @@ export default {
 			],
 			listItems: [
 				'Quick offers',
+				'Reliable suppliers',
+				'Safety standards',
 				'Dedicated support',
 				'Low fees',
 				'Easy payments'
@@ -127,7 +129,7 @@ export default {
 					hid: 'description',
 					name: 'description',
 					content:
-						'Find out more about JetSupply and the way we can get you anywhere, anytime, with our range of private jet charter services.'
+						'Find out more about Jet Supply and the way we can get you anywhere, anytime, with our range of private jet charter services.'
 				}
 			]
 		}
