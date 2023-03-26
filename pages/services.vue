@@ -368,6 +368,13 @@ export default {
 					content:
 						'At Jet Supply we provide an integrated travel solution that takes you from A to B fast, confortable and safe on the most advanced private aircraft available for charter.'
 				}
+			],
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: 'https://jet-supply.com/services'
+				}
 			]
 		}
 	},

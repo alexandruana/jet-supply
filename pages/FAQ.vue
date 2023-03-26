@@ -180,6 +180,13 @@ export default {
 					name: 'description',
 					content: 'Got questions regarding flying private? Read the frequently asked questions for chartering an aircraft.'
 				}
+			],
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: 'https://jet-supply.com/faq'
+				}
 			]
 		}
 	},

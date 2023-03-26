@@ -22,7 +22,7 @@
 <script>
 export default {
 	name: 'IndexPage',
-	head () {
+	head() {
 		return {
 			title: 'Private Jet Charter',
 			meta: [
@@ -30,10 +30,18 @@ export default {
 				{
 					hid: 'home-description',
 					name: 'description',
-					content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods'
+					content:
+						'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods'
+				}
+			],
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: 'https://jet-supply.com/'
 				}
 			]
 		}
-	},
+	}
 }
 </script>

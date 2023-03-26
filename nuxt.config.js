@@ -53,7 +53,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'canonical', type: 'image/x-icon', href: 'https://www.jet-supply.com/' }
     ]
   },
 

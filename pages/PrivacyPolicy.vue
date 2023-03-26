@@ -245,6 +245,13 @@ export default {
 					name: 'description',
 					content: 'Understand how our website data is being processed by reading our privacy policy.'
 				}
+			],
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: 'https://jet-supply.com/privacypolicy'
+				}
 			]
 		}
 	}

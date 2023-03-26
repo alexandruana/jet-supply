@@ -131,6 +131,13 @@ export default {
 					content:
 						'Find out more about Jet Supply and the way we can get you anywhere, anytime, with our range of private jet charter services.'
 				}
+			],
+			link: [
+				{
+					hid: 'canonical',
+					rel: 'canonical',
+					href: 'https://jet-supply.com/about'
+				}
 			]
 		}
 	}
