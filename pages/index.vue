@@ -30,7 +30,7 @@ export default {
 				{
 					hid: 'home-description',
 					name: 'description',
-					content: ''
+					content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods'
 				}
 			]
 		}

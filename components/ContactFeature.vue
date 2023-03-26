@@ -34,9 +34,9 @@
 				"
 			>
 				<div class="bg-pattern h-full">
-					<h2 class="mb-4 mt-0 text-xl text-white font-heavy">
+					<p class="mb-4 mt-0 text-xl text-white font-heavy">
 						Contact information
-					</h2>
+					</p>
 					<p class="text-base text-slate-400 mb-6">
 						Request offers or find out more on how to travel hassle free
 						through private charter.

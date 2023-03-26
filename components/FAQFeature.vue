@@ -26,7 +26,7 @@
 			<div class="col-span-12 md:col-span-6">
 				<Accordion v-for="(item, index) in faqs" :key="index">
 					<template slot="title">
-						<h3>{{ item.title }}</h3>
+						<p>{{ item.title }}</p>
 					</template>
 					<template slot="content">
 						<p>{{ item.content }}</p>

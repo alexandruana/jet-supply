@@ -41,7 +41,7 @@
 				/>
 			</svg>
 			<div class="text-center">
-				<h3 class="text-xl font-semibold text-jet-light">Thank you!</h3>
+				<p class="text-xl font-semibold text-jet-light">Thank you!</p>
 				<p class="mb-12 text-sm font-light">
 					Your message has now been submitted.
 				</p>

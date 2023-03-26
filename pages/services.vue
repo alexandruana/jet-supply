@@ -363,7 +363,7 @@ export default {
 			meta: [
 				// hid is used as unique identifier. Do not use `vmid` for it as it will not work
 				{
-					hid: 'about-description',
+					hid: 'services-description',
 					name: 'description',
 					content:
 						'At Jet Supply we provide an integrated travel solution that takes you from A to B fast, confortable and safe on the most advanced private aircraft available for charter.'

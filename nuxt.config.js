@@ -16,11 +16,6 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'On-demand private jet charter flights. Fly on a global network of 2,500 aircraft and take advantage of full flexibility, privacy and a wide array of payment methods.'
-      },
       { name: 'format-detection', content: 'telephone=no' },
       {
         hid: 'og:title',
@@ -47,6 +42,9 @@ export default {
         property: 'og:url',
         content: 'https:///www.jet-supply.com/'
       },
+      { property: 'og:locale',
+        content: 'en_US'
+      },
       {
         hid: 't-type',
         name: 'twitter:card',
@@ -54,7 +52,8 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'canonical', type: 'image/x-icon', href: 'https://www.jet-supply.com/' }
     ]
   },
 

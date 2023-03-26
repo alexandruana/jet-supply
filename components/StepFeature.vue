@@ -59,17 +59,17 @@
 						</svg>
 					</div>
 					<div class="flex-grow pl-4">
-						<h2
+						<p
 							class="
 								font-medium
 								title-font
-								text-sm text-gray-900
+								text-md text-gray-900
 								mb-1
 								tracking-wider
 							"
 						>
 							Trip details
-						</h2>
+						</p>
 						<p class="leading-relaxed">
 							We'll collect basic information regarding your trip such as the  <span class="font-medium">departure and arrival</span> locations, <span class="font-medium">date of the flight</span>, <span class="font-medium">number of guests</span>, and the type of <span class="font-medium">cabin</span> you desire. 
 						</p>
@@ -119,17 +119,17 @@
 						</svg>
 					</div>
 					<div class="flex-grow pl-4">
-						<h2
+						<p
 							class="
 								font-medium
 								title-font
-								text-sm text-gray-900
+								text-md text-gray-900
 								mb-1
 								tracking-wider
 							"
 						>
 							Charter offers
-						</h2>
+						</p>
 						<p class="leading-relaxed">
 							Through our access to the worldwide jet market we provide a number of hand-picked private jet offers that suit the needs of your trip best.
 						</p>
@@ -180,17 +180,17 @@
 						</svg>
 					</div>
 					<div class="flex-grow pl-4">
-						<h2
+						<p
 							class="
 								font-medium
 								title-font
-								text-sm text-gray-900
+								text-md text-gray-900
 								mb-1
 								tracking-wider
 							"
 						>
 							Charter agreement and payment
-						</h2>
+						</p>
 						<p class="leading-relaxed">
 							Once one of the offers is accepted, we issue our charter agreement and organize the payment through one of the various fiat and crypto means we have available.
 						</p>
@@ -243,17 +243,17 @@
 						</svg>
 					</div>
 					<div class="flex-grow pl-4">
-						<h2
+						<p
 							class="
 								font-medium
 								title-font
-								text-sm text-gray-900
+								text-md text-gray-900
 								mb-1
 								tracking-wider
 							"
 						>
 							Passenger details and services
-						</h2>
+						</p>
 						<p class="leading-relaxed">
 							Prior departure we will collect all the guest information and catering wishes as well as organise ground and heli transfers.
 						</p>
@@ -289,17 +289,17 @@
 						</svg>
 					</div>
 					<div class="flex-grow pl-4">
-						<h2
+						<p
 							class="
 								font-medium
 								title-font
-								text-sm text-gray-900
+								text-md text-gray-900
 								mb-1
 								tracking-wider
 							"
 						>
 							Ready for boarding
-						</h2>
+						</p>
 						<p class="leading-relaxed">
 							With all services confirmed, our team will be ready to welcome you at one of the VIP terminals of your departure airport. Here, one of the hosts will take care of the screening process and documents control while the aircraft will be aready in position for your departure. 
 						</p>
