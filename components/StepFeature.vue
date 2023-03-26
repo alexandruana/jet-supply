@@ -312,6 +312,8 @@
 				width="100%"
 				height="100%"
 				alt="private jet interior"
+				title="Praetor 600 corporate jet interior"
+				loading="lazy"
 			/>
 		</div>
 	</div>

@@ -58,6 +58,8 @@
 							width="100%"
 							height="100%"
 							alt="aircraft image"
+							title="Bombardier Global private jet"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -78,6 +80,8 @@
 							width="100%"
 							height="100%"
 							alt="aircraft image"
+							title="Bombardier Global 7500 cabin"
+							loading="lazy"
 						/>
 					</div>
 				</div>

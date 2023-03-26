@@ -201,7 +201,7 @@
 					<span>{{ aircraft.properties.range }}  hours</span>
 				</li>
 			</ul>
-			<h4 class="text-right text-xl">{{ aircraft.rate }}<span class="text-md">/h</span></h4>
+			<p class="text-right text-xl">{{ aircraft.rate }}<span class="text-md">/h</span></p>
 		</div>
 	</div>
 </template>

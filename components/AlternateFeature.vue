@@ -28,7 +28,9 @@
 					src="/images/global6500_interior.jpeg"
 					width="100%"
 					height="100%"
-					alt="global interior"
+					alt="Bombardier Global 5000 interior"
+					title="Bombardier Global 5000 interior"
+					loading="lazy"
 				/>
 				<div class="p-5">
 					<h3
@@ -72,6 +74,8 @@
 					width="100%"
 					height="100%"
 					alt="helicopter interior"
+					title="Airbus helicopters interior"
+					loading="lazy"
 				/>
 				<div class="p-5">
 					<h3
@@ -115,6 +119,8 @@
 					width="100%"
 					height="100%"
 					alt="limousine interior"
+					title="BMW limousine transfer"
+					loading="lazy"
 				/>
 				<div class="p-5">
 					<h3

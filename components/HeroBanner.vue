@@ -18,6 +18,8 @@
 			width="100%"
 			format="webp"
 			alt="praetor 600 background"
+			title="Praetor 600 on arrival"
+			loading="eager"
 		/>
 		<div class="container sm:py-12 lg:py-20 xl:py-28">
 			<div

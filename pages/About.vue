@@ -43,6 +43,8 @@
 					width="100%"
 					height="100%"
 					alt="gulfstream interior"
+					title="Gulfstream interior"
+					loading="lazy"
 				/>
 			</div>
 			<div class="col-span-12 md:col-span-6 order-4 md:order-3 bg-gradient-tui rounded-3xl shadow-xl">
@@ -52,6 +54,8 @@
 					width="100%"
 					height="100%"
 					alt="lounge interior"
+					title="General Aviation VIP terminal"
+					loading="lazy"
 				/>
 			</div>
 			<div class="col-span-12 md:col-span-6 order-3 md:order-4 max-w-md">
